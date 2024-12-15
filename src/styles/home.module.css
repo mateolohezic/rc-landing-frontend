@@ -1,0 +1,9 @@
+.text__outline{
+    -webkit-text-stroke: 3px red;
+    color: transparent;
+}
+
+.play__outline{
+    filter: drop-shadow(0px 2px 0px white) drop-shadow(0px -2px 0px white) drop-shadow(2px 0px 0px white) drop-shadow(-2px 0px 0px white);
+    color: #0a0a0a;
+}

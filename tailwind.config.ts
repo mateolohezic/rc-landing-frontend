@@ -9,8 +9,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background:{
+          DEFAULT: '#0a0a0a',
+          sidebar: '#111111'
+        },
+        invalid:{
+          DEFAULT: '#f45050'
+        },
+      },
+      fontFamily: {
+        blackout: "var(--blackout), sans-serif",
+        highrise: "var(--highrise), sans-serif",
+        "highrise-bold": "var(--highrise_bold), sans-serif",
+        stretch: "var(--stretch), sans-serif",
       },
     },
   },
