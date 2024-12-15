@@ -22,7 +22,7 @@ export default function HomePage() {
           <p className={`font-stretch text-7xl uppercase ${styles.text__outline}`}>Suppera</p>
           <p className="font-stretch text-7xl uppercase">Conquista</p>
         </div>
-        <Link href={'/home'} className="w-fit shrink-0 flex justify-center items-center gap-2 p-6 pr-3 rounded-2xl hover:bg-neutral-800 transition-150 group">
+        <Link href={'/home'} className="w-fit shrink-0 flex justify-center items-center gap-2 p-6 pr-3 rounded-2xl hover:bg-white/10 transition-150 group">
           <div className="flex justify-center items-center gap-4">
             <div className="flex flex-col justify-center items-end">
               <p className="font-highrise-bold tracking-wide leading-[0.85] text-5xl">Conocé la</p>
@@ -30,14 +30,25 @@ export default function HomePage() {
             </div>
             <p className="font-blackout text-9xl"><RCLogo className="w-28 fill-white"/></p>
           </div>
-          <div className="relative">
-            <PlayIcon className={`text-7xl group-hover:text-white transition-150`}/>
-            <div className="size-full flex justify-center items-center absolute top-0 left-0">
-              <PlayIcon className={`text-7xl text-background scale-[0.8] group-hover:text-white transition-150`}/>
-            </div>
-          </div>
+          <PlayIcon className={`text-7xl text-transparent group-hover:text-white stroke-1 stroke-white transition-150`}/>
         </Link>
       </div>
+      <div className="size-full absolute top-0 left-0 -z-10">
+        <div className="size-full relative">
+          <div className="size-full bg-gradient-to-bl from-background/75 to-75% to-background absolute top-0 left-0"></div>
+          <video
+            controls={false}
+            playsInline
+            autoPlay
+            muted
+            loop
+            className="size-full object-cover pointer-events-none select-none"
+            >
+            <source src="/assets/background_video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+    </div>
     </main>
   );
 }
