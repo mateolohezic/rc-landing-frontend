@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+
+const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const blackout = localFont({
   src: "../assets/fonts/Blackout.ttf",
@@ -33,8 +39,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${blackout.variable} ${stretch.variable} ${highrise.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
+    <html lang="en" className="bg-background text-white">
+      <body className={`${nunito.className} ${blackout.variable} ${stretch.variable} ${highrise.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
         {children}
       </body>
     </html>

@@ -1,18 +1,17 @@
-// import Link from "next/link";
-import { RCIcon, RCLogo } from "@/components";
 import { Metadata } from "next";
-import styles from '@/styles/home.module.css';
-import { PlayIcon } from "@/icons";
 import Link from "next/link";
+import { PlayIcon } from "@/icons";
+import { RCIcon, RCLogo } from "@/components";
+import styles from '@/styles/home.module.css';
 
 export const metadata: Metadata = {
   title: 'RC Gym',
   description: "RC Gym",
 };
 
-export default function HomePage() {
+export default function IntroPage() {
   return (
-    <main className="w-full grow p-16 flex flex-col items-center justify-start relative text-white">
+    <main className="w-full grow p-16 flex flex-col items-center justify-start relative">
       <div className="w-full grow">
         <RCIcon className="w-80 fill-neutral-100"/>
       </div>
