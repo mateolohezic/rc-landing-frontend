@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { PlayIcon } from "@/icons";
 import { RCIcon, RCLogo } from "@/components";
-import styles from '@/styles/home.module.css';
+import styles from '@/styles/intro.module.css';
 
 export const metadata: Metadata = {
   title: 'RC Gym',

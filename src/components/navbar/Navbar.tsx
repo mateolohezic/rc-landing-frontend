@@ -32,11 +32,9 @@ export const Navbar = () => {
                 <Link href={'/sumate'} className="px-2 py-1 border border-red-500 hover:bg-red-500 rounded-md text-red-500 hover:text-white tracking-widest uppercase transition-200">
                     Conseguí tu día de prueba
                 </Link>
-                <div className="h-20 aspect-square p-1 rounded-full absolute top-0 left-0 right-0 mx-auto translate-y-1/4 bg-background-sidebar">
-                    <Link href={'/home'}>
-                        <RCLogo className="w-full fill-white"/>
-                    </Link>
-                </div>
+                <Link href={'/home'} className="h-20 aspect-square p-1 bg-background-sidebar rounded-full absolute top-0 left-0 right-0 mx-auto translate-y-1/4 hover:scale-125 transition-200">
+                    <RCLogo className="w-full fill-white"/>
+                </Link>
             </nav>
         </div>
     )
