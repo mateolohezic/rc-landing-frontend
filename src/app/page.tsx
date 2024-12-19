@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { PlayIcon } from "@/icons";
-import { RCIcon, RCLogo } from "@/components";
+import { RCIcon, RCLogo, VideoIntro } from "@/components";
 import styles from '@/styles/intro.module.css';
 
 export const metadata: Metadata = {
@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 
 export default function IntroPage() {
   return (
-    <main className="w-full grow p-16 flex flex-col items-center justify-start relative">
-      <div className="w-full grow">
-        <RCIcon className="w-80 fill-neutral-100"/>
+    <main className="w-full grow p-16 flex flex-col relative">
+      <div className="w-80 grow relative z-10">
+        <RCIcon className="w-full fill-neutral-100"/>
       </div>
-      <div className="w-full flex justify-between items-end">
+      <div className="w-full flex justify-between items-end relative z-10">
         <div className="grow flex flex-col">
           <p className="font-stretch text-7xl uppercase">Entrena</p>
           <p className={`font-stretch text-7xl uppercase ${styles.text__outline}`}>Suppera</p>
@@ -32,22 +32,7 @@ export default function IntroPage() {
           <PlayIcon className={`text-7xl text-transparent group-hover:text-white stroke-1 stroke-white transition-150`}/>
         </Link>
       </div>
-      <div className="size-full absolute top-0 left-0 -z-10">
-        <div className="size-full relative">
-          <div className="size-full bg-gradient-to-bl from-background/75 to-75% to-background absolute top-0 left-0"></div>
-          <video
-            controls={false}
-            playsInline
-            autoPlay
-            muted
-            loop
-            className="size-full object-cover pointer-events-none select-none"
-            >
-            <source src="/assets/background_video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-    </div>
+      <VideoIntro/>
     </main>
   );
 }
