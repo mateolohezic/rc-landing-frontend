@@ -8,12 +8,6 @@ const nunito = Nunito({
   display: 'swap',
 });
 
-const blackout = localFont({
-  src: "../assets/fonts/Blackout.ttf",
-  variable: "--blackout",
-  weight: "400",
-});
-
 const stretch = localFont({
   src: "../assets/fonts/Stretch.otf",
   variable: "--stretch",
@@ -39,8 +33,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
-    <html lang="en" className="bg-background text-white">
-      <body className={`${nunito.className} ${blackout.variable} ${stretch.variable} ${highrise.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
+    <html lang="en" className="bg-neutral-900 text-white">
+      <body className={`${nunito.className} ${stretch.variable} ${highrise.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
         {children}
       </body>
     </html>

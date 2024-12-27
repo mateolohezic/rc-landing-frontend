@@ -18,7 +18,6 @@ export default {
         },
       },
       fontFamily: {
-        blackout: "var(--blackout), sans-serif",
         highrise: "var(--highrise), sans-serif",
         "highrise-bold": "var(--highrise_bold), sans-serif",
         stretch: "var(--stretch), sans-serif",
