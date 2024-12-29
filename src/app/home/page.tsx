@@ -1,13 +1,21 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, RCIcon, SwiperDescuentos } from "@/components";
-import { ArrowRightIcon, FitnessIcon, GroupIcon, GroupWorkIcon, PlusIcon } from "@/icons";
+import { Navbar, RCIcon, RCLogo, SwiperDescuentos } from "@/components";
+import { ArrowRightIcon, FitnessIcon, GroupIcon, GroupWorkIcon, PlayIcon, PlusIcon } from "@/icons";
 import styles from "@/styles/home.module.css";
 import portada from "@/assets/home/portada.webp";
 import pattern from "@/assets/home/pattern.webp";
 import sede_yerba_buena from "@/assets/home/sede_yerba_buena.webp";
 import trainner_3 from "@/assets/home/trainer_3.webp";
+import banner_stock from "@/assets/home/banner_stock.webp";
+import feature_cardio from "@/assets/home/features/feature_cardio.webp";
+import feature_green from "@/assets/home/features/feature_green.webp";
+import feature_lessons from "@/assets/home/features/feature_lessons.webp";
+import feature_muscule from "@/assets/home/features/feature_muscule.webp";
+import feature_tech from "@/assets/home/features/feature_tech.webp";
+import feature_train from "@/assets/home/features/feature_train.webp";
+import feature_power from "@/assets/home/features/feature_power.webp";
 
 export const metadata: Metadata = {
     title: 'RC Gym',
@@ -197,6 +205,168 @@ export default function HomePage() {
                     <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]">Descuentos <b className={`block ${styles.text__outline}`}>en tu suscripción</b></h2>
                 </div>
                 <SwiperDescuentos/>
+            </section>
+            <div className="w-full relative">
+                <div className="size-52 rounded-full bg-neutral-900/50 flex justify-center items-center absolute bottom-16 right-16 z-20">
+                    <RCIcon className="fill-white w-36"/>
+                </div>
+                <div className="size-full bg-gradient-to-b from-neutral-900 via-transparent to-neutral-900 absolute top-0 left-0 z-10"></div>
+                <Image src={banner_stock} alt="RC Gym" className="size-full object-contain"/>
+            </div>
+            <section className="w-full my-24 flex flex-col justify-center items-center">
+                <div className="w-full py-8 px-4 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 flex justify-center text-center">
+                    <h2 className="w-fit pb-2 border-b-2 border-red-500 text-9xl font-highrise-bold uppercase leading-[0.75]">Viví la experiencia RC</h2>
+                </div>
+                <div className="mt-12 w-full flex justify-center relative overflow-x-clip">
+                    <div className="w-full max-w-7xl grid grid-cols-4 gap-4 relative z-10">
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Zona de cardio</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_muscule} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Zona de musculatura</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_lessons} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Lecciones acompañadas</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_green} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Terraza al aire libre</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Powerlifting</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_tech} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Última tecnología</h3>
+                        </div>
+                        <div className="w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col">
+                            <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
+                                <Image src={feature_train} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            </div>
+                            <h3 className="mt-4 text-center font-semibold uppercase tracking-widest">Entrenamiento deportivo</h3>
+                        </div>
+                    </div>
+                    <div className="size-full max-w-7xl flex justify-end items-end absolute top-0 left-0 right-0 mx-auto z-0">
+                        <RCIcon className="fill-red-500 opacity-15 h-[75%] translate-x-1/4 translate-y-[25%]"/>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex flex-col justify-center items-center">
+                <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]"><b className={`block ${styles.text__outline}`}>Clases pensadas</b> para vos</h2>
+                <div className="mt-12 w-full flex border-y-2 border-neutral-800">
+                    <div className="flex flex-col divide-y-2 divide-neutral-800">
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Spinning</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_green} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Funcional</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_lessons} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">CrossFit</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_muscule} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Zumba</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div className="grow bg-background border-x-2 border-neutral-800">
+                        <div className="size-full relative">
+                            <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
+                            <button type="button" className="size-full bg-gradient-to-br from-background/75 to-background/25 flex justify-center items-center absolute top-0 left-0 group">
+                                <div className="size-32 rounded-full flex justify-center items-center group-hover:bg-white/10 transition-200">
+                                    <PlayIcon className="text-white size-24"/>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="flex flex-col divide-y-2 divide-neutral-800">
+
+
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Pilates</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_tech} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Calistenia</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Boxeo</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                        <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
+                            <Image src={feature_train} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                            <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Full Body</h3>
+                            <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
+                                <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                    <PlayIcon className="text-white size-14"/>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </section>
             <section className="min-h-svh"></section>
             <section className="min-h-svh"></section>

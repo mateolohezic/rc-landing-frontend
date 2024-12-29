@@ -4,7 +4,11 @@ export {
 
 export {
     FaPlus as PlusIcon,
-    FaUserGroup as GroupIcon
+    FaUserGroup as GroupIcon,
+    FaInstagram as InstagramIcon,
+    FaTiktok as TiktokIcon,
+    FaYoutube as YoutubeIcon,
+    FaWhatsapp as WhatsappIcon
 } from "react-icons/fa6";
 
 export {
