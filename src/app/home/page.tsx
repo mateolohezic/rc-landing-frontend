@@ -1,14 +1,17 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, RCIcon, RCLogo, SwiperDescuentos } from "@/components";
-import { ArrowRightIcon, FitnessIcon, GroupIcon, GroupWorkIcon, PlayIcon, PlusIcon } from "@/icons";
+import { Navbar, RCIcon, SwiperDescuentos, SwiperTestimonios } from "@/components";
+import { ArrowRightIcon, FitnessIcon, GroupIcon, GroupWorkIcon, MemberCardIcon, OfferIcon, PlayIcon, PlusIcon, QRIcon } from "@/icons";
 import styles from "@/styles/home.module.css";
 import portada from "@/assets/home/portada.webp";
 import pattern from "@/assets/home/pattern.webp";
 import sede_yerba_buena from "@/assets/home/sede_yerba_buena.webp";
 import trainner_3 from "@/assets/home/trainer_3.webp";
 import banner_stock from "@/assets/home/banner_stock.webp";
+import app_rcgym from "@/assets/home/app_rcgym.webp";
+import apple_icon from "@/assets/home/apple_icon.webp";
+import playstore_icon from "@/assets/home/playstore_icon.webp";
 import feature_cardio from "@/assets/home/features/feature_cardio.webp";
 import feature_green from "@/assets/home/features/feature_green.webp";
 import feature_lessons from "@/assets/home/features/feature_lessons.webp";
@@ -90,7 +93,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <section className="w-full flex">
+            <section className="w-full flex shadow-xl shadow-black/25">
                 <div className="grow px-24 py-12 relative">
                     <div className="flex flex-col justify-center relative z-20">
                         <p className="text-8xl font-highrise-bold whitespace-nowrap relative">Resultados <b className="block">que hablan.</b></p>
@@ -139,7 +142,7 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <section className="w-full px-4 bg-neutral-800 py-24 relative">
+            <section className="w-full px-4 bg-neutral-800 py-24">
                 <div className="w-full max-w-7xl mx-auto">
                     <h2 className="w-fit bg-red-600 px-4 py-0.5 text-7xl font-highrise-bold uppercase">Caso de éxito</h2>
                     <div className="mt-4 w-full grid grid-cols-2 gap-8">
@@ -214,7 +217,7 @@ export default function HomePage() {
                 <Image src={banner_stock} alt="RC Gym" className="size-full object-contain"/>
             </div>
             <section className="w-full my-24 flex flex-col justify-center items-center">
-                <div className="w-full py-8 px-4 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 flex justify-center text-center">
+                <div className="w-full py-8 px-4 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 shadow-lg shadow-black/15 flex justify-center text-center">
                     <h2 className="w-fit pb-2 border-b-2 border-red-500 text-9xl font-highrise-bold uppercase leading-[0.75]">Viví la experiencia RC</h2>
                 </div>
                 <div className="mt-12 w-full flex justify-center relative overflow-x-clip">
@@ -269,7 +272,7 @@ export default function HomePage() {
             </section>
             <section className="w-full flex flex-col justify-center items-center">
                 <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]"><b className={`block ${styles.text__outline}`}>Clases pensadas</b> para vos</h2>
-                <div className="mt-12 w-full flex border-y-2 border-neutral-800">
+                <div className="mt-12 w-full flex border-y-2 border-neutral-800 shadow-xl shadow-black/50">
                     <div className="flex flex-col divide-y-2 divide-neutral-800">
                         <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
                             <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
@@ -323,8 +326,6 @@ export default function HomePage() {
                         </div>
                     </div>
                     <div className="flex flex-col divide-y-2 divide-neutral-800">
-
-
                         <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
                             <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
                             <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
@@ -367,6 +368,54 @@ export default function HomePage() {
                         </button>
                     </div>
                 </div>
+            </section>
+            <section className="w-full px-4 pt-12 flex flex-col justify-center items-center bg-neutral-800">
+                <div className="mt-2 w-full max-w-7xl flex justify-between relative z-20">
+                    <div className="grow flex flex-col justify-start pb-12">
+                        <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]">Disfruta la App</h2>
+                        <p className="text-pretty w-full max-w-lg">Conocé SocioPLUS®.</p>
+                        <div className="mt-8 w-full flex flex-col gap-6">
+                            <div className="w-full flex gap-4 justify-start items-center">
+                                <MemberCardIcon className="size-14 shrink-0 fill-[#2ECD70]"/>
+                                <div className="flex flex-col">
+                                    <h3 className="text-xl font-black uppercase tracking-widest text-[#2ECD70]">Membresía digital</h3>
+                                    <p className="text-base text-white/75">Inspecciona tus datos en todo momento.</p>
+                                </div>
+                            </div>
+                            <div className="w-full flex gap-4 justify-start items-center">
+                                <QRIcon className="size-14 shrink-0 fill-[#2ECD70]"/>
+                                <div className="flex flex-col">
+                                    <h3 className="text-xl font-black uppercase tracking-widest text-[#2ECD70]">Ingreso fácil y rápido</h3>
+                                    <p className="text-base text-white/75">Acceso dinámico a todas nuestras sedes.</p>
+                                </div>
+                            </div>
+                            <div className="w-full flex gap-4 justify-start items-center">
+                                <OfferIcon className="size-14 shrink-0 fill-[#2ECD70]"/>
+                                <div className="flex flex-col">
+                                    <h3 className="text-xl font-black uppercase tracking-widest text-[#2ECD70]">Beneficios y descuentos</h3>
+                                    <p className="text-base text-white/75">Disfrutá de nuestros descuentos en comercios adheridos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-8 flex justify-start items-center gap-8">
+                            <Link href={"https://apps.apple.com/ar/app/socioplus-ux/id1621587015"} target="_blank" className="group">
+                                <Image src={apple_icon} alt="Descargar Socio Plus RC Gym Apple iOS" className="size-16 object-contain group-hover:scale-110 transition-150"/>
+                            </Link>
+                            <Link href={"https://play.google.com/store/apps/details?id=com.socioplus&hl=es_AR&gl=US&pli=1"} target="_blank" className="group">
+                                <Image src={playstore_icon} alt="Descargar Socio Plus RC Gym Play Store Android" className="size-16 object-contain group-hover:scale-110 transition-150"/>
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="w-full max-w-lg flex flex-col justify-end items-end">
+                        <Image src={app_rcgym} alt="Aplicación Socio Plus RC Gym" className="w-full"/>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full max-w-7xl px-4 py-24 flex flex-col justify-center items-center">
+                <div className="mb-8 w-full">
+                    <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]">Testimonios <b className={`block ${styles.text__outline}`}>nuestros entrenados</b></h2>
+                </div>
+                <SwiperTestimonios/>
             </section>
             <section className="min-h-svh"></section>
             <section className="min-h-svh"></section>
