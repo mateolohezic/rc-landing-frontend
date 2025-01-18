@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const nunito = Nunito({
+const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -11,12 +11,6 @@ const nunito = Nunito({
 const stretch = localFont({
   src: "../assets/fonts/Stretch.otf",
   variable: "--stretch",
-  weight: "400",
-});
-
-const highrise = localFont({
-  src: "../assets/fonts/Highrise.otf",
-  variable: "--highrise",
   weight: "400",
 });
 
@@ -34,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode;}>) {
   return (
     <html lang="en" className="bg-neutral-900 text-white">
-      <body className={`${nunito.className} ${stretch.variable} ${highrise.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
+      <body className={`${montserrat.className} ${stretch.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
         {children}
       </body>
     </html>

@@ -3,7 +3,6 @@ export {
 } from "react-icons/ri";
 
 export {
-    FaPlus as PlusIcon,
     FaUserGroup as GroupIcon,
     FaInstagram as InstagramIcon,
     FaTiktok as TiktokIcon,
