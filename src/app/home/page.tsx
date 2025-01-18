@@ -36,7 +36,7 @@ export default function HomePage() {
                 <div className="flex flex-col justify-center items-center text-center relative z-20">
                     <h2 className="px-4 text-9xl font-highrise-bold border-b-2 border-b-red-500">Cambia tu estilo de vida</h2>
                     <p className="mt-4 w-full max-w-2xl text-2xl">Descubre cómo un <b className="font-bold">cambio gradual</b> y sostenido en tus hábitos puede llevarte a una <b className="bg-red-500">mejor salud y mayor bienestar</b>.</p>
-                    <Link href={'/'} className="mt-8 block px-8 py-3 bg-red-500 rounded-lg text-5xl uppercase">Conseguí tu día de prueba</Link>
+                    <Link href={'/'} className="mt-8 block px-8 py-3 bg-gradient-to-r from-red-500 to-neutral-900 to-[150%] rounded-lg text-5xl uppercase hover:opacity-80 transition-200">Conseguí tu día de prueba</Link>
                 </div>
             </section>
             <section className="w-full max-w-7xl px-4 xl:px-0 py-24">
