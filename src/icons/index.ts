@@ -8,7 +8,8 @@ export {
     FaTiktok as TiktokIcon,
     FaYoutube as YoutubeIcon,
     FaWhatsapp as WhatsappIcon,
-    FaAddressCard as MemberCardIcon
+    FaAddressCard as MemberCardIcon,
+    FaCheck as CheckIcon
 } from "react-icons/fa6";
 
 export {

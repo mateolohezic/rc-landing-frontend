@@ -2,10 +2,10 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar, RCIcon, SwiperDescuentos, SwiperTestimonios } from "@/components";
-import { ArrowRightIcon, FitnessIcon, GroupIcon, GroupWorkIcon, MemberCardIcon, OfferIcon, PlayIcon, QRIcon } from "@/icons";
+import { ArrowRightIcon, CheckIcon, FitnessIcon, GroupIcon, GroupWorkIcon, MemberCardIcon, OfferIcon, PlayIcon, QRIcon } from "@/icons";
 import styles from "@/styles/home.module.css";
 import portada from "@/assets/home/portada.webp";
-import pattern from "@/assets/home/pattern.webp";
+import pattern_dot from "@/assets/home/pattern_dot.webp";
 import sede_yerba_buena from "@/assets/home/sede_yerba_buena.webp";
 import trainner_3 from "@/assets/home/trainer_3.webp";
 import banner_stock from "@/assets/home/banner_stock.webp";
@@ -30,13 +30,18 @@ export default function HomePage() {
         <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900">
             <h1 className="sr-only">RC Gym Tucumán</h1>
             <Navbar/>
-            <section className="w-full min-h-svh flex flex-col justify-center items-center">
+            <section className="w-full min-h-svh flex flex-col justify-center items-center relative">
                 <Image src={portada} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                <div className="size-full bg-gradient-to-b from-neutral-900/50 to-neutral-900 absolute top-0 left-0 z-10"></div>
-                <div className="flex flex-col justify-center items-center text-center relative z-20">
-                    <h2 className="px-4 text-9xl font-highrise-bold border-b-2 border-b-red-500">Cambia tu estilo de vida</h2>
-                    <p className="mt-4 w-full max-w-2xl text-2xl">Descubre cómo un <b className="font-bold">cambio gradual</b> y sostenido en tus hábitos puede llevarte a una <b className="bg-red-500">mejor salud y mayor bienestar</b>.</p>
-                    <Link href={'/'} className="mt-8 block px-8 py-3 bg-gradient-to-r from-red-500 to-neutral-900 to-[150%] rounded-lg text-5xl uppercase hover:opacity-80 transition-200">Conseguí tu día de prueba</Link>
+                <div className="size-full bg-gradient-to-b from-transparent to-neutral-900 absolute top-0 left-0 z-10"></div>
+                <div className="w-full px-4 flex flex-col justify-center items-center text-center relative z-20">
+                    <h2 className="px-4 text-9xl font-highrise-bold border-b-2 border-b-red-500">Cambia tu estilo de vida.</h2>
+                    <p className="mt-4 w-full max-w-3xl text-2xl">Descubre cómo un <b className="font-bold">cambio gradual</b> y sostenido en tus hábitos puede llevarte a una <b className="bg-red-500">mejor salud y mayor bienestar</b>.</p>
+                    <Link href={'/'} className="mt-12 block px-8 py-3 bg-gradient-to-r from-red-500 to-red-400 to-[150%] rounded-lg text-5xl uppercase hover:opacity-80 transition-200">Conseguí tu día de prueba</Link>
+                    <div className="mt-8 flex justify-center items-center gap-8">
+                        <p className="text-lg flex items-center gap-2"><CheckIcon className="text-2xl text-red-500"/>Empezá el cambio hoy.</p>
+                        <p className="text-lg flex items-center gap-2"><CheckIcon className="text-2xl text-red-500"/>Abierto incluso domingos y feriados.</p>
+                        <p className="text-lg flex items-center gap-2"><CheckIcon className="text-2xl text-red-500"/>Equipado para todas las edades.</p>
+                    </div>
                 </div>
             </section>
             <section className="w-full max-w-7xl px-4 xl:px-0 py-24">
@@ -88,7 +93,7 @@ export default function HomePage() {
                         <p className="text-8xl font-highrise-bold whitespace-nowrap text-red-600">Entrenamientos <b className="block">que transforman.</b></p>
                     </div>
                     <div className="size-full bg-gradient-to-r from-transparent to-background absolute top-0 left-0 z-10"></div>
-                    <Image src={pattern} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                    <Image src={pattern_dot} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
                 </div>
                 <div className="w-full max-w-7xl relative">
                     <div className="size-full bg-gradient-to-r from-background to-transparent absolute top-0 left-0 z-10"></div>
@@ -158,7 +163,7 @@ export default function HomePage() {
             </section>
             <section className="w-full px-4 xl:px-0 flex flex-col justify-center items-center">
                 <div className="w-full flex justify-center relative">
-                    <Image src={pattern} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                    <Image src={pattern_dot} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
                     <div className="bg-gradient-to-br from-black to-background-sidebar opacity-50 size-full absolute top-0 left-0"></div>
                     <div className="w-full max-w-7xl grid grid-cols-6 relative z-20">
                         <button type="button" className="w-full h-16 font-black uppercase tracking-widest hover:bg-white/10 transition-150">En forma</button>
