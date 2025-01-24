@@ -44,7 +44,56 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <section className="w-full max-w-7xl px-4 xl:px-0 py-24">
+            <section className="w-full max-w-7xl px-4 xl:px-0 my-24">
+                <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]">Bienvenido a RC</h2>
+                <div className="mt-8 w-full grid grid-cols-2 gap-24">
+                    <p className="text-white/75 font-thin">En RC Gym, creemos que el fitness es más que un objetivo: es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!</p>
+                    <div className="flex flex-col gap-6">
+                        <div className="flex items-center gap-4">
+                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
+                                <FitnessIcon className="size-8"/>
+                            </div>
+                            <div className="grow flex flex-col gap-1">
+                                <h3 className="font-black uppercase tracking-widest">Instalaciones de primer nivel</h3>
+                                <p className="text-sm text-white/75">Entrena con equipos de última tecnología y disfruta de un ambiente diseñado para maximizar tu rendimiento y comodidad.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
+                                <GroupIcon className="size-8"/>
+                            </div>
+                            <div className="grow flex flex-col gap-1">
+                                <h3 className="font-black uppercase tracking-widest">Entrenadores profesionales</h3>
+                                <p className="text-sm text-white/75">Recibe guía personalizada de expertos en fitness, listos para acompañarte en cada paso de tu transformación.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-center gap-4">
+                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
+                                <GroupWorkIcon className="size-8"/>
+                            </div>
+                            <div className="grow flex flex-col gap-1">
+                                <h3 className="font-black uppercase tracking-widest">Clases grupales motivadoras</h3>
+                                <p className="text-sm text-white/75">Desde yoga hasta HIIT, participa en una variedad de clases que se adaptan a tus objetivos y te mantienen inspirado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full flex shadow-xl shadow-black/25">
+                <div className="grow px-24 py-12 relative">
+                    <div className="flex flex-col justify-center relative z-20">
+                        <p className="text-8xl font-highrise-bold whitespace-nowrap relative">Resultados <b className="block">que hablan.</b></p>
+                        <p className="text-8xl font-highrise-bold whitespace-nowrap text-red-600">Entrenamientos <b className="block">que transforman.</b></p>
+                    </div>
+                    <div className="size-full bg-gradient-to-r from-transparent to-background absolute top-0 left-0 z-10"></div>
+                    <Image src={pattern_dot} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
+                </div>
+                <div className="w-full max-w-7xl relative">
+                    <div className="size-full bg-gradient-to-r from-background to-transparent absolute top-0 left-0 z-10"></div>
+                    <Image src={trainner_3} alt="RC Gym" className="size-full object-cover object-[50%_95%] absolute top-0 left-0"/>
+                </div>
+            </section>
+            <section className="w-full max-w-7xl px-4 xl:px-0 my-24">
                 <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]"><span className={styles.text__outline}>Conocé nuestras</span> <b className="block">sedes</b></h2>
                 <div className="mt-12 grid grid-cols-5 gap-6">
                     <button type="button" className="w-full aspect-square bg-background-sidebar hover:bg-background-sidebar/25 border-2 border-background-sidebar hover:border-white/25 rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-150">
@@ -82,55 +131,6 @@ export default function HomePage() {
                             <button type="button" className="px-4 py-1 rounded text-white/75 hover:bg-white/20 hover:text-white transition-150">
                                 Conoce más
                             </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section className="w-full flex shadow-xl shadow-black/25">
-                <div className="grow px-24 py-12 relative">
-                    <div className="flex flex-col justify-center relative z-20">
-                        <p className="text-8xl font-highrise-bold whitespace-nowrap relative">Resultados <b className="block">que hablan.</b></p>
-                        <p className="text-8xl font-highrise-bold whitespace-nowrap text-red-600">Entrenamientos <b className="block">que transforman.</b></p>
-                    </div>
-                    <div className="size-full bg-gradient-to-r from-transparent to-background absolute top-0 left-0 z-10"></div>
-                    <Image src={pattern_dot} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                </div>
-                <div className="w-full max-w-7xl relative">
-                    <div className="size-full bg-gradient-to-r from-background to-transparent absolute top-0 left-0 z-10"></div>
-                    <Image src={trainner_3} alt="RC Gym" className="size-full object-cover object-[50%_95%] absolute top-0 left-0"/>
-                </div>
-            </section>
-            <section className="w-full max-w-7xl px-4 xl:px-0 py-24">
-                <h2 className="text-9xl font-highrise-bold uppercase leading-[0.8]">Bienvenido a RC</h2>
-                <div className="mt-8 w-full grid grid-cols-2 gap-24">
-                    <p className="text-white/75 font-thin">En RC Gym, creemos que el fitness es más que un objetivo: es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!</p>
-                    <div className="flex flex-col gap-6">
-                        <div className="flex items-center gap-4">
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <FitnessIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Instalaciones de primer nivel</h3>
-                                <p className="text-sm text-white/75">Entrena con equipos de última tecnología y disfruta de un ambiente diseñado para maximizar tu rendimiento y comodidad.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <GroupIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Entrenadores profesionales</h3>
-                                <p className="text-sm text-white/75">Recibe guía personalizada de expertos en fitness, listos para acompañarte en cada paso de tu transformación.</p>
-                            </div>
-                        </div>
-                        <div className="flex items-center gap-4">
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <GroupWorkIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Clases grupales motivadoras</h3>
-                                <p className="text-sm text-white/75">Desde yoga hasta HIIT, participa en una variedad de clases que se adaptan a tus objetivos y te mantienen inspirado.</p>
-                            </div>
                         </div>
                     </div>
                 </div>
