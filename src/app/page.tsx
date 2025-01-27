@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { PlayIcon } from "@/icons";
 import { RCIcon, RCLogo, VideoIntro } from "@/components";
-import styles from '@/styles/intro.module.css';
 
 export const metadata: Metadata = {
   title: 'RC Gym',
@@ -18,7 +17,7 @@ export default function IntroPage() {
       <div className="w-full flex justify-between items-end relative z-10">
         <div className="grow flex flex-col">
           <p className="font-stretch text-7xl uppercase">Entrena</p>
-          <p className={`font-stretch text-7xl uppercase ${styles.text__outline}`}>Suppera</p>
+          <p className="font-stretch text-7xl uppercase text__outline__red">Suppera</p>
           <p className="font-stretch text-7xl uppercase">Conquista</p>
         </div>
         <Link href={'/home'} className="w-fit shrink-0 flex justify-center items-center gap-2 p-6 pr-3 rounded-2xl hover:bg-white/10 transition-150 group">

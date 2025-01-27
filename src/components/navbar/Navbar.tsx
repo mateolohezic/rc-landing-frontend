@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { IconType } from "react-icons"
-import { InstagramIcon, TiktokIcon, WhatsappIcon, YoutubeIcon } from "@/icons"
-import type { NavbarLink } from "@/interfaces"
-import { RCIcon } from "@/components"
-import { NavLink } from "./NavLink"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { IconType } from "react-icons";
+import { InstagramIcon, TiktokIcon, WhatsappIcon, YoutubeIcon } from "@/icons";
+import type { NavbarLink } from "@/interfaces";
+import { NavLink, RCIcon } from "@/components";
 
 interface SocialMedia {
     label: string;
@@ -48,10 +48,15 @@ export const Navbar = () => {
             <nav className="w-full max-w-7xl h-20 flex justify-between items-center relative">
                 <ul className="flex gap-6">
                     { links.map(
-                            (link:NavbarLink, i:number) => <NavLink navLink={link} isAtTop={isAtTop} key={i}/>
+                            (link:NavbarLink, i:number) => <NavLink navLink={link} isAtTop={isAtTop} index={i} key={i}/>
                     )}
                 </ul>
-                <div className="flex justify-end gap-6">
+                <motion.div
+                    initial={{ opacity: 0, y: -100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.125*3 }}
+                    className="flex justify-end gap-6"
+                >
                     <div className="flex justify-end items-center gap-4">
                         {
                             socialMedias.map( ({label, href, Icon}:SocialMedia) =>
@@ -69,7 +74,7 @@ export const Navbar = () => {
                     <Link href={'/sumate'} className={`px-2 py-1 rounded-md tracking-widest uppercase border ${ isAtTop ? 'border-transparent bg-white text-black' : 'border-red-500 hover:bg-red-500 text-red-500 hover:text-white'} transition-200`}>
                         Conseguí tu día de prueba
                     </Link>
-                </div>
+                </motion.div>
                 <Link href={'/home'} className={`h-20 aspect-square ${ isAtTop ? 'translate-y-1/4' : 'p-2' } flex justify-center items-center absolute top-0 left-0 right-0 mx-auto hover:scale-110 transition-200`}>
                     <RCIcon className={`${ isAtTop ? 'size-24' : 'size-full' } overflow-visible fill-white transition-200`}/>
                 </Link>

@@ -1,8 +1,20 @@
+export { RCLogo } from "./RCLogo";
+export { RCIcon } from "./RCIcon";
+
 export { VideoIntro } from "./intro/VideoIntro";
 
 export { Navbar } from "./navbar/Navbar";
+export { NavLink } from "./navbar/NavLink";
 
-export { RCLogo } from "./RCLogo";
-export { RCIcon } from "./RCIcon";
-export { SwiperDescuentos } from "./SwiperDescuentos";
-export { SwiperTestimonios } from "./SwiperTestimonios";
+export { Portada } from "./landing/Portada";
+export { Bienvenido } from "./landing/Bienvenido";
+export { Frase } from "./landing/Frase";
+export { Sedes } from "./landing/Sedes";
+export { CasoDeExito } from "./landing/CasoDeExito";
+export { Entrenamientos } from "./landing/Entrenamientos";
+export { SwiperDescuentos } from "./landing/SwiperDescuentos";
+export { BannerRC } from "./landing/BannerRC";
+export { Features } from "./landing/Features";
+export { ClasesVideo } from "./landing/ClasesVideo";
+export { SocioPlus } from "./landing/SocioPlus";
+export { SwiperTestimonios } from "./landing/SwiperTestimonios";
