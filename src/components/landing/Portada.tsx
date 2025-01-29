@@ -8,7 +8,7 @@ import portada from "@/assets/home/portada.webp";
 
 export const Portada = () => {
     return (
-        <section className="w-full lg:min-h-svh py-24 lg:py-0 flex flex-col justify-center items-center relative">
+        <section className="w-full lg:min-h-svh py-24 lg:py-0 flex flex-col justify-center items-center relative overflow-x-hidden">
             <Image priority src={portada} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
             <div className="size-full bg-gradient-to-b from-transparent to-neutral-900 absolute top-0 left-0 z-10"></div>
             <motion.div

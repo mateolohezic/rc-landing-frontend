@@ -1,10 +1,28 @@
-import Link from "next/link"
+'use client'
+
+import { useState } from "react";
+import Link from "next/link";
+import { motion } from 'framer-motion';
 
 export const CasoDeExito = () => {
+
+    const [inView, setInView] = useState<boolean>(false);
+
     return (
-        <section className="w-full px-4 bg-neutral-800 py-12 lg:py-24">
+        <motion.section
+            onViewportEnter={() => setInView(true)}
+            onViewportLeave={() => setInView(false)}
+            viewport={{ amount: .75 }}
+            className="w-full px-4 bg-neutral-800 py-12 lg:py-24"
+        >
             <div className="w-full max-w-7xl mx-auto">
-                <h2 className="w-fit bg-red-600 px-4 py-0.5 text-5xl lg:text-7xl font-highrise-bold uppercase mx-auto lg:mx-0">Caso de éxito</h2>
+                <motion.h2
+                    animate={{ scale: inView ? 1.5 : 1 }}
+                    transition={{ type: "tween", ease: "circInOut" }}
+                    className="w-fit bg-red-600 px-4 py-0.5 text-5xl lg:text-7xl font-highrise-bold uppercase mx-auto lg:mx-0 origin-bottom-left"
+                >
+                    Caso de éxito
+                </motion.h2>
                 <div className="mt-6 lg:mt-4 w-full grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
                     <div className="w-full aspect-video rounded-xl overflow-hidden relative">
                         <iframe
@@ -27,6 +45,6 @@ export const CasoDeExito = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
