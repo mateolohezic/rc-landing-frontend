@@ -13,13 +13,13 @@ export const CasoDeExito = () => {
             onViewportEnter={() => setInView(true)}
             onViewportLeave={() => setInView(false)}
             viewport={{ amount: .75 }}
-            className="w-full px-4 bg-neutral-800 py-12 lg:py-24"
+            className="w-full px-4 bg-neutral-800 pt-12 pb-4 lg:py-24"
         >
             <div className="w-full max-w-7xl mx-auto">
                 <motion.h2
-                    animate={{ scale: inView ? 1.5 : 1 }}
+                    animate={{ scale: inView ? 1.25 : 1 }}
                     transition={{ type: "tween", ease: "circInOut" }}
-                    className="w-fit bg-red-600 px-4 py-0.5 text-5xl lg:text-7xl font-highrise-bold uppercase mx-auto lg:mx-0 origin-bottom-left"
+                    className="w-fit bg-red-600 px-4 py-0.5 text-5xl lg:text-7xl font-highrise-bold uppercase origin-bottom-left"
                 >
                     Caso de éxito
                 </motion.h2>

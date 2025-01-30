@@ -44,9 +44,12 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <div className={`w-full ${ isAtTop ? 'bg-transparent' : 'bg-background-sidebar'} flex flex-col justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
-            <nav className="w-full max-w-7xl h-20 flex justify-between items-center relative">
-                <ul className="flex gap-6">
+        <div className={`w-full ${ isAtTop ? 'bg-transparent' : 'bg-neutral-900 lg:bg-background-sidebar'} flex flex-col justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
+            <nav className="w-full max-w-7xl h-20 px-4 lg:px-0 flex justify-between items-center relative">
+                <Link href={'/home'} className={`h-16 lg:h-20 aspect-square  ${ isAtTop ? 'lg:translate-y-1/4' : 'lg:p-2' } flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:mx-auto lg:hover:scale-110 transition-200`}>
+                    <RCIcon className={`${ isAtTop ? 'size-16 lg:size-24' : 'size-full' } overflow-visible fill-white transition-200`}/>
+                </Link>
+                <ul className="lg:flex gap-6 hidden">
                     { links.map(
                             (link:NavbarLink, i:number) => <NavLink navLink={link} isAtTop={isAtTop} index={i} key={i}/>
                     )}
@@ -57,7 +60,7 @@ export const Navbar = () => {
                     transition={{ delay: 0.125*3 }}
                     className="flex justify-end gap-6"
                 >
-                    <div className="flex justify-end items-center gap-4">
+                    <div className="lg:flex justify-end items-center gap-4 hidden">
                         {
                             socialMedias.map( ({label, href, Icon}:SocialMedia) =>
                                 <Link
@@ -71,13 +74,10 @@ export const Navbar = () => {
                             )
                         }
                     </div>
-                    <Link href={'/sumate'} className={`px-2 py-1 rounded-md tracking-widest uppercase border ${ isAtTop ? 'border-transparent bg-white text-black' : 'border-red-500 hover:bg-red-500 text-red-500 hover:text-white'} transition-200`}>
+                    <Link href={'/sumate'} className={`px-2 py-1 h-10 rounded-md tracking-widest text-xs lg:text-base uppercase border ${ isAtTop ? 'border-transparent bg-white text-black' : 'border-red-500 bg-red-500 lg:bg-transparent lg:hover:bg-red-500 lg:text-red-500 lg:hover:text-white'} flex items-center transition-200`}>
                         Conseguí tu día de prueba
                     </Link>
                 </motion.div>
-                <Link href={'/home'} className={`h-20 aspect-square ${ isAtTop ? 'translate-y-1/4' : 'p-2' } flex justify-center items-center absolute top-0 left-0 right-0 mx-auto hover:scale-110 transition-200`}>
-                    <RCIcon className={`${ isAtTop ? 'size-24' : 'size-full' } overflow-visible fill-white transition-200`}/>
-                </Link>
             </nav>
         </div>
     )

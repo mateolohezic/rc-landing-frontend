@@ -68,7 +68,7 @@ export const Features = () => {
                                 initial={{ opacity: 0, y: 100 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.125*i }}
-                                key={feature.title} className="min-w-96 lg:min-w-0 w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col"
+                                key={feature.title} className="min-w-72 lg:min-w-0 w-full p-3 bg-gradient-to-b from-neutral-800 to-transparent rounded-xl flex flex-col"
                             >
                                 <div className="w-full aspect-[4/3] rounded-lg overflow-hidden relative">
                                     <Image src={feature.img} alt={feature.title} className="size-full object-cover absolute top-0 left-0"/>

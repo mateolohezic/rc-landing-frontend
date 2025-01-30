@@ -1,5 +1,8 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from 'framer-motion';
 import { MemberCardIcon, OfferIcon, QRIcon } from "@/icons";
 import app_rcgym from "@/assets/home/app_rcgym.webp";
 import apple_icon from "@/assets/home/apple_icon.webp";
@@ -44,9 +47,14 @@ export const SocioPlus = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="w-full max-w-lg flex flex-col justify-end items-end">
+                <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.6 }}
+                    className="w-full max-w-lg flex flex-col justify-end items-end"
+                >
                     <Image src={app_rcgym} alt="Aplicación Socio Plus RC Gym" className="w-full"/>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

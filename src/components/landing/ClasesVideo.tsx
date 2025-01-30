@@ -10,7 +10,7 @@ import feature_power from "@/assets/home/features/feature_power.webp";
 
 export const ClasesVideo = () => {
     return (
-        <section className="w-full flex flex-col justify-center items-center">
+        <section className="w-full lg:flex flex-col justify-center items-center hidden">
             <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]"><b className="block text__outline">Clases pensadas</b> para vos</h2>
             <div className="mt-12 w-full flex border-y-2 border-neutral-800 shadow-xl shadow-black/50">
                 <div className="flex flex-col divide-y-2 divide-neutral-800">
