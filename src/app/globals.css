@@ -42,16 +42,6 @@
     fill-rule: evenodd;
     clip-rule: evenodd;
   }
-
-  .text__outline{
-    -webkit-text-stroke: 1px white;
-    color: transparent;
-  }
-  
-  .text__outline__red{
-    -webkit-text-stroke: 3px red;
-    color: transparent;
-}
 }
 
 @layer base {
@@ -124,4 +114,21 @@
 
 .swiper-slide {
   background: transparent;
+}
+
+.text__outline{
+  -webkit-text-stroke: 1px white;
+  color: transparent;
+}
+
+.text__outline__red{
+  -webkit-text-stroke: 3px rgb(220, 38, 38);
+  color: transparent;
+}
+
+@media (max-width: 768px){
+  .text__outline__red{
+    -webkit-text-stroke: 2px rgb(220, 38, 38);
+    color: transparent;
+  }
 }
