@@ -44,7 +44,7 @@ export const Navbar = () => {
     }, []);
 
     return (
-        <div className={`w-full ${ isAtTop ? 'bg-transparent' : 'bg-neutral-900 lg:bg-background-sidebar'} flex flex-col justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
+        <div className={`w-full ${ isAtTop ? 'bg-transparent' : 'bg-gradient-to-b from-neutral-900 lg:from-background-sidebar to-neutral-900 lg:to-transparent'} flex flex-col justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
             <nav className="w-full max-w-7xl h-20 px-4 lg:px-0 flex justify-between items-center relative">
                 <Link href={'/home'} className={`h-16 lg:h-20 aspect-square  ${ isAtTop ? 'lg:translate-y-1/4' : 'lg:p-2' } flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:mx-auto lg:hover:scale-110 transition-200`}>
                     <RCIcon className={`${ isAtTop ? 'size-16 lg:size-24' : 'size-full' } overflow-visible fill-white transition-200`}/>
@@ -65,7 +65,7 @@ export const Navbar = () => {
                             socialMedias.map( ({label, href, Icon}:SocialMedia) =>
                                 <Link
                                     href={href}
-                                    className={`${!isAtTop && "text-white/25 hover:text-white"} transition-150`}
+                                    className="hover:opacity-75 transition-150"
                                     aria-label={label}
                                     key={label}
                                 >
@@ -74,7 +74,7 @@ export const Navbar = () => {
                             )
                         }
                     </div>
-                    <Link href={'/sumate'} className={`px-2 py-1 h-10 rounded-md tracking-widest text-xs lg:text-base uppercase border ${ isAtTop ? 'border-transparent bg-white text-black' : 'border-red-500 bg-red-500 lg:bg-transparent lg:hover:bg-red-500 lg:text-red-500 lg:hover:text-white'} flex items-center transition-200`}>
+                    <Link href={'/sumate'} className={`px-2 py-1 h-10 rounded-md tracking-widest text-xs lg:text-base uppercase ${ isAtTop ? 'bg-white text-black' : 'bg-red-500 lg:hover:bg-red-400'} flex items-center transition-200`}>
                         Conseguí tu día de prueba
                     </Link>
                 </motion.div>
