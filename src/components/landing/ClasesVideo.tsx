@@ -1,113 +1,126 @@
+'use client'
+
+import { useState } from "react";
 import Image from "next/image";
 import { PlayIcon } from "@/icons";
-import feature_cardio from "@/assets/home/features/feature_cardio.webp";
-import feature_green from "@/assets/home/features/feature_green.webp";
-import feature_lessons from "@/assets/home/features/feature_lessons.webp";
-import feature_muscule from "@/assets/home/features/feature_muscule.webp";
-import feature_tech from "@/assets/home/features/feature_tech.webp";
-import feature_train from "@/assets/home/features/feature_train.webp";
-import feature_power from "@/assets/home/features/feature_power.webp";
+
+interface ClassVideo {
+    title: string;
+    youtubeId: string
+}
+
+const classVideos:Array<ClassVideo> = [
+    {
+        title: "Boxeo",
+        youtubeId: "i8lLCqf8Hs8",
+    },
+    {
+        title: "Funcional",
+        youtubeId: "JNKakxQwveA",
+    },
+    {
+        title: "Calistenia",
+        youtubeId: "iNL-NZAhZF0",
+    },
+    {
+        title: "Indoor Cycle",
+        youtubeId: "W2bQ-MrXpMw",
+    },
+    {
+        title: "Pilates",
+        youtubeId: "5_LXvr9lhME",
+    },
+    {
+        title: "Zumba",
+        youtubeId: "IzBhjFig4-Y",
+    },
+    {
+        title: "GAP",
+        youtubeId: "IF28Rl1vSHk",
+    },
+    {
+        title: "CrossFit",
+        youtubeId: "-2qfcxbhZno",
+    },
+];
 
 export const ClasesVideo = () => {
+
+    const [selectedVideo, setSelectedVideo] = useState<ClassVideo>(classVideos[0]);
+
     return (
         <section className="w-full lg:flex flex-col justify-center items-center hidden">
-            <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]"><b className="block text__outline">Clases pensadas</b> para vos</h2>
+            <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]">
+                <b className="block text__outline">Clases pensadas</b> para vos
+            </h2>
             <div className="mt-12 w-full flex border-y-2 border-neutral-800 shadow-xl shadow-black/50">
                 <div className="flex flex-col divide-y-2 divide-neutral-800">
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Spinning</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
+                    { classVideos.slice(0, 4).map((clase) => (
+                        <button
+                            key={clase.youtubeId}
+                            disabled={selectedVideo.youtubeId === clase.youtubeId}
+                            type="button"
+                            onClick={() => setSelectedVideo(clase)}
+                            className="h-48 aspect-video flex justify-center items-center relative group"
+                        >
+                            <Image
+                                src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
+                                alt={clase.title}
+                                fill
+                                className="object-cover absolute top-0 left-0 z-0"
+                            />
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className={`text-xl font-black uppercase tracking-widest relative z-20 ${ selectedVideo.youtubeId !== clase.youtubeId && "group-hover:opacity-0"} transition-200`}>{clase.title}</h3>
+                            <div className={`size-full flex justify-center items-center absolute top-0 left-0 z-30 ${ selectedVideo.youtubeId !== clase.youtubeId ? "bg-white/10 opacity-0 group-hover:opacity-100" : "bg-red-500/25"} transition-200`}>
+                                { selectedVideo.youtubeId !== clase.youtubeId &&
+                                    <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                        <PlayIcon className="text-white size-14" />
+                                    </div>
+                                }
                             </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_green} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Funcional</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_lessons} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">CrossFit</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_muscule} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Zumba</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
+                        </button>
+                    ))}
                 </div>
                 <div className="grow bg-background border-x-2 border-neutral-800">
                     <div className="size-full relative">
-                        <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0"/>
-                        <button type="button" className="size-full bg-gradient-to-br from-background/75 to-background/25 flex justify-center items-center absolute top-0 left-0 group">
-                            <div className="size-32 rounded-full flex justify-center items-center group-hover:bg-white/10 transition-200">
-                                <PlayIcon className="text-white size-24"/>
-                            </div>
-                        </button>
+                        <iframe
+                            src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}`}
+                            className="size-full absolute top-0 left-0"
+                            title={`Clase de ${selectedVideo.title} RC Gym`}
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerPolicy="strict-origin-when-cross-origin"
+                            allowFullScreen
+                        />
                     </div>
                 </div>
                 <div className="flex flex-col divide-y-2 divide-neutral-800">
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_power} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Pilates</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
+                    {classVideos.slice(4).map((clase) => (
+                        <button
+                            key={clase.youtubeId}
+                            disabled={selectedVideo.youtubeId === clase.youtubeId}
+                            type="button"
+                            onClick={() => setSelectedVideo(clase)}
+                            className="h-48 aspect-video flex justify-center items-center relative group"
+                        >
+                            <Image
+                                src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
+                                alt={clase.title}
+                                fill
+                                className="object-cover absolute top-0 left-0 z-0"
+                            />
+                            <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
+                            <h3 className={`text-xl font-black uppercase tracking-widest relative z-20 ${ selectedVideo.youtubeId !== clase.youtubeId && "group-hover:opacity-0"} transition-200`}>{clase.title}</h3>
+                            <div className={`size-full flex justify-center items-center absolute top-0 left-0 z-30 ${ selectedVideo.youtubeId !== clase.youtubeId ? "bg-white/10 opacity-0 group-hover:opacity-100" : "bg-red-500/25"} transition-200`}>
+                                { selectedVideo.youtubeId !== clase.youtubeId &&
+                                    <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
+                                        <PlayIcon className="text-white size-14" />
+                                    </div>
+                                }
                             </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_tech} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Calistenia</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_cardio} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Boxeo</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
-                    <button type="button" className="h-48 aspect-video flex justify-center items-center relative group">
-                        <Image src={feature_train} alt="Zona de cardio" className="size-full object-cover absolute top-0 left-0 z-0"/>
-                        <div className="size-full bg-gradient-to-l from-neutral-900/50 to-background absolute top-0 left-0 z-10"></div>
-                        <h3 className="text-xl font-black uppercase tracking-widest relative z-20 group-hover:opacity-0 transition-200">Full Body</h3>
-                        <div className="size-full bg-white/10 flex justify-center items-center absolute top-0 left-0 z-30 opacity-0 group-hover:opacity-100 transition-200">
-                            <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                <PlayIcon className="text-white size-14"/>
-                            </div>
-                        </div>
-                    </button>
+                        </button>
+                    ))}
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
