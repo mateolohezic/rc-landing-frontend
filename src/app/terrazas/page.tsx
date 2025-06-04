@@ -36,9 +36,9 @@ export default function TerrazasPage() {
             <span className="block">Nueva sede</span> Terrazas
           </h1>
           <p className="mt-6 text-lg lg:text-2xl">
-            Abrimos el <b className="text-red-500">16 de junio</b>. Quedan solo{" "}
+            Abrimos el <b className="text-red-500">30 de junio</b>. Quedan solo{" "}
             <b className="text-red-500">100 cupos</b> en preventa. <br />
-            Aprovechá hasta <b className="text-red-500">35% OFF</b> en tu pase anual.
+            Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
           </p>
           <Link
             href="https://forms.gle/1a1J5yMtw1rroT7D6"
@@ -81,9 +81,9 @@ export default function TerrazasPage() {
               <ClockIcon className='size-6 shrink-0' />
             </div>
             <ul className='p-3 flex font-highrise flex-col text-start'>
-              <li><b className='font-bold'>Lunes a viernes</b> - 12:00 a 21:00</li>
-              <li><b className='font-bold'>Sábados</b> - 9:00 a 23:00</li>
-              <li><b className='font-bold'>Domingos</b> - 12:22 a 23:00</li>
+              <li><b className='font-bold'>Lunes a viernes</b> - 5:00 a 23:00</li>
+              <li><b className='font-bold'>Sábados</b> - 9:00 a 13:00 Y 16:00 a 20:00</li>
+              <li><b className='font-bold'>Domingos</b> - 9:00 a 12:00 Y 17:00 a 20:00</li>
             </ul>
           </div>
         </div>
