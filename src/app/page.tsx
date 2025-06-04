@@ -12,7 +12,7 @@ import {
     Features,
     ClasesVideo,
     SocioPlus,
-    SwiperTestimonios
+    // SwiperTestimonios
 } from "@/components";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function HomePage() {
             <Features/>
             <ClasesVideo/>
             <SocioPlus/>
-            <SwiperTestimonios/>
+            {/* <SwiperTestimonios/> */}
         </main>
     );
 }

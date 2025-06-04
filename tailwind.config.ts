@@ -18,6 +18,7 @@ export default {
         },
       },
       fontFamily: {
+        montserrat: "var(--montserrat), sans-serif",
         highrise: "var(--highrise), sans-serif",
         "highrise-bold": "var(--highrise_bold), sans-serif",
         stretch: "var(--stretch), sans-serif",

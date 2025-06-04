@@ -33,3 +33,15 @@ export {
 export {
     BiSolidOffer as OfferIcon
 } from "react-icons/bi";
+
+export {
+    LuClock8 as ClockIcon
+} from "react-icons/lu";
+
+export {
+    RxCross1 as CrossIcon,
+} from "react-icons/rx";
+
+export {
+    TbSunWind as SunWindIcon,
+} from "react-icons/tb";

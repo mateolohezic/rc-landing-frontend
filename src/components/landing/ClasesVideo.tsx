@@ -84,7 +84,7 @@ export const ClasesVideo = () => {
                 <div className="grow bg-background border-x-2 border-neutral-800">
                     <div className="size-full relative">
                         <iframe
-                            src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}`}
+                            src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?rel=0&modestbranding=1`}
                             className="size-full absolute top-0 left-0"
                             title={`Clase de ${selectedVideo.title} RC Gym`}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
