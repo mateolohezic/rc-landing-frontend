@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { IconType } from "react-icons";
-import { InstagramIcon, TiktokIcon, WhatsappIcon, YoutubeIcon } from "@/icons";
+import { InstagramIcon, TiktokIcon, YoutubeIcon } from "@/icons";
 import type { NavbarLink } from "@/interfaces";
 import { NavLink, RCIcon } from "@/components";
 
@@ -23,7 +23,7 @@ const socialMedias:Array<SocialMedia> = [
     { label: 'Instagram', href: 'https://www.instagram.com/rcgym/', Icon: InstagramIcon },
     { label: 'TikTok', href: 'https://www.tiktok.com/@rc.gym', Icon: TiktokIcon },
     { label: 'YouTube', href: 'https://www.youtube.com/@RCGym-t4v', Icon: YoutubeIcon },
-    { label: 'Whatsapp', href: 'https://api.whatsapp.com/send/?phone=5493815145543&text&type=phone_number&app_absent=0', Icon: WhatsappIcon },
+    // { label: 'Whatsapp', href: 'https://api.whatsapp.com/send/?phone=5493815145543&text&type=phone_number&app_absent=0', Icon: WhatsappIcon },
 ]
 
 export const Navbar = () => {

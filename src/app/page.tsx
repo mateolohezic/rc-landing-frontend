@@ -35,8 +35,8 @@ export default function HomePage() {
             <SwiperDescuentos/>
             <BannerRC/>
             <Features/>
-            <SwiperBeneficios/>
             <ClasesVideo/>
+            <SwiperBeneficios/>
             <SocioPlus/>
             {/* <SwiperTestimonios/> */}
         </main>

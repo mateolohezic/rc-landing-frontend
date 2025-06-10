@@ -9,7 +9,7 @@ export const BannerRC = () => {
                 <RCIcon className="fill-white w-16 lg:w-36"/>
             </div>
             <div className="size-full bg-gradient-to-b from-neutral-900 via-transparent to-neutral-900 absolute top-0 left-0 z-10"></div>
-            <Image src={banner_stock} alt="RC Gym" className="size-full object-cover"/>
+            <Image src={banner_stock} alt="RC Gym" className="size-full object-cover object-[50%_100%] lg:max-h-96"/>
         </div>
     )
 }

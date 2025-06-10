@@ -41,7 +41,7 @@ export default function TerrazasPage() {
             Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
           </p>
           <Link
-            href="https://forms.gle/1a1J5yMtw1rroT7D6"
+            href="https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
             target="_blank"
             className="mt-8 inline-block px-8 py-3 text-xl bg-gradient-to-r from-red-500 to-red-400 rounded-lg uppercase hover:opacity-80 transition"
           >
@@ -91,6 +91,7 @@ export default function TerrazasPage() {
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">
           Precios de preventa
         </h2>
+        <p className="uppercase tracking-widest text-xs lg:text-base text-center lg:text-start">Precios válidos solo para preventar presencial en efectivo</p>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-xl">Primera etapa <b className="block text-3xl font-bold uppercase">100 Cupos</b></h3>
@@ -113,7 +114,6 @@ export default function TerrazasPage() {
           <p className="mt-8 text-7xl font-highrise-bold"><small className="font-montserrat text-2xl">$ </small>504.000</p>
           <p className="mt-2 block text-2xl uppercase font-semibold">En 3 cuotas sin interés</p>
           <p className="mt-4 line-through text-lg">Antes: $840.000</p>
-          <p className="mt-4">Válido solo en efectivo</p>
         </div>
       </section>
 
@@ -148,14 +148,15 @@ export default function TerrazasPage() {
         </div>
         <div className="size-full px-4 py-24 lg:py-48 bg-black/75 flex flex-col items-center text-center relative z-10">
           <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center mb-6">
-            ¡Última preventa presencial!
+            ¡Última cupos de preventa!
           </h2>
           <p className="text-lg text-center max-w-xl">
             Martes 20/05 de 17.00 a 20.00 hs en Av Aconquija 2122, Primer Piso.
             También disponible preventa online.
           </p>
           <Link
-            href="https://forms.gle/1a1J5yMtw1rroT7D6"
+            href="https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
+            // href="https://forms.gle/1a1J5yMtw1rroT7D6"
             target="_blank"
             className="mt-8 inline-block px-8 py-3 text-xl bg-red-600 rounded-lg uppercase hover:bg-red-500 transition"
             >

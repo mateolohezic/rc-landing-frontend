@@ -9,19 +9,19 @@ import pattern_dot from "@/assets/home/pattern_dot.webp";
 
 const entrenamientos = [
   {
-    nombre: "Vida saludable",
+    nombre: "Principiantes",
     videoId: "2ZVpx85A-VY",
     descripcion:
       "Entrenamiento general para mejorar tu resistencia, fuerza y bienestar general.",
   },
   {
-    nombre: "En forma",
+    nombre: "Definición",
     videoId: "e7eyX-uLLn8",
     descripcion:
       "Mejorá tu rendimiento en disciplinas específicas con técnicas avanzadas.",
   },
   {
-    nombre: "Definición",
+    nombre: "Masa muscular",
     videoId: "kdrgMt0J3w0",
     descripcion:
       "Programas pensados para rehabilitación, movilidad y mejora integral del cuerpo.",
@@ -33,7 +33,7 @@ const entrenamientos = [
       "Movimientos naturales para entrenar tu cuerpo como una máquina eficiente.",
   },
   {
-    nombre: "Fuerza",
+    nombre: "Adultos mayores",
     videoId: "j7pCt1G6Mk8",
     descripcion:
       "Reducción de grasa corporal y tonificación muscular sin perder energía.",
@@ -47,7 +47,7 @@ const entrenamientos = [
 ];
 
 export const Entrenamientos = () => {
-  const [active, setActive] = useState("Vida saludable");
+  const [active, setActive] = useState(entrenamientos[0].nombre);
 
   const entrenamientoActual = entrenamientos.find((e) => e.nombre === active);
 

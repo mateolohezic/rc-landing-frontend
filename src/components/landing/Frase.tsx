@@ -7,7 +7,7 @@ import trainner_3 from "@/assets/home/trainer_3.webp";
 
 export const Frase = () => {
     return (
-        <section className="sr-only lg:not-sr-only w-full bg-background flex shadow-xl shadow-black/25 overflow-x-hidden">
+        <section className="hidden w-full bg-background lg:flex shadow-xl shadow-black/25 overflow-x-hidden">
             <div className="grow px-4 lg:px-24 py-4 lg:py-12 relative">
                 <div className="flex flex-col justify-center relative z-20">
                     <p className="text-4xl lg:text-8xl font-highrise-bold whitespace-nowrap relative">Resultados <b className="block">que hablan.</b></p>
