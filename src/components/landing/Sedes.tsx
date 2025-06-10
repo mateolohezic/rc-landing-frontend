@@ -45,7 +45,7 @@ const sedes = [
         img: sede_tafi_viejo,
         clases: ["Funcional", "Spinning", "Yoga", "GAP", "Ritmos", "Full Body"],
         horarios: {
-            semana: "6:00 a 23:00",
+            semana: "6:00 a 22:30",
             sabado: "9:00 a 13:00 y 16:00 a 20:00",
             domingo: "17:00 a 20:00"
         },

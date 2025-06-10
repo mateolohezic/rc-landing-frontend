@@ -150,10 +150,10 @@ export default function TerrazasPage() {
           <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center mb-6">
             ¡Última cupos de preventa!
           </h2>
-          <p className="text-lg text-center max-w-xl">
+          {/* <p className="text-lg text-center max-w-xl">
             Martes 20/05 de 17.00 a 20.00 hs en Av Aconquija 2122, Primer Piso.
             También disponible preventa online.
-          </p>
+          </p> */}
           <Link
             href="https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
             // href="https://forms.gle/1a1J5yMtw1rroT7D6"

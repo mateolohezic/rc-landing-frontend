@@ -24,7 +24,7 @@ export const Frase = () => {
                 className="w-full max-w-7xl relative"
             >
                 <div className="size-full bg-gradient-to-r from-background to-transparent absolute top-0 left-0 z-10"></div>
-                <Image src={trainner_3} alt="RC Gym" className="size-full object-cover object-[50%_95%] absolute top-0 left-0"/>
+                <Image src={trainner_3} alt="RC Gym" className="size-full object-cover object-[50%_50%] absolute top-0 left-0"/>
             </motion.div>
         </section>
     )
