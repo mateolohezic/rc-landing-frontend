@@ -115,6 +115,13 @@ export const Sedes = () => {
                                     </button>
                                 </li>
                             ))}
+                                <li>
+                                    <Link href={"/terrazas"}
+                                        className={`w-full text-left px-4 py-3 bg-red-600 hover:bg-zinc-700 transition-colors flex justify-between items-center`}
+                                    >
+                                        Terrazas <span className=' text-xs uppercase tracking-widest'>Nueva sede</span>
+                                    </Link>
+                                </li>
                         </motion.ul>
                     )}
                 </AnimatePresence>
@@ -130,10 +137,19 @@ export const Sedes = () => {
                         <h3 className="text-5xl font-highrise-bold uppercase">{sede.title}</h3>
                     </button>
                 ))}
-                <button disabled className="w-full aspect-square p-4 border-2 border-dashed border-white/50 rounded-lg flex flex-col justify-center items-center gap-4">
-                    <RCIcon className="w-16 fill-white/50" />
-                    <h3 className="text-5xl font-highrise-bold text-white/50 uppercase">Próximamente</h3>
-                </button>
+                {/* <button
+                        key={idx}
+                        onClick={() => setSelectedSede(sede)}
+                        className={`w-full aspect-square rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-all border-2 ${selectedSede.title === sede.title ? "bg-gradient-to-br from-background to-red-600 border-white" : "bg-background-sidebar hover:bg-background-sidebar/25 border-background-sidebar hover:border-white/25" }`}
+                    >
+                        <RCIcon className="w-16 fill-white" />
+                        <h3 className="text-5xl font-highrise-bold uppercase">{sede.title}</h3>
+                </button> */}
+                <Link href={"/terrazas"} className="w-full aspect-square rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-all border-2 bg-red-600 hover:bg-red-500 border-red-600 hover:border-red-500 relative">
+                    <div className='w-fit px-4 py-1 bg-white rounded-lg text-red-600 text-lg font-bold uppercase -translate-y-1/2 absolute top-0 left-0 right-0 mx-auto'>Nueva sede</div>
+                    <RCIcon className="w-16 fill-white" />
+                    <h3 className="text-5xl font-highrise-bold uppercase">Terrazas</h3>
+                </Link>
             </div>
             <AnimatePresence mode="wait">
                 <motion.div

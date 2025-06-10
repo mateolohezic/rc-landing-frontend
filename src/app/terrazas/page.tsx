@@ -16,7 +16,7 @@ export default function TerrazasPage() {
   return (
     <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900 text-white">
       <Navbar />
-      <section className="w-full min-h-svh pt-28 pb-12 flex flex-col justify-center items-center relative overflow-hidden">
+      <section className="w-full lg:min-h-svh py-48 lg:pt-28 lg:pb-12 flex flex-col justify-center items-center relative overflow-hidden">
         <div className="size-full bg-background absolute top-0 left-0 z-0">
           <video
             controls={false}
@@ -37,7 +37,7 @@ export default function TerrazasPage() {
           </h1>
           <p className="mt-6 text-lg lg:text-2xl">
             Abrimos el <b className="text-red-500">30 de junio</b>. Quedan solo{" "}
-            <b className="text-red-500">100 cupos</b> en preventa. <br />
+            <span className="block lg:inline"><b className="text-red-500">100 cupos</b> en preventa.</span>
             Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
           </p>
           <Link
@@ -60,9 +60,8 @@ export default function TerrazasPage() {
           </div>
         </div>
       </section>
-
-      <section className="w-full max-w-7xl px-4 xl:px-0 my-24 flex items-center gap-12">
-        <div className="grow aspect-video relative">
+      <section className="w-full max-w-7xl px-4 xl:px-0 my-12 lg:my-24 flex flex-col lg:flex-row items-center gap-12">
+        <div className="w-full lg:w-auto lg:grow aspect-video relative">
           <Image
             src={terrazas_1}
             alt="Imagen del gimnasio Terrazas"
@@ -73,10 +72,10 @@ export default function TerrazasPage() {
           <h2 className="sr-only">
             Ubicación y horarios
           </h2>
-          <h3 className="text-6xl lg:text-8xl font-highrise-bold uppercase mb-6 text-center lg:text-start">
+          <h3 className="text-5xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">
             Av Perón 2400, Terrazas
           </h3>
-          <div className='mt-8 lg:mt-4 w-fit bg-zinc-700 text-sm rounded-2xl overflow-hidden flex relative'>
+          <div className='mt-6 lg:mt-8 w-fit mx-auto lg:mx-0 bg-zinc-700 text-sm rounded-2xl overflow-hidden flex relative'>
             <div className='w-12 shrink-0 bg-zinc-800 flex justify-center items-center'>
               <ClockIcon className='size-6 shrink-0' />
             </div>
@@ -88,7 +87,7 @@ export default function TerrazasPage() {
           </div>
         </div>
       </section>
-      <section className="w-full max-w-7xl px-4 xl:px-0 my-24">
+      <section className="w-full max-w-7xl px-4 xl:px-0 my-12 lg:my-24">
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">
           Precios de preventa
         </h2>
@@ -121,19 +120,19 @@ export default function TerrazasPage() {
       <section className="w-full max-w-7xl px-4 pb-24">
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase mb-6 text-center lg:text-start">Qué incluye</h2>
         <ul className="grid grid-cols-1 md:grid-cols-4 gap-6 text-lg">
-          <li className="aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
+          <li className="lg:aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
             <FitnessIcon className="size-12"/>
             <span className="text-xl font-bold">Full Pass con acceso libre al salón de aparatos</span>
           </li>
-          <li className="aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
+          <li className="lg:aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
             <GroupIcon className="size-12"/>
             <span className="text-xl font-bold">Instructor en sala para guiarte</span>
           </li>
-          <li className="aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
+          <li className="lg:aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
             <ClockIcon className="size-12"/>
             <span className="text-xl font-bold">Acceso a toda la grilla horaria de clases</span>
           </li>
-          <li className="aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
+          <li className="lg:aspect-square bg-neutral-800 p-6 rounded-lg flex flex-col justify-center items-center gap-6 text-center">
             <SunWindIcon className="size-12"/>
             <span className="text-xl font-bold">Ambiente climatizado y equipado</span>
           </li>
@@ -147,7 +146,7 @@ export default function TerrazasPage() {
             className="size-full object-cover pointer-events-none select-none"
           />
         </div>
-        <div className="size-full px-4 py-48 bg-black/75 flex flex-col items-center text-center relative z-10">
+        <div className="size-full px-4 py-24 lg:py-48 bg-black/75 flex flex-col items-center text-center relative z-10">
           <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center mb-6">
             ¡Última preventa presencial!
           </h2>

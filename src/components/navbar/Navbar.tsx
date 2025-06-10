@@ -21,10 +21,10 @@ const links:Array<NavbarLink> = [
 ]
 
 const socialMedias:Array<SocialMedia> = [
-    { label: 'Instagram', href: 'https://www.instagram.com/rooftopcrossfit/', Icon: InstagramIcon },
-    { label: 'TikTok', href: 'https://www.instagram.com/rooftopcrossfit/', Icon: TiktokIcon },
-    { label: 'YouTube', href: 'https://www.instagram.com/rooftopcrossfit/', Icon: YoutubeIcon },
-    { label: 'Whatsapp', href: 'https://www.instagram.com/rooftopcrossfit/', Icon: WhatsappIcon },
+    { label: 'Instagram', href: 'https://www.instagram.com/rcgym/', Icon: InstagramIcon },
+    { label: 'TikTok', href: 'https://www.tiktok.com/@rc.gym', Icon: TiktokIcon },
+    { label: 'YouTube', href: 'https://www.youtube.com/@RCGym-t4v', Icon: YoutubeIcon },
+    { label: 'Whatsapp', href: 'https://api.whatsapp.com/send/?phone=5493815145543&text&type=phone_number&app_absent=0', Icon: WhatsappIcon },
 ]
 
 export const Navbar = () => {
@@ -46,7 +46,7 @@ export const Navbar = () => {
     return (
         <div className={`w-full ${ isAtTop ? 'bg-transparent' : 'bg-gradient-to-b from-neutral-900 lg:from-background-sidebar to-neutral-900 lg:to-transparent'} flex flex-col justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
             <nav className="w-full max-w-7xl h-20 px-4 lg:px-0 flex justify-between items-center relative">
-                <Link href={'/home'} className={`h-16 lg:h-20 aspect-square  ${ isAtTop ? 'lg:translate-y-1/4' : 'lg:p-2' } flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:mx-auto lg:hover:scale-110 transition-200`}>
+                <Link href={'/'} className={`h-16 lg:h-20 aspect-square  ${ isAtTop ? 'lg:translate-y-1/4' : 'lg:p-2' } flex justify-center items-center lg:absolute lg:top-0 lg:left-0 lg:right-0 lg:mx-auto lg:hover:scale-110 transition-200`}>
                     <RCIcon className={`${ isAtTop ? 'size-16 lg:size-24' : 'size-full' } overflow-visible fill-white transition-200`}/>
                 </Link>
                 <ul className="lg:flex gap-6 hidden">
@@ -74,7 +74,7 @@ export const Navbar = () => {
                             )
                         }
                     </div>
-                    <Link href={'/sumate'} className={`px-2 py-1 h-10 rounded-md tracking-widest text-xs lg:text-base uppercase ${ isAtTop ? 'bg-white text-black' : 'bg-red-500 lg:hover:bg-red-400'} flex items-center transition-200`}>
+                    <Link href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || "/" } target="_blank" className={`px-2 py-1 h-10 rounded-md tracking-widest text-xs lg:text-base uppercase ${ isAtTop ? 'bg-white text-black' : 'bg-red-500 lg:hover:bg-red-400'} flex items-center transition-200`}>
                         Conseguí tu día de prueba
                     </Link>
                 </motion.div>

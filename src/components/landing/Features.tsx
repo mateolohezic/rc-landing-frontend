@@ -60,7 +60,7 @@ export const Features = () => {
             <div className="mt-8 lg:mt-12 w-full flex justify-center relative overflow-x-clip">
                 <motion.div
                     onViewportEnter={() => setInView(true)}
-                    className="w-full max-w-7xl px-4 xl:px-0 flex lg:grid lg:grid-cols-4 gap-4 relative z-10 overflow-x-auto lg:overflow-x-hidden lg:overflow-y-hidden"
+                    className="w-full max-w-7xl px-4 xl:px-0 grid grid-cols-1 lg:grid-cols-4 gap-4 relative z-10"
                 >
                     { inView &&
                         features.map((feature, i) => (

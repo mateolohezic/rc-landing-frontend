@@ -14,9 +14,9 @@ export const Bienvenido = () => {
             onViewportEnter={() => setInView(true)}
             className="w-full max-w-7xl px-4 xl:px-0 mb-12 lg:my-24 text-center lg:text-start"
         >
-            <h2 className="text-6xl lg:text-9xl font-highrise-bold uppercase leading-[0.8]">Bienvenido a RC</h2>
+            <h2 className="sr-only lg:not-sr-only lg:text-9xl font-highrise-bold uppercase leading-[0.8]">Bienvenido a RC</h2>
             <div className="mt-4 lg:mt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
-                <p className="lg:text-white/75 font-thin">En RC Gym, creemos que el fitness es más que un objetivo: es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!</p>
+                <p className="lg:text-white/75 font-thin sr-only lg:not-sr-only">En RC Gym, creemos que el fitness es más que un objetivo: es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!</p>
                 { inView &&
                     <div className="flex flex-col gap-8 lg:gap-6">
                         <motion.div

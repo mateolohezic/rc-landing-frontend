@@ -11,7 +11,7 @@ import playstore_icon from "@/assets/home/playstore_icon.webp";
 export const SocioPlus = () => {
     return (
         <section className="w-full px-4 pt-12 flex flex-col justify-center items-center bg-neutral-800 text-center lg:text-start">
-            <div className="w-full max-w-7xl flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-stretch relative z-20">
+            <div className="w-full max-w-7xl flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-stretch relative z-20 overflow-hidden">
                 <div className="grow flex flex-col justify-start pb-4 lg:pb-12">
                     <h2 className="text-6xl lg:text-9xl font-highrise-bold uppercase lg:leading-[0.8]">Disfruta la App</h2>
                     <p className="text-pretty w-full max-w-lg">Conocé SocioPLUS®.</p>

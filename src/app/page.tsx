@@ -12,6 +12,7 @@ import {
     Features,
     ClasesVideo,
     SocioPlus,
+    SwiperBeneficios,
     // SwiperTestimonios
 } from "@/components";
 
@@ -34,6 +35,7 @@ export default function HomePage() {
             <SwiperDescuentos/>
             <BannerRC/>
             <Features/>
+            <SwiperBeneficios/>
             <ClasesVideo/>
             <SocioPlus/>
             {/* <SwiperTestimonios/> */}

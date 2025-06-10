@@ -13,6 +13,7 @@ export { Sedes } from "./landing/Sedes";
 export { CasoDeExito } from "./landing/CasoDeExito";
 export { Entrenamientos } from "./landing/Entrenamientos";
 export { SwiperDescuentos } from "./landing/SwiperDescuentos";
+export { SwiperBeneficios } from "./landing/SwiperBeneficios";
 export { BannerRC } from "./landing/BannerRC";
 export { Features } from "./landing/Features";
 export { ClasesVideo } from "./landing/ClasesVideo";
