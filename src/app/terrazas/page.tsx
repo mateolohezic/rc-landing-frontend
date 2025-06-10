@@ -8,8 +8,8 @@ import portada from "@/assets/terrazas/portada.webp";
 import terrazas_1 from "@/assets/terrazas/terrazas_2.webp";
 
 export const metadata: Metadata = {
-  title: "RC Gym Terrazas",
-  description: "Nueva sede Terrazas en preventa - hasta 35% OFF",
+  title: "Terrazas",
+  description: "Nueva sede Terrazas en preventa - hasta 40% OFF",
 };
 
 export default function TerrazasPage() {
