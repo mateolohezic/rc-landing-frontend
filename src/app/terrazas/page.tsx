@@ -91,7 +91,7 @@ export default function TerrazasPage() {
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">
           Precios de preventa
         </h2>
-        <p className="uppercase tracking-widest text-xs lg:text-base text-center lg:text-start">Precios válidos solo para preventar presencial en efectivo</p>
+        <p className="uppercase tracking-widest text-xs lg:text-base text-center lg:text-start">Precios válidos solo para preventa presencial en efectivo</p>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-xl">Primera etapa <b className="block text-3xl font-bold uppercase">100 Cupos</b></h3>
@@ -148,7 +148,7 @@ export default function TerrazasPage() {
         </div>
         <div className="size-full px-4 py-24 lg:py-48 bg-black/75 flex flex-col items-center text-center relative z-10">
           <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase text-center mb-6">
-            ¡Última cupos de preventa!
+            ¡Últimos cupos de preventa!
           </h2>
           {/* <p className="text-lg text-center max-w-xl">
             Martes 20/05 de 17.00 a 20.00 hs en Av Aconquija 2122, Primer Piso.

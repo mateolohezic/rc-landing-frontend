@@ -45,3 +45,15 @@ export {
 export {
     TbSunWind as SunWindIcon,
 } from "react-icons/tb";
+
+export {
+  GiRunningShoe as BeginnerIcon,
+  GiMuscleUp as DefinitionIcon,
+  GiWeightLiftingUp as MassIcon,
+  GiBodyBalance as PerformanceIcon,
+} from "react-icons/gi";
+
+export {
+  FaUserClock as SeniorIcon,
+  FaUserGraduate as TeenIcon,
+} from "react-icons/fa";
