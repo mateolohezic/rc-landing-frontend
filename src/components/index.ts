@@ -19,3 +19,6 @@ export { Features } from "./landing/Features";
 export { ClasesVideo } from "./landing/ClasesVideo";
 export { SocioPlus } from "./landing/SocioPlus";
 export { SwiperTestimonios } from "./landing/SwiperTestimonios";
+
+export { SwiperTerrazas } from "./terrazas/SwiperTerrazas";
+export { ClasesTerrazas } from "./terrazas/ClasesTerrazas";

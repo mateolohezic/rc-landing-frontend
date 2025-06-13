@@ -21,8 +21,8 @@ const classVideos: ClassVideo[] = [
 ];
 
 export const ClasesVideo = () => {
-    const [selectedVideo, setSelectedVideo] = useState<ClassVideo>(classVideos[0]); // desktop
-    const [modalVideo, setModalVideo] = useState<ClassVideo | null>(null); // mobile modal
+    const [selectedVideo, setSelectedVideo] = useState<ClassVideo>(classVideos[0]);
+    const [modalVideo, setModalVideo] = useState<ClassVideo | null>(null);
 
     return (
         <>
