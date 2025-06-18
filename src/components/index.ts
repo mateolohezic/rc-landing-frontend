@@ -1,5 +1,6 @@
 export { RCLogo } from "./RCLogo";
 export { RCIcon } from "./RCIcon";
+export { PlanCard } from "./PlanCard";
 
 export { VideoIntro } from "./intro/VideoIntro";
 
@@ -19,6 +20,7 @@ export { Features } from "./landing/Features";
 export { ClasesVideo } from "./landing/ClasesVideo";
 export { SocioPlus } from "./landing/SocioPlus";
 export { SwiperTestimonios } from "./landing/SwiperTestimonios";
+export { Precios } from "./landing/Precios";
 
 export { SwiperTerrazas } from "./terrazas/SwiperTerrazas";
 export { ClasesTerrazas } from "./terrazas/ClasesTerrazas";

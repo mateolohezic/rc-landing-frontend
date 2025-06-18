@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckIcon, ClockIcon, FitnessIcon, GroupIcon, SunWindIcon } from "@/icons";
-import { ClasesTerrazas, Navbar, SwiperTerrazas } from "@/components";
+import { ClasesTerrazas, SwiperTerrazas } from "@/components";
 import portada from "@/assets/terrazas/portada.webp";
 
 export const metadata: Metadata = {
@@ -13,7 +13,6 @@ export const metadata: Metadata = {
 export default function TerrazasPage() {
   return (
     <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900 text-white">
-      <Navbar />
       <section className="w-full lg:min-h-svh py-48 lg:pt-28 lg:pb-12 flex flex-col justify-center items-center relative overflow-hidden">
         <div className="size-full bg-background absolute top-0 left-0 z-0">
           <video

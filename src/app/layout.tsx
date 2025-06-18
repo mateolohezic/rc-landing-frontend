@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Navbar } from "@/components";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -103,6 +104,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
   return (
     <html lang="es" className="bg-neutral-900 text-white">
       <body className={`${montserrat.className} ${montserrat.variable} ${stretch.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
+        <Navbar />
         {children}
       </body>
     </html>

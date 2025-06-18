@@ -16,6 +16,7 @@ interface SocialMedia {
 
 const links:Array<NavbarLink> = [
     { title: 'Inicio', href: '/' },
+    { title: 'Planes', href: '/planes' },
     { title: 'Sede Terrazas', href: '/terrazas' }
 ]
 

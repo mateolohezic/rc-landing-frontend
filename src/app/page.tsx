@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import {
-    Navbar,
     Portada,
     Bienvenido,
     Frase,
@@ -13,6 +12,7 @@ import {
     ClasesVideo,
     SocioPlus,
     SwiperBeneficios,
+    Precios,
     // SwiperTestimonios
 } from "@/components";
 
@@ -25,7 +25,6 @@ export default function HomePage() {
     return (
         <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900">
             <h1 className="sr-only">RC Gym Tucumán</h1>
-            <Navbar/>
             <Portada/>
             <Bienvenido/>
             <Frase/>
@@ -37,6 +36,7 @@ export default function HomePage() {
             <Features/>
             <ClasesVideo/>
             <SwiperBeneficios/>
+            <Precios/>
             <SocioPlus/>
             {/* <SwiperTestimonios/> */}
         </main>

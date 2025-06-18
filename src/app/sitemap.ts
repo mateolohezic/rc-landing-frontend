@@ -14,5 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 1,
     },
+    {
+      url: 'https://rcgym.com.ar/planes',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
   ]
 }
