@@ -38,7 +38,7 @@ export default function TerrazasPage() {
             Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
           </p>
           <Link
-            href="https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
+            href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || '/'}
             target="_blank"
             className="mt-8 inline-block px-8 py-3 text-xl bg-gradient-to-r from-red-600 to-red-500 rounded-lg uppercase hover:opacity-80 transition"
           >
@@ -88,7 +88,6 @@ export default function TerrazasPage() {
         <p className="uppercase tracking-widest text-xs lg:text-base">
           Precios válidos solo para preventa presencial
         </p>
-
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
@@ -135,7 +134,7 @@ export default function TerrazasPage() {
             </p>
           </div>
         </div>
-        <div className="mt-12 bg-white/5 border-2 border-white/20 p-6 rounded-xl shadow-inner opacity-40 pointer-events-none select-none">
+        <div className="mt-6 bg-white/5 border-2 border-white/20 p-6 rounded-xl shadow-inner opacity-40 pointer-events-none select-none">
           <h3 className="text-3xl font-bold uppercase">Pase anual - Agotado</h3>
           <p className="mt-4 text-6xl font-highrise-bold">
             <small className="font-montserrat text-2xl">$ </small>504.000
@@ -144,6 +143,15 @@ export default function TerrazasPage() {
             En 3 cuotas sin interés
           </p>
           <p className="mt-4 text-lg">Antes: $840.000</p>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || '/'}
+            target="_blank"
+            className="mt-8 inline-block px-8 py-3 text-xl bg-gradient-to-r from-red-600 to-red-500 rounded-lg uppercase hover:opacity-80 transition"
+          >
+            Reservá tu cupo
+          </Link>
         </div>
       </section>
       <section className="mt-48 w-full max-w-7xl px-4 text-center">
@@ -188,8 +196,7 @@ export default function TerrazasPage() {
             ¡Últimos cupos de preventa!
           </h2>
           <Link
-            href="https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
-            // href="https://forms.gle/1a1J5yMtw1rroT7D6"
+            href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || '/'}
             target="_blank"
             className="mt-8 inline-block px-8 py-3 text-xl bg-gradient-to-r from-red-600 to-red-500 rounded-lg uppercase hover:opacity-80 transition"
           >
