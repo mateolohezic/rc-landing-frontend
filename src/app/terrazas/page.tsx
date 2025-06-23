@@ -92,12 +92,12 @@ export default function TerrazasPage() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
-            <p className="mt-4 text-6xl font-highrise-bold relative">
+            <p className="mt-2 text-4xl font-highrise-bold relative text-white/75">
               <span className="relative">
                 <small className="font-montserrat text-2xl">$ </small>
                 70.000
                 <div className="size-full flex justify-center items-center absolute top-0 left-0">
-                  <div className="w-full h-1 bg-red-500 rotate-12 relative left-2"></div>
+                  <div className="w-full h-0.5 bg-red-500 rotate-12 relative left-2"></div>
                 </div>
               </span>
             </p>
@@ -114,12 +114,12 @@ export default function TerrazasPage() {
           </div>
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Semestral</h3>
-            <p className="mt-4 text-6xl font-highrise-bold relative">
+            <p className="mt-2 text-4xl font-highrise-bold relative text-white/75">
               <span className="relative">
                 <small className="font-montserrat text-2xl">$ </small>
                 420.000
                 <div className="size-full flex justify-center items-center absolute top-0 left-0">
-                  <div className="w-full h-1 bg-red-500 rotate-12 relative left-2"></div>
+                  <div className="w-full h-0.5 bg-red-500 rotate-12 relative left-2"></div>
                 </div>
               </span>
             </p>
