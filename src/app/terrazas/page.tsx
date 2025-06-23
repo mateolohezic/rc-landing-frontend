@@ -34,7 +34,7 @@ export default function TerrazasPage() {
           </h1>
           <p className="mt-6 text-lg lg:text-2xl">
             Abrimos el <b className="text-red-500">30 de junio</b>. Quedan solo{" "}
-            <span className="block lg:inline"><b className="text-red-500">100 cupos</b> en preventa.</span>
+            <span className="block"><b className="text-red-500">100 cupos</b> en preventa.</span>
             Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
           </p>
           <Link
@@ -92,8 +92,14 @@ export default function TerrazasPage() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
-            <p className="mt-4 text-6xl font-highrise-bold">
-              <small className="font-montserrat text-2xl">$ </small>70.000
+            <p className="mt-4 text-6xl font-highrise-bold relative">
+              <span className="relative">
+                <small className="font-montserrat text-2xl">$ </small>
+                70.000
+                <div className="size-full flex justify-center items-center absolute top-0 left-0">
+                  <div className="w-full h-1 bg-red-500 rotate-12 relative left-2"></div>
+                </div>
+              </span>
             </p>
             <div className="w-full h-px my-4 bg-white/20" />
             <p className="mt-4 text-lg font-semibold uppercase">Con tarjeta de crédito</p>
@@ -108,8 +114,14 @@ export default function TerrazasPage() {
           </div>
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Semestral</h3>
-            <p className="mt-4 text-6xl font-highrise-bold">
-              <small className="font-montserrat text-2xl">$ </small>420.000
+            <p className="mt-4 text-6xl font-highrise-bold relative">
+              <span className="relative">
+                <small className="font-montserrat text-2xl">$ </small>
+                420.000
+                <div className="size-full flex justify-center items-center absolute top-0 left-0">
+                  <div className="w-full h-1 bg-red-500 rotate-12 relative left-2"></div>
+                </div>
+              </span>
             </p>
             <div className="w-full h-px my-4 bg-white/20" />
             <p className="mt-4 text-lg font-semibold uppercase">En 3 cuotas sin interés</p>
