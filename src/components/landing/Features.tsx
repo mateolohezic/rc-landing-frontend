@@ -53,7 +53,7 @@ export const Features = () => {
     const [inView, setInView] = useState<boolean>(false);
 
     return (
-        <section className="w-full my-12 lg:my-24 flex flex-col justify-center items-center">
+        <section className="w-full my-24 flex flex-col justify-center items-center">
             <div className="w-full py-8 px-4 bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-900 shadow-lg shadow-black/15 flex justify-center text-center">
                 <h2 className="w-fit pb-2 border-b-2 border-red-500 text-5xl lg:text-9xl font-highrise-bold uppercase leading-[0.8] [word-spacing:0.25rem]">Viví la experiencia RC</h2>
             </div>

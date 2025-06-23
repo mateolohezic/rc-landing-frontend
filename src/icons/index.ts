@@ -57,3 +57,7 @@ export {
   FaUserClock as SeniorIcon,
   FaUserGraduate as TeenIcon,
 } from "react-icons/fa";
+
+export {
+    IoMenu as MenuIcon,
+} from "react-icons/io5";

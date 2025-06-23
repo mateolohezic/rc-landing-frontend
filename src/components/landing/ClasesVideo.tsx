@@ -103,7 +103,7 @@ export const ClasesVideo = () => {
                     </div>
                 </div>
             </section>
-            <section className="w-full px-4 py-8 lg:hidden">
+            <section className="w-full px-4 lg:hidden">
                 <h2 className="text-5xl font-highrise-bold uppercase text-center mb-6">
                     Clases para vos
                 </h2>

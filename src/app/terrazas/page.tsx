@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { CheckIcon, ClockIcon, FitnessIcon, GroupIcon, SunWindIcon } from "@/icons";
-import { ClasesTerrazas, SwiperTerrazas } from "@/components";
+import { SwiperTerrazas } from "@/components";
 import portada from "@/assets/terrazas/portada.webp";
 
 export const metadata: Metadata = {
@@ -80,34 +80,50 @@ export default function TerrazasPage() {
           </div>
         </div>
       </section>
-      <ClasesTerrazas/>
+      {/* <ClasesTerrazas/> */}
       <section className="mt-24 w-full max-w-7xl px-4 xl:px-0 text-center">
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase">
           Precios de preventa
         </h2>
-        <p className="uppercase tracking-widest text-xs lg:text-base">Precios válidos solo para preventa presencial en efectivo</p>
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <p className="uppercase tracking-widest text-xs lg:text-base">
+          Precios válidos solo para preventa presencial
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl">Primera etapa <b className="block text-3xl font-bold uppercase">100 Cupos</b></h3>
-            <p className="mt-8 text-7xl font-highrise-bold"><small className="font-montserrat text-2xl">$ </small>45.500</p>
-            <p className="mt-2 line-through text-lg">Antes: $70.000</p>
+            <h3 className="text-3xl font-bold uppercase">Mensual</h3>
+            <p className="mt-4 text-lg font-semibold uppercase">Con tarjeta de crédito</p>
+            <p className="mt-2 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>55.000
+            </p>
+            <hr className="my-4 border-white/20" />
+            <p className="text-lg font-semibold uppercase">Efectivo o transferencia (-15%)</p>
+            <p className="mt-2 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>46.700
+            </p>
           </div>
-          <div className="bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl">Segunda etapa <b className="block text-3xl font-bold uppercase">100 Cupos</b></h3>
-            <p className="mt-8 text-7xl font-highrise-bold"><small className="font-montserrat text-2xl">$ </small>49.000</p>
-            <p className="mt-2 line-through text-lg">Antes: $70.000</p>
-          </div>
-          <div className="bg-white/10 border-2 border-dashed border-white/50 p-6 rounded-xl shadow-lg">
-            <h3 className="text-xl">Última etapa <b className="block text-3xl font-bold uppercase">100 Cupos</b></h3>
-            <p className="mt-8 text-7xl font-highrise-bold"><small className="font-montserrat text-2xl">$ </small>52.500</p>
-            <p className="mt-2 line-through text-lg">Antes: $70.000</p>
+          <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
+            <h3 className="text-3xl font-bold uppercase">Semestral</h3>
+            <p className="mt-4 text-lg font-semibold uppercase">En 3 cuotas sin interés</p>
+            <p className="mt-2 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>320.000
+            </p>
+            <hr className="my-4 border-white/20" />
+            <p className="text-lg font-semibold uppercase">Efectivo o transferencia (-15%)</p>
+            <p className="mt-2 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>272.000
+            </p>
           </div>
         </div>
-        <div className="mt-6 bg-red-600 border-2 border-red-600 p-6 rounded-xl shadow-lg">
-          <h3 className="text-3xl font-bold uppercase">Pase anual</h3>
-          <p className="mt-8 text-7xl font-highrise-bold"><small className="font-montserrat text-2xl">$ </small>504.000</p>
-          <p className="mt-2 block text-2xl uppercase font-semibold">En 3 cuotas sin interés</p>
-          <p className="mt-4 line-through text-lg">Antes: $840.000</p>
+        <div className="mt-12 bg-white/5 border-2 border-white/20 p-6 rounded-xl shadow-inner opacity-40 pointer-events-none select-none">
+          <h3 className="text-3xl font-bold uppercase">Pase anual - Agotado</h3>
+          <p className="mt-4 text-6xl font-highrise-bold">
+            <small className="font-montserrat text-2xl">$ </small>504.000
+          </p>
+          <p className="mt-2 block text-xl uppercase font-semibold">
+            En 3 cuotas sin interés
+          </p>
+          <p className="mt-4 text-lg">Antes: $840.000</p>
         </div>
       </section>
       <section className="mt-48 w-full max-w-7xl px-4 text-center">

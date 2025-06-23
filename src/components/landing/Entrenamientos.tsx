@@ -12,8 +12,16 @@ import {
   SeniorIcon,
   TeenIcon,
 } from "@/icons";
+import { IconType } from "react-icons";
 
-const entrenamientos = [
+interface Entrenamiento {
+  nombre: string;
+  videoId: string;
+  descripcion: string;
+  Icon: IconType;
+}
+
+const entrenamientos:Array<Entrenamiento> = [
   {
     nombre: "Principiantes",
     videoId: "2ZVpx85A-VY",
@@ -23,13 +31,13 @@ const entrenamientos = [
   {
     nombre: "Definición",
     videoId: "e7eyX-uLLn8",
-    descripcion:"Mejorá tu rendimiento en disciplinas específicas con técnicas avanzadas.",
+    descripcion: "Mejorá tu rendimiento en disciplinas específicas con técnicas avanzadas.",
     Icon: DefinitionIcon,
   },
   {
     nombre: "Masa muscular",
     videoId: "kdrgMt0J3w0",
-    descripcion:"Programas pensados para rehabilitación, movilidad y mejora integral del cuerpo.",
+    descripcion: "Programas pensados para rehabilitación, movilidad y mejora integral del cuerpo.",
     Icon: MassIcon,
   },
   {
@@ -54,10 +62,12 @@ const entrenamientos = [
 
 export const Entrenamientos = () => {
   const [active, setActive] = useState(entrenamientos[0].nombre);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   const entrenamientoActual = entrenamientos.find((e) => e.nombre === active);
 
   return (
-    <section className="w-full max-w-7xl px-4 xl:px-0 flex flex-col justify-center items-center lg:my-24">
+    <section className="w-full max-w-7xl px-4 xl:px-0 flex flex-col justify-center items-center lg:my-24 text-center lg:text-start">
       <motion.h2
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -66,17 +76,64 @@ export const Entrenamientos = () => {
       >
         <span className="text__outline">Entrenamientos</span> <b className="block">que se adaptan</b>
       </motion.h2>
-      <div className="mt-8 lg:mt-12 w-full flex justify-center gap-2 overflow-x-auto px-2 scrollbar-hide">
-        {entrenamientos.map(({ nombre, Icon }) => (
+      <div className="mt-8 lg:mt-12 w-full">
+        <div className="lg:hidden relative z-10">
           <button
-            key={nombre}
-            onClick={() => setActive(nombre)}
-            className={`flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-full border transition-all text-sm ${ active === nombre ? "bg-red-600 border-white" : "bg-zinc-800 border-white/20 hover:border-white/40" }`}
+            onClick={() => setDropdownOpen((prev) => !prev)}
+            className="w-full px-4 py-3 bg-zinc-800 text-white rounded-lg border border-white/20 flex justify-between items-center"
           >
-            <Icon className="text-lg shrink-0" />
-            {nombre}
+            <span className="flex items-center gap-2 text-lg">
+              {entrenamientoActual && <entrenamientoActual.Icon className="text-xl" />}
+              {active}
+            </span>
+            <svg
+              className={`w-5 h-5 transform transition-transform ${dropdownOpen ? "rotate-180" : "rotate-0"}`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
           </button>
-        ))}
+          <AnimatePresence>
+            {dropdownOpen && (
+              <motion.ul
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.2 }}
+                className="absolute w-full mt-2 bg-zinc-900 border border-white/20 rounded-lg shadow-lg overflow-hidden"
+              >
+                {entrenamientos.map(({ nombre, Icon }) => (
+                  <li key={nombre}>
+                    <button
+                      onClick={() => {
+                        setActive(nombre);
+                        setDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-3 flex items-center gap-2 hover:bg-zinc-700 transition-colors ${ active === nombre ? "bg-zinc-800 font-bold" : "" }`}
+                    >
+                      <Icon className="text-lg" />
+                      {nombre}
+                    </button>
+                  </li>
+                ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
+        </div>
+        <div className="hidden lg:flex justify-center gap-2 overflow-x-auto scrollbar-hide">
+          {entrenamientos.map(({ nombre, Icon }) => (
+            <button
+              key={nombre}
+              onClick={() => setActive(nombre)}
+              className={`flex items-center gap-2 whitespace-nowrap px-4 py-2 rounded-full border transition-all text-sm ${ active === nombre ? "bg-red-600 border-white" : "bg-zinc-800 border-white/20 hover:border-white/40" }`}
+            >
+              <Icon className="text-lg shrink-0" />
+              {nombre}
+            </button>
+          ))}
+        </div>
       </div>
       <div className="mt-8 w-full flex flex-col lg:flex-row lg:bg-neutral-800">
         <div className="w-full lg:max-w-sm p-6 flex flex-col">
@@ -92,7 +149,6 @@ export const Entrenamientos = () => {
               {entrenamientoActual?.nombre}
             </motion.h3>
           </AnimatePresence>
-
           <AnimatePresence mode="wait">
             <motion.p
               key={entrenamientoActual?.descripcion}
@@ -105,7 +161,6 @@ export const Entrenamientos = () => {
               {entrenamientoActual?.descripcion}
             </motion.p>
           </AnimatePresence>
-
           <Link
             href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || "/"}
             target="_blank"
@@ -134,30 +189,6 @@ export const Entrenamientos = () => {
           </AnimatePresence>
         </div>
       </div>
-      {/* <div className="w-full flex justify-center relative">
-        <Image
-          src={pattern_dot}
-          alt="Entrenamientos STANNUM"
-          className="size-full object-cover absolute top-0 left-0 z-0"
-        />
-        <div className="bg-gradient-to-br from-black to-background-sidebar opacity-50 size-full absolute top-0 left-0"></div>
-        <div className="w-full flex relative z-20 overflow-x-auto divide-x-2 divide-white/10">
-          {entrenamientos.map((entrenamiento) => (
-            <button
-              key={entrenamiento.nombre}
-              type="button"
-              onClick={() => setActive(entrenamiento.nombre)}
-              className={`min-w-64 xl:min-w-0 grow h-16 font-black uppercase tracking-widest transition-150 ${
-                active === entrenamiento.nombre
-                  ? "bg-red-600"
-                  : "hover:bg-white/10"
-              }`}
-            >
-              {entrenamiento.nombre}
-            </button>
-          ))}
-        </div>
-      </div> */}
     </section>
   );
 };

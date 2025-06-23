@@ -56,7 +56,7 @@ const sedes = [
         description: "Contamos con duchas, vestuarios, salones climatizados y dispenser de agua.",
         location: "Junín 567",
         img: sede_barrio_norte,
-        clases: ["Aeróbicos", "Spinning", "Funcional", "BAP", "Personal Class"],
+        clases: ["Aeróbicos", "Spinning", "Funcional", "BAP", "Aero Box"],
         horarios: {
             semana: "7:00 a 22:00",
             sabado: "9:00 a 16:00",

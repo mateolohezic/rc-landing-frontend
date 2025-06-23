@@ -39,7 +39,7 @@ export const SwiperDescuentos = () => {
     }
 
     return (
-        <section className="w-full px-4 my-12 lg:my-24 flex flex-col justify-center items-center">
+        <section className="w-full px-4 my-24 flex flex-col justify-center items-center">
             <div className="mb-4 lg:mb-8 w-full max-w-7xl">
                 <h2 className="text-6xl lg:text-9xl font-highrise-bold uppercase lg:leading-[0.8] [word-spacing:0.25rem] text-center lg:text-start">Descuentos <b className="block text__outline">en tu suscripción</b></h2>
             </div>
