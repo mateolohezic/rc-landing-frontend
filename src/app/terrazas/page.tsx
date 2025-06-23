@@ -92,24 +92,32 @@ export default function TerrazasPage() {
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
+            <p className="mt-4 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>70.000
+            </p>
+            <div className="w-full h-px my-4 bg-white/20" />
             <p className="mt-4 text-lg font-semibold uppercase">Con tarjeta de crédito</p>
             <p className="mt-2 text-6xl font-highrise-bold">
               <small className="font-montserrat text-2xl">$ </small>55.000
             </p>
-            <hr className="my-4 border-white/20" />
-            <p className="text-lg font-semibold uppercase">Efectivo o transferencia (-15%)</p>
+            <div className="w-full h-px my-4 bg-white/20" />
+            <p className="text-lg font-semibold uppercase">Efectivo o transferencia</p>
             <p className="mt-2 text-6xl font-highrise-bold">
               <small className="font-montserrat text-2xl">$ </small>46.700
             </p>
           </div>
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Semestral</h3>
+            <p className="mt-4 text-6xl font-highrise-bold">
+              <small className="font-montserrat text-2xl">$ </small>420.000
+            </p>
+            <div className="w-full h-px my-4 bg-white/20" />
             <p className="mt-4 text-lg font-semibold uppercase">En 3 cuotas sin interés</p>
             <p className="mt-2 text-6xl font-highrise-bold">
               <small className="font-montserrat text-2xl">$ </small>320.000
             </p>
-            <hr className="my-4 border-white/20" />
-            <p className="text-lg font-semibold uppercase">Efectivo o transferencia (-15%)</p>
+            <div className="w-full h-px my-4 bg-white/20" />
+            <p className="text-lg font-semibold uppercase">Efectivo o transferencia</p>
             <p className="mt-2 text-6xl font-highrise-bold">
               <small className="font-montserrat text-2xl">$ </small>272.000
             </p>
