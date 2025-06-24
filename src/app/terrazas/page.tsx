@@ -86,12 +86,12 @@ export default function TerrazasPage() {
           Precios de preventa
         </h2>
         <p className="uppercase tracking-widest text-xs lg:text-base">
-          Precios válidos solo para preventa presencial
+          Precios de preventa
         </p>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
-            <p className="mt-2 text-4xl font-highrise-bold relative text-white/75">
+            <div className="mt-2 text-4xl font-highrise-bold relative text-white/75">
               <span className="relative">
                 <small className="font-montserrat text-2xl">$ </small>
                 70.000
@@ -99,7 +99,7 @@ export default function TerrazasPage() {
                   <div className="w-full h-0.5 bg-red-500 rotate-12 relative left-2"></div>
                 </div>
               </span>
-            </p>
+            </div>
             <div className="w-full h-px my-4 bg-white/20" />
             <p className="mt-4 text-lg font-semibold uppercase">Con tarjeta de crédito</p>
             <p className="mt-2 text-6xl font-highrise-bold">
