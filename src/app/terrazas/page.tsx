@@ -85,9 +85,6 @@ export default function TerrazasPage() {
         <h2 className="text-6xl lg:text-8xl font-highrise-bold uppercase">
           Precios de preventa
         </h2>
-        <p className="uppercase tracking-widest text-xs lg:text-base">
-          Precios de preventa
-        </p>
         <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div className="bg-white/10 border-2 border-red-600 p-6 rounded-xl shadow-lg">
             <h3 className="text-3xl font-bold uppercase">Mensual</h3>
