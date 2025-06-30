@@ -33,9 +33,9 @@ export default function TerrazasPage() {
             <span className="block">Nueva sede</span> Terrazas
           </h1>
           <p className="mt-6 text-lg lg:text-2xl">
-            Abrimos el <b className="text-red-500">30 de junio</b>. Quedan solo{" "}
-            <span className="block"><b className="text-red-500">100 cupos</b> en preventa.</span>
-            Aprovechá hasta <b className="text-red-500">40% OFF</b> en tu pase anual.
+            Abrimos el <b className="text-red-500 font-extrabold">7 de julio</b>. Quedan solo{" "}
+            <span className="block"><b className="text-red-500 font-extrabold">100 cupos</b> en preventa.</span>
+            Aprovechá hasta <b className="text-red-500 font-extrabold">40% OFF</b> en tu pase anual.
           </p>
           <Link
             href={process.env.NEXT_PUBLIC_FORM_ASOCIATE || '/'}
