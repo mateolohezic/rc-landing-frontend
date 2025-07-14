@@ -29,6 +29,12 @@ const preciosPorSede = [
     trimestral: 140400,
     semestral: 264000,
   },
+  {
+    title: "Terrazas",
+    mensual: 70000,
+    trimestral: 178500,
+    semestral: 336000,
+  },
 ];
 
 
