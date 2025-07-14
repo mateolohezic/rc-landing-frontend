@@ -13,21 +13,21 @@ const preciosPorSede = [
   },
   {
     title: "Yerba Buena",
-    mensual: 59000,
-    trimestral: 159000,
-    semestral: 300000,
+    mensual: 65000,
+    trimestral: 175500,
+    semestral: 331500,
   },
   {
     title: "Barrio Sur",
-    mensual: 39000,
-    trimestral: 99300,
-    semestral: 187200,
+    mensual: 44900,
+    trimestral: 114500,
+    semestral: 215500,
   },
   {
     title: "Tafí Viejo",
-    mensual: 49000,
-    trimestral: 125100,
-    semestral: 235200,
+    mensual: 55000,
+    trimestral: 140400,
+    semestral: 264000,
   },
 ];
 
