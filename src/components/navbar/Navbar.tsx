@@ -9,8 +9,7 @@ import type { NavbarLink } from "@/interfaces";
 
 const links: Array<NavbarLink> = [
     { title: 'Inicio', href: '/' },
-    { title: 'Planes', href: '/planes' },
-    { title: 'Sede Terrazas', href: '/terrazas' }
+    { title: 'Planes', href: '/planes' }
 ];
 
 const socialMedias = [
@@ -34,7 +33,7 @@ export const Navbar = () => {
             <div className={`w-full ${isAtTop ? 'bg-transparent' : 'bg-gradient-to-b from-neutral-900 to-neutral-900'} flex justify-center items-center fixed top-0 left-0 z-50 transition-200`}>
                 <nav className="w-full max-w-7xl h-20 px-4 flex justify-between items-center relative">
                     <Link href="/" className="h-16 aspect-square flex justify-center items-center lg:absolute lg:left-0 lg:right-0 lg:mx-auto">
-                        <RCIcon className={`${isAtTop ? 'size-16 lg:size-24' : 'size-full'} fill-white transition-200`} />
+                        <RCIcon className={`${isAtTop ? 'scale-150 left-4 lg:left-0 top-4' : 'scale-100 left-0 top-0'} size-full fill-white transition-200 relative`} />
                     </Link>
                     <ul className="lg:flex gap-6 hidden">
                         {links.map((link, i) => (
