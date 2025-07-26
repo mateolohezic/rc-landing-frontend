@@ -10,8 +10,22 @@ import sede_barrio_norte from "@/assets/home/sedes/sede_barrio_norte.webp";
 import sede_barrio_sur from "@/assets/home/sedes/sede_barrio_sur.webp";
 import sede_tafi_viejo from "@/assets/home/sedes/sede_tafi_viejo.webp";
 import sede_yerba_buena from "@/assets/home/sedes/sede_yerba_buena.webp";
+import sede_terrazas from "@/assets/terrazas/terrazas_1.webp";
 
 const sedes = [
+    {
+        title: "Terrazas",
+        description: "Contamos con espacio verde outdoor, estacionamiento gratuito, WiFi, salones climatizados, dispenser de agua fria y caliente, vestuarios, duchas y lockers con candado",
+        location: "Av. Perón 2400",
+        img: sede_terrazas,
+        clases: ["Spinning", "Funcional HIT", "Circuito abdominal"],
+        horarios: {
+            semana: "5:00 a 23:00",
+            sabado: "9:00 a 13:00 y 16:00 a 20:00",
+            domingo: "9:00 a 12:00 y 17:00 a 20:00"
+        },
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493816959673&text&type=phone_number&app_absent=0"
+    },
     {
         title: "Yerba Buena",
         description: "Contamos con una amplia terraza al aire libre, wifi, duchas, vestuarios, secador de pelo, dispenser de agua, salones climatizados y estacionamiento.",
@@ -115,13 +129,6 @@ export const Sedes = () => {
                                     </button>
                                 </li>
                             ))}
-                                <li>
-                                    <Link href={"/terrazas"}
-                                        className={`w-full text-left px-4 py-3 bg-red-600 hover:bg-zinc-700 transition-colors flex justify-between items-center`}
-                                    >
-                                        Terrazas <span className=' text-xs uppercase tracking-widest'>Nueva sede</span>
-                                    </Link>
-                                </li>
                         </motion.ul>
                     )}
                 </AnimatePresence>
@@ -137,19 +144,6 @@ export const Sedes = () => {
                         <h3 className="text-5xl font-highrise-bold uppercase">{sede.title}</h3>
                     </button>
                 ))}
-                {/* <button
-                        key={idx}
-                        onClick={() => setSelectedSede(sede)}
-                        className={`w-full aspect-square rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-all border-2 ${selectedSede.title === sede.title ? "bg-gradient-to-br from-background to-red-600 border-white" : "bg-background-sidebar hover:bg-background-sidebar/25 border-background-sidebar hover:border-white/25" }`}
-                    >
-                        <RCIcon className="w-16 fill-white" />
-                        <h3 className="text-5xl font-highrise-bold uppercase">{sede.title}</h3>
-                </button> */}
-                <Link href={"/terrazas"} className="w-full aspect-square rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-all border-2 bg-red-600 hover:bg-red-500 border-red-600 hover:border-red-500 relative">
-                    <div className='w-fit px-4 py-1 bg-white rounded-lg text-red-600 text-lg font-bold uppercase -translate-y-1/2 absolute top-0 left-0 right-0 mx-auto'>Nueva sede</div>
-                    <RCIcon className="w-16 fill-white" />
-                    <h3 className="text-5xl font-highrise-bold uppercase">Terrazas</h3>
-                </Link>
             </div>
             <AnimatePresence mode="wait">
                 <motion.div
