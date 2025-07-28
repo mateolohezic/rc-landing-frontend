@@ -10,7 +10,7 @@ import sede_barrio_norte from "@/assets/home/sedes/sede_barrio_norte.webp";
 import sede_barrio_sur from "@/assets/home/sedes/sede_barrio_sur.webp";
 import sede_tafi_viejo from "@/assets/home/sedes/sede_tafi_viejo.webp";
 import sede_yerba_buena from "@/assets/home/sedes/sede_yerba_buena.webp";
-import sede_terrazas from "@/assets/terrazas/terrazas_1.webp";
+import sede_terrazas from "@/assets/home/sedes/sede_terrazas.webp";
 
 const sedes = [
     {
