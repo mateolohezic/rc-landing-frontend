@@ -19,9 +19,9 @@ const preciosPorSede = [
   },
   {
     title: "Barrio Sur",
-    mensual: 44900,
-    trimestral: 114500,
-    semestral: 215500,
+    mensual: 49400,
+    trimestral: 126000,
+    semestral: 237000,
   },
   {
     title: "Tafí Viejo",
