@@ -7,9 +7,9 @@ import { PlanCard } from '@/components';
 const preciosPorSede = [
   {
     title: "Barrio Norte",
-    mensual: 45000,
-    trimestral: 114750,
-    semestral: 216000,
+    mensual: 50000,
+    trimestral: 127500,
+    semestral: 240000,
   },
   {
     title: "Yerba Buena",
