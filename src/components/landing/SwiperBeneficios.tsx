@@ -17,8 +17,11 @@ import beneficio_9 from "@/assets/home/beneficios/beneficio_9.webp";
 import beneficio_10 from "@/assets/home/beneficios/beneficio_10.webp";
 import beneficio_11 from "@/assets/home/beneficios/beneficio_11.webp";
 import beneficio_12 from "@/assets/home/beneficios/beneficio_12.webp";
+import beneficio_13 from "@/assets/home/beneficios/beneficio_13.webp";
+import beneficio_14 from "@/assets/home/beneficios/beneficio_14.webp";
+import beneficio_15 from "@/assets/home/beneficios/beneficio_15.webp";
 
-const beneficios = [ beneficio_1, beneficio_2, beneficio_3, beneficio_4, beneficio_5, beneficio_6, beneficio_7, beneficio_8, beneficio_9, beneficio_10, beneficio_11, beneficio_12 ];
+const beneficios = [ beneficio_1, beneficio_2, beneficio_3, beneficio_4, beneficio_5, beneficio_6, beneficio_7, beneficio_8, beneficio_9, beneficio_10, beneficio_11, beneficio_12, beneficio_13, beneficio_14, beneficio_15 ];
 
 export const SwiperBeneficios = () => {
 
