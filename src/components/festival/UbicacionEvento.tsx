@@ -77,7 +77,7 @@ const infoSede: InfoUbicacion = {
 
 export const UbicacionEvento = () => {
     return (
-        <section className="w-full py-12 lg:py-24 bg-neutral-800">
+        <section className="w-full py-12 lg:py-24 bg-neutral-800" id='ubicacion'>
             <div className="w-full max-w-7xl px-4 xl:px-0 mx-auto">
                 {/* Header */}
                 <motion.div

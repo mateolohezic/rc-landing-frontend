@@ -164,7 +164,7 @@ export const CronogramaActividades = () => {
     }, {} as Record<string, Actividad[]>);
 
     return (
-        <section className="w-full max-w-6xl px-4 xl:px-0 py-12 lg:py-24 mx-auto">
+        <section className="w-full max-w-6xl px-4 xl:px-0 py-12 lg:py-24 mx-auto" id='cronograma'>
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
