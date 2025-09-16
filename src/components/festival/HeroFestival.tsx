@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ClockIcon, LocationIcon, GroupIcon, MusicIcon } from "@/icons";
-import portada from "@/assets/festival/picnic_1.webp";
+import portada from "@/assets/festival/portada_festival.webp";
 
 export const HeroFestival = () => {
     return (
