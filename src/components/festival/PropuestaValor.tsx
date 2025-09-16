@@ -23,6 +23,21 @@ interface PilarFestival {
 
 const pilares: PilarFestival[] = [
     {
+        id: 'conexion',
+        icon: <HeartIcon className="size-16" />,
+        title: 'Conexión',
+        subtitle: 'Espacio seguro para familias',
+        description: 'Un ambiente libre de alcohol donde adultos, jóvenes y niños pueden disfrutar juntos en un entorno seguro y alegre.',
+        image: img_1,
+        color: 'from-red-500 to-orange-400',
+        benefits: [
+            'Ambiente libre de alcohol',
+            'Actividades para todas las edades',
+            'Zona kids especializada',
+            'Espacio de encuentro familiar'
+        ]
+    },
+    {
         id: 'ecocanje',
         icon: <LeafIcon className="size-16" />,
         title: 'Ecocanje',
@@ -50,21 +65,6 @@ const pilares: PilarFestival[] = [
             'Playlist curada',
             'Clases musicalizadas',
             'Volumen consciente'
-        ]
-    },
-    {
-        id: 'conexion',
-        icon: <HeartIcon className="size-16" />,
-        title: 'Conexión',
-        subtitle: 'Espacio seguro para familias',
-        description: 'Un ambiente libre de alcohol donde adultos, jóvenes y niños pueden disfrutar juntos en un entorno seguro y alegre.',
-        image: img_1,
-        color: 'from-red-500 to-orange-400',
-        benefits: [
-            'Ambiente libre de alcohol',
-            'Actividades para todas las edades',
-            'Zona kids especializada',
-            'Espacio de encuentro familiar'
         ]
     },
     {

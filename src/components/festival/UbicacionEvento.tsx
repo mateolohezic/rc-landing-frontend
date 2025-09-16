@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiMapPin, FiClock, FiWifi, FiDroplet, FiSun, FiShield } from 'react-icons/fi';
+import { FiMapPin, FiClock, FiWifi, FiDroplet, FiSun } from 'react-icons/fi';
 
 interface InfoUbicacion {
     direccion: string;
@@ -67,11 +67,6 @@ const infoSede: InfoUbicacion = {
             nombre: "Dispenser de agua",
             descripcion: "Agua fría y caliente"
         },
-        {
-            icon: <FiShield className="text-2xl" />,
-            nombre: "Vestuarios y duchas",
-            descripcion: "Instalaciones completas"
-        }
     ],
     horarioEvento: {
         inicio: "10:00",

@@ -14,22 +14,12 @@ const faqs: FAQ[] = [
     {
         id: '1',
         pregunta: '¿Qué incluye exactamente la entrada?',
-        respuesta: 'Tu entrada incluye: acceso a todas las actividades del cronograma, kit oficial (toalla + botella RC, bebida energética, barrita, stickers), plantita viva de regalo, acceso a charlas y talleres, estacionamiento gratuito y WiFi libre.',
-    },
-    {
-        id: '2',
-        pregunta: '¿Hay descuentos para familias?',
-        respuesta: 'Sí! Ofrecemos descuentos especiales: 15% off para familias de 3 o más personas, y los niños menores de 6 años ingresan gratis acompañados de un adulto con entrada paga.',
-    },
-    {
-        id: '3',
-        pregunta: '¿Qué pasa si llueve el día del evento?',
-        respuesta: 'RC Terrazas cuenta con espacios cubiertos amplios. En caso de lluvia intensa, trasladaremos las actividades principales al salón interno. El evento se realiza con lluvia o sol.',
+        respuesta: 'Tu entrada incluye: acceso a todas las actividades del cronograma, kit oficial (toalla + botella RC, bebida energética, barrita, stickers), desayuno y almuerzo, acceso a charlas y talleres, estacionamiento gratuito y WiFi libre.',
     },
     {
         id: '4',
         pregunta: '¿Se puede comprar comida durante el evento?',
-        respuesta: 'Absolutamente. Tendremos food trucks y stands gastronómicos con opciones saludables: bowls, wraps, jugos naturales, smoothies y opciones veganas. También puedes traer tu propia comida.',
+        respuesta: 'Absolutamente, RC La Cantina estará a disposición durante todo el evento. También puedes traer tu propia comida.',
     },
     {
         id: '5',
@@ -40,16 +30,6 @@ const faqs: FAQ[] = [
         id: '6',
         pregunta: '¿Necesito experiencia previa en fitness?',
         respuesta: 'Para nada! Todas las clases están adaptadas para principiantes y avanzados. Nuestros instructores ofrecen modificaciones para todos los niveles. Solo necesitas ganas de moverte y divertirte.',
-    },
-    {
-        id: '7',
-        pregunta: '¿Puedo cancelar mi entrada si no puedo asistir?',
-        respuesta: 'Sí, ofrecemos reembolso del 100% hasta 48 horas antes del evento. Después de ese plazo, puedes transferir tu entrada a otra persona sin costo adicional.',
-    },
-    {
-        id: '8',
-        pregunta: '¿Hay vestuarios y duchas disponibles?',
-        respuesta: 'RC Terrazas cuenta con vestuarios completos, duchas con agua caliente, lockers y zona de descanso. Ideal para cambiarte antes o después de las actividades.',
     },
     {
         id: '9',

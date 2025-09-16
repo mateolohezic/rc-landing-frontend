@@ -5,7 +5,7 @@ import { CuentaRegresiva } from "@/components/festival/CuentaRegresiva";
 import { FAQFestival } from "@/components/festival/FAQFestival";
 import { PropuestaValor } from "@/components/festival/PropuestaValor";
 import { QueTraerFestival } from "@/components/festival/QueTraerFestival";
-import { SponsorsFestival } from "@/components/festival/SponsorsFestival";
+// import { SponsorsFestival } from "@/components/festival/SponsorsFestival";
 import { UbicacionEvento } from "@/components/festival/UbicacionEvento";
 import { Metadata } from "next";
 
@@ -28,12 +28,12 @@ export default function FestivalPage() {
             <HeroFestival />
             <ComparativoEventos />
             <PropuestaValor />
+            {/* <SponsorsFestival /> */}
+            <QueTraerFestival />
             <CronogramaActividades />
-            <SponsorsFestival />
+            <CuentaRegresiva />
             <UbicacionEvento />
             <FAQFestival />
-            <QueTraerFestival />
-            <CuentaRegresiva />
         </main>
     );
 }

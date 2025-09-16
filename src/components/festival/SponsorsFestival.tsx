@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const sponsors = [
@@ -65,9 +66,9 @@ export const SponsorsFestival = () => {
                         Diferentes paquetes de sponsorship disponibles.
                     </p>
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
-                        <button className="px-8 py-4 bg-purple-500 hover:bg-purple-600 rounded-lg font-bold uppercase text-lg transition-colors">
+                        <Link href="https://api.whatsapp.com/send/?phone=5493816463912&text&type=phone_number&app_absent=0" target='_blank' className="px-8 py-4 bg-purple-500 hover:bg-purple-600 rounded-lg font-bold uppercase text-lg transition-colors">
                             Info para sponsors
-                        </button>
+                        </Link>
                     </div>
                     <div className="mt-6 text-white/60 text-sm">
                         <p>sofiamorenorc@gmail.com | +54 9 3816 46-3912</p>
