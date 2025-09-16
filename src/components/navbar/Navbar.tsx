@@ -9,7 +9,8 @@ import type { NavbarLink } from "@/interfaces";
 
 const links: Array<NavbarLink> = [
     { title: 'Inicio', href: '/' },
-    { title: 'Planes', href: '/planes' }
+    { title: 'Planes', href: '/planes' },
+    { title: 'Festival RC', href: '/festival' }
 ];
 
 const socialMedias = [

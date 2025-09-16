@@ -24,3 +24,5 @@ export { Precios } from "./landing/Precios";
 
 export { SwiperTerrazas } from "./terrazas/SwiperTerrazas";
 export { ClasesTerrazas } from "./terrazas/ClasesTerrazas";
+
+export { HeroFestival } from "./festival/HeroFestival";

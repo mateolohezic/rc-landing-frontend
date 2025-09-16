@@ -9,7 +9,10 @@ export {
     FaYoutube as YoutubeIcon,
     FaWhatsapp as WhatsappIcon,
     FaAddressCard as MemberCardIcon,
-    FaCheck as CheckIcon
+    FaCheck as CheckIcon,
+    FaMoon as MoonIcon,
+    FaUser as UserIcon,
+    FaHeart as HeartIcon
 } from "react-icons/fa6";
 
 export {
@@ -59,5 +62,23 @@ export {
 } from "react-icons/fa";
 
 export {
+    IoMdMusicalNote as MusicIcon,
+    IoMdSunny as SunIcon
+} from "react-icons/io";
+
+export {
     IoMenu as MenuIcon,
+    IoLocationSharp as LocationIcon,
 } from "react-icons/io5";
+
+export {
+    WiRaindrop as RaindropIcon
+} from "react-icons/wi";
+
+export {
+    CiBeerMugFull as BeerIcon
+} from "react-icons/ci";
+
+export {
+    PiLeafThin as LeafIcon
+} from "react-icons/pi";
