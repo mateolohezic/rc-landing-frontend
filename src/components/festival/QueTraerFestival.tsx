@@ -48,8 +48,8 @@ const itemsRecomendados: ItemRecomendado[] = [
     },
     {
         id: '4',
-        nombre: 'Toalla personal',
-        descripcion: 'Incluimos una en el kit, pero podés traer una extra',
+        nombre: 'Toalla',
+        descripcion: 'Para uso e higiniere personal',
         icon: <FaShirt className="text-2xl" />,
         esencial: false,
         categoria: 'ropa'
@@ -73,22 +73,14 @@ const itemsRecomendados: ItemRecomendado[] = [
     {
         id: '7',
         nombre: 'Snacks saludables',
-        descripcion: 'Frutas, frutos secos, barritas. También hay food trucks',
+        descripcion: 'Frutas, frutos secos, barritas.',
         icon: <FiHeart className="text-2xl" />,
         esencial: false,
         categoria: 'extras'
     },
     {
-        id: '8',
-        nombre: 'Cambio de ropa',
-        descripcion: 'Para después de las actividades, tenemos vestuarios completos',
-        icon: <FaShirt className="text-2xl" />,
-        esencial: false,
-        categoria: 'ropa'
-    },
-    {
         id: '9',
-        nombre: 'Lona o manta para el pasto',
+        nombre: 'Lona o manta',
         descripcion: 'Para sentarte cómodo durante las actividades al aire libre y el almuerzo',
         icon: <LeafIcon className="text-2xl" />,
         categoria: 'proteccion',
