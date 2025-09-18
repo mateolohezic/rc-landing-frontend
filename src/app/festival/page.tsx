@@ -5,7 +5,7 @@ import { CuentaRegresiva } from "@/components/festival/CuentaRegresiva";
 import { FAQFestival } from "@/components/festival/FAQFestival";
 import { PropuestaValor } from "@/components/festival/PropuestaValor";
 import { QueTraerFestival } from "@/components/festival/QueTraerFestival";
-// import { SponsorsFestival } from "@/components/festival/SponsorsFestival";
+import { SponsorsFestival } from "@/components/festival/SponsorsFestival";
 import { UbicacionEvento } from "@/components/festival/UbicacionEvento";
 import { Metadata } from "next";
 
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
 
 export default function FestivalPage() {
     return (
-        <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900">
+        <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900 overflow-x-hidden">
             <h1 className="sr-only">Festival RC Club 2025 - Diversión Sana en Tucumán</h1>
             <HeroFestival />
             <ComparativoEventos />
             <PropuestaValor />
-            {/* <SponsorsFestival /> */}
+            <SponsorsFestival />
             <QueTraerFestival />
             <CronogramaActividades />
             <CuentaRegresiva />

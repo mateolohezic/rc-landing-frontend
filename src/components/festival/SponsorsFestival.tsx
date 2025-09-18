@@ -2,16 +2,39 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import amsterdam from "@/assets/festival/sponsors/amsterdam.webp";
+import bonafide from "@/assets/festival/sponsors/bonafide.webp";
+import festival_holistico from "@/assets/festival/sponsors/festival_holistico.webp";
+import gatorade from "@/assets/festival/sponsors/gatorade.webp";
+import kuranda from "@/assets/festival/sponsors/kuranda.webp";
+import la_cantina from "@/assets/festival/sponsors/la_cantina.webp";
+import municipalidad from "@/assets/festival/sponsors/municipalidad.webp";
+import onkel_saft from "@/assets/festival/sponsors/onkel_saft.webp";
+import paco_garcia from "@/assets/festival/sponsors/paco_garcia.webp";
+import papas_tafi from "@/assets/festival/sponsors/papas_tafi.webp";
+import pepsi from "@/assets/festival/sponsors/pepsi.webp";
+import que_lo_paleo from "@/assets/festival/sponsors/que_lo_paleo.webp";
+import quiropraxia from "@/assets/festival/sponsors/quiropraxia.webp";
+import redbull from "@/assets/festival/sponsors/redbull.webp";
+import soremer from "@/assets/festival/sponsors/soremer.webp";
+import Image from 'next/image';
 
 const sponsors = [
-    { id: '1', logo: '🥗' },
-    { id: '2', logo: '💧' },
-    { id: '3', logo: '👕' },
-    { id: '4', logo: '🥜' },
-    { id: '5', logo: '🎵' },
-    { id: '6', logo: '🧘' },
-    { id: '7', logo: '🌱' },
-    { id: '8', logo: '🛡️' }
+    { id: '1', logo: amsterdam, title: 'Amsterdam' },
+    { id: '15', logo: gatorade, title: 'Gatorade' },
+    { id: '10', logo: pepsi, title: 'Pepsi' },
+    { id: '13', logo: redbull, title: 'Redbull' },
+    { id: '11', logo: que_lo_paleo, title: 'Que Lo Paleo' },
+    { id: '9', logo: papas_tafi, title: 'Papas Tafí' },
+    { id: '5', logo: la_cantina, title: 'La Cantina' },
+    { id: '8', logo: paco_garcia, title: 'Paco Garcia' },
+    { id: '4', logo: kuranda, title: 'Kuranda' },
+    { id: '7', logo: onkel_saft, title: 'Onkel Saft' },
+    { id: '12', logo: quiropraxia, title: 'Quiropraxia' },
+    { id: '3', logo: festival_holistico, title: 'Festival Holístico' },
+    { id: '6', logo: municipalidad, title: 'Municipalidad de Yerba Buena' },
+    { id: '14', logo: soremer, title: 'Soremer' },
+    { id: '2', logo: bonafide, title: 'Bonafide' },
 ];
 
 export const SponsorsFestival = () => {
@@ -31,22 +54,18 @@ export const SponsorsFestival = () => {
                     Empresas comprometidas con el bienestar y la vida saludable que hacen posible este evento
                 </p>
             </motion.div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16 lg:mb-20">
+            <div className="grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 gap-6 mb-16 lg:mb-20">
                 {sponsors.map((sponsor, index) => (
                     <motion.div
                         key={sponsor.id}
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.1 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ initial: { delay: index * 0.1 } }}
                         whileHover={{ scale: 1.05, y: -5 }}
-                        className="bg-white/5 border border-white/10 rounded-2xl p-8 lg:p-10 hover:border-red-500/30 transition-all duration-300 group cursor-pointer backdrop-blur-sm"
+                        className="bg-white/5 border border-white/10 rounded-2xl p-4 lg:p-6 hover:border-red-500/30 flex justify-center items-center transition-200 group"
                     >
-                        <div className="w-full h-20 lg:h-24 flex items-center justify-center text-4xl lg:text-5xl">
-                            <span className="filter grayscale group-hover:grayscale-0 transition-all">
-                                {sponsor.logo}
-                            </span>
-                        </div>
+                        <Image src={sponsor.logo} alt={sponsor.title} className='w-full h-32 object-contain'/>
                         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity" />
                     </motion.div>
                 ))}
