@@ -9,6 +9,7 @@ import type { NavbarLink } from "@/interfaces";
 
 const links: Array<NavbarLink> = [
     { title: 'Inicio', href: '/' },
+    { title: 'Epico', href: '/epico' },
     { title: 'Planes', href: '/planes' }
 ];
 

@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: 'https://rcgym.com.ar/terrazas',
+      url: 'https://rcgym.com.ar/epico',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
