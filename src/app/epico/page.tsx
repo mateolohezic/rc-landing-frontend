@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { CheckIcon, ClockIcon, FitnessIcon, GroupIcon, TennisIcon } from "@/icons";
+import { CheckIcon, ClockIcon, FitnessIcon, GroupIcon, GroupWorkIcon } from '@/icons';
 import { SwiperEpico } from "@/components";
 
 export const metadata: Metadata = {
@@ -16,7 +16,6 @@ export default function EpicoPage() {
         <div className="relative z-20 max-w-4xl text-center px-4">
           <h1 className="text-6xl lg:text-9xl font-highrise-bold uppercase">Nueva sede <b className="text-red-500 block">EPICO</b></h1>
           <p className="mt-6 text-lg lg:text-2xl">
-            Fecha estimativa de apertura: <b className="text-red-500 font-extrabold">Enero</b>.
             <br />Quedan solo <b className="text-red-500 font-extrabold">50 cupos</b> en primera etapa.
             <br />Aprovechá <b className="text-red-500 font-extrabold">50% OFF</b> en tu primer mes.
           </p>
@@ -28,9 +27,6 @@ export default function EpicoPage() {
             Reservá tu cupo
           </Link>
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-lg">
-            <p className="flex items-center gap-2">
-              <CheckIcon className="text-red-500 text-xl" /> Cancha de padel
-            </p>
             <p className="flex items-center gap-2">
               <CheckIcon className="text-red-500 text-xl" /> Zona exclusiva
             </p>
@@ -120,7 +116,7 @@ export default function EpicoPage() {
           </li>
           <li className="flex flex-col justify-center items-center gap-6">
             <div className="size-16 flex justify-center items-center rounded-full bg-gradient-to-br from-red-600 to-red-500">
-              <GroupIcon className="size-9"/>
+              <GroupWorkIcon className="size-10"/>
             </div>
             <span className="text-xl max-w-xs lg:max-w-none grow">
               <b className="underline decoration-red-500 font-bold">Instructor</b> en sala para guiarte
@@ -136,10 +132,10 @@ export default function EpicoPage() {
           </li>
           <li className="flex flex-col justify-center items-center gap-6">
             <div className="size-16 flex justify-center items-center rounded-full bg-gradient-to-br from-red-600 to-red-500">
-              <TennisIcon className="size-10"/>
+              <GroupIcon className="size-9"/>
             </div>
             <span className="text-xl max-w-xs lg:max-w-none grow">
-              <b className="underline decoration-red-500 font-bold">Cancha de padel</b> disponible
+              Forma parte de <b className="underline decoration-red-500 font-bold">RC Club</b>, nuestra comunidad exclusiva
             </span>
           </li>
         </ul>

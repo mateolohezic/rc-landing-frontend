@@ -24,8 +24,10 @@ import descuento_16 from "@/assets/home/descuentos/descuento_16.webp";
 import descuento_17 from "@/assets/home/descuentos/descuento_17.webp";
 import descuento_18 from "@/assets/home/descuentos/descuento_18.webp";
 import descuento_19 from "@/assets/home/descuentos/descuento_19.webp";
+import descuento_20 from "@/assets/home/descuentos/descuento_20.webp";
+import descuento_21 from "@/assets/home/descuentos/descuento_21.webp";
 
-const descuentos = [ descuento_1, descuento_2, descuento_3, descuento_4, descuento_5, descuento_6, descuento_7, descuento_8, descuento_9, descuento_10, descuento_11, descuento_12, descuento_13, descuento_14, descuento_15, descuento_16, descuento_17, descuento_18, descuento_19 ]
+const descuentos = [ descuento_1, descuento_2, descuento_3, descuento_4, descuento_5, descuento_6, descuento_7, descuento_8, descuento_9, descuento_10, descuento_11, descuento_12, descuento_13, descuento_14, descuento_15, descuento_16, descuento_17, descuento_18, descuento_19, descuento_20, descuento_21 ]
 
 export const SwiperDescuentos = () => {
 

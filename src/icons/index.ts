@@ -22,8 +22,7 @@ export {
 
 export {
     MdFitnessCenter as FitnessIcon,
-    MdGroupWork as GroupWorkIcon,
-    MdSportsTennis as TennisIcon
+    MdGroupWork as GroupWorkIcon
 } from "react-icons/md";
 
 export {
