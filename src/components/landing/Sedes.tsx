@@ -24,7 +24,7 @@ const sedes = [
             sabado: "9:00 a 13:00 y 16:00 a 20:00",
             domingo: "9:00 a 12:00 y 17:00 a 20:00"
         },
-        phonenumber: "https://api.whatsapp.com/send/?phone=5493816959673&text&type=phone_number&app_absent=0"
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
     },
     {
         title: "Yerba Buena",

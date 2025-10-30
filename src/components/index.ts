@@ -28,3 +28,15 @@ export { ClasesTerrazas } from "./terrazas/ClasesTerrazas";
 export { SwiperEpico } from "./epico/SwiperEpico";
 
 export { HeroFestival } from "./festival/HeroFestival";
+
+export { HalloweenHero } from "./halloween/HalloweenHero";
+export { ProofBar } from "./halloween/ProofBar";
+export { EventPromise } from "./halloween/EventPromise";
+export { UrgencySection } from "./halloween/UrgencySection";
+export { EventTimeline } from "./halloween/EventTimeline";
+export { PrizeCards } from "./halloween/PrizeCards";
+export { JurySection } from "./halloween/JurySection";
+export { FAQAccordion } from "./halloween/FAQAccordion";
+export { SponsorsSection } from "./halloween/SponsorsSection";
+export { FinalCTA } from "./halloween/FinalCTA";
+export { StickyHeader } from "./halloween/StickyHeader";
