@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components";
+import { ClarityTracker, Navbar } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const montserrat = Montserrat({
@@ -106,6 +106,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     <html lang="es" className="bg-neutral-900 text-white">
       <body className={`${montserrat.className} ${montserrat.variable} ${stretch.variable} ${highrise_bold.variable} antialiased w-full min-h-svh flex flex-col items-center`}>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_G_A_ID || ""}/>
+        <ClarityTracker/>
         <Navbar />
         {children}
       </body>

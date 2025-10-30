@@ -1,6 +1,7 @@
 export { RCLogo } from "./RCLogo";
 export { RCIcon } from "./RCIcon";
 export { PlanCard } from "./PlanCard";
+export { ClarityTracker } from "./ClarityTracker";
 
 export { VideoIntro } from "./intro/VideoIntro";
 
