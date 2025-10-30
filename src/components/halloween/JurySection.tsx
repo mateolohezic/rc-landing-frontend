@@ -1,21 +1,24 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import gabi from "@/assets/halloween/gabi.webp"
+import raquel from "@/assets/halloween/raquel.webp"
+import seba from "@/assets/halloween/seba.webp"
+import Image from 'next/image';
 
 const jury = [
   {
     name: 'Gaby Papa',
-    // image: '/assets/jury/gaby.jpg', // Placeholder - necesita foto real
+    image: gabi
   },
   {
     name: 'Seba Finkelstein',
-    // image: '/assets/jury/seba.jpg', // Placeholder - necesita foto real
+    image: seba
   },
   {
     name: 'Raquel Soaje',
-    // image: '/assets/jury/raquel.jpg', // Placeholder - necesita foto real
+    image: raquel
   },
 ];
 
@@ -33,13 +36,7 @@ const JuryCard = ({ judge }: { judge: typeof jury[0] }) => {
     >
       <div className="aspect-[3/4] bg-gradient-to-br from-neutral-700 to-neutral-900 relative overflow-hidden">
         <div className="size-full flex items-center justify-center">
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-            className="text-9xl opacity-30"
-          >
-            👤
-          </motion.div>
+          <Image src={judge.image} alt={judge.name} className='size-full object-cover'/>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-neutral-900 to-transparent" />
       </div>

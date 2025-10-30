@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const proofItems = [
   { icon: '🏆', text: '5 sedes compitiendo' },
-  { icon: '💰', text: '+$500.000 en premios' },
+  { icon: '💰', text: '$1.500.000 en premios' },
   { icon: '👥', text: 'Jurado confirmado' },
   { icon: '🎯', text: 'Sponsors oficiales' },
 ];

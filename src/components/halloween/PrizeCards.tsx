@@ -9,36 +9,33 @@ const prizes = [
     position: '🥇',
     title: 'Primer Lugar',
     prize: '1 Año Gratis en RC',
-    value: 420000,
+    value: 840000,
     features: [
       '12 meses de entrenamiento',
       'Acceso a todas las sedes',
       'Clases ilimitadas',
     ],
-    strikethrough: 35000,
     highlight: true,
   },
   {
     position: '🥈',
     title: 'Segundo Lugar',
     prize: '6 Meses Gratis en RC',
-    value: 210000,
+    value: 420000,
     features: [
       'Medio año transformando tu cuerpo',
       'Sin excusas, sin pretextos',
     ],
-    strikethrough: 35000,
     highlight: false,
   },
   {
     position: '🥉',
     title: 'Tercer Lugar',
     prize: '3 Meses Gratis en RC',
-    value: 105000,
+    value: 210000,
     features: [
       'El empujón que necesitabas',
     ],
-    strikethrough: 35000,
     highlight: false,
   },
 ];
@@ -46,9 +43,8 @@ const prizes = [
 const bonusPrize = {
   icon: '🍔',
   title: 'Premio Sede Ganadora',
-  prize: 'Combo Burguer para 10 personas',
+  prize: 'Combo Burguer para el equipo',
   subtitle: '+ Gaseosas + Snacks',
-  value: 80000,
   description: 'La celebración perfecta',
 };
 
@@ -97,7 +93,7 @@ const PrizeCard = ({ prize, index }: { prize: typeof prizes[0]; index: number })
           </p>
           <p className="text-sm text-white/70 mt-2">Valor real del premio</p>
         </div>
-        <ul className="space-y-3 mb-6">
+        <ul className="space-y-3">
           {prize.features.map((feature, i) => (
             <li key={i} className="flex items-center gap-2 text-base lg:text-lg">
               <span className="text-yellow-400">✓</span>
@@ -105,14 +101,6 @@ const PrizeCard = ({ prize, index }: { prize: typeof prizes[0]; index: number })
             </li>
           ))}
         </ul>
-        <div className="border-t border-white/20 pt-4">
-          <p className="text-center text-white/60 line-through text-lg">
-            Precio normal: ${prize.strikethrough.toLocaleString('es-AR')}/mes
-          </p>
-          <p className="text-center text-2xl font-highrise-bold mt-2 text-yellow-400">
-            TU PRECIO: $0
-          </p>
-        </div>
       </div>
     </motion.div>
   );
@@ -138,7 +126,7 @@ export const PrizeCards = () => {
             en juego
           </p>
           <p className="text-xl lg:text-2xl mt-4 text-white/70">
-            (Valor real: <span className="text-yellow-400 font-bold">+$500.000</span>)
+            (Valor real: <span className="text-yellow-400 font-bold">$1.500.000</span>)
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 mb-4 lg:mb-8">
@@ -160,10 +148,6 @@ export const PrizeCards = () => {
             {bonusPrize.prize}
           </p>
           <p className="text-lg text-white/80 mb-4">{bonusPrize.subtitle}</p>
-          <p className="text-4xl font-highrise-bold text-orange-400">
-            <small className="text-xl">$ </small>
-            {bonusPrize.value.toLocaleString('es-AR')}
-          </p>
           <p className="text-base text-white/70 mt-2 italic">{bonusPrize.description}</p>
         </motion.div>
       </div>
