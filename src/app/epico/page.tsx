@@ -16,6 +16,7 @@ export default function EpicoPage() {
         <div className="relative z-20 max-w-4xl text-center px-4">
           <h1 className="text-6xl lg:text-9xl font-highrise-bold uppercase">Nueva sede <b className="text-red-500 block">EPICO</b></h1>
           <p className="mt-6 text-lg lg:text-2xl">
+            <br />Fecha de apertura: <b className="text-red-500 font-extrabold">15 de diciembre</b>
             <br />Quedan solo <b className="text-red-500 font-extrabold">50 cupos</b> en primera etapa.
             <br />Aprovechá <b className="text-red-500 font-extrabold">50% OFF</b> en tu primer mes.
           </p>
