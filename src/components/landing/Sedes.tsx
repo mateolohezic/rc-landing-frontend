@@ -27,7 +27,7 @@ const sedes = [
         phonenumber: "https://api.whatsapp.com/send/?phone=5493815145550&text&type=phone_number&app_absent=0"
     },
     {
-        title: "Yerba Buena",
+        title: "Aconquija",
         description: "Contamos con una amplia terraza al aire libre, wifi, duchas, vestuarios, secador de pelo, dispenser de agua, salones climatizados y estacionamiento.",
         location: "Av Aconquija 2122",
         img: sede_yerba_buena,

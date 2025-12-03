@@ -7,21 +7,21 @@ import { PlanCard } from '@/components';
 const preciosPorSede = [
   {
     title: "Barrio Norte",
-    mensual: 50000,
-    trimestral: 127500,
-    semestral: 240000,
+    mensual: 55000,
+    trimestral: 140250,
+    semestral: 264000,
   },
   {
-    title: "Yerba Buena",
-    mensual: 65000,
-    trimestral: 175500,
-    semestral: 331500,
+    title: "Aconquija",
+    mensual: 72000,
+    trimestral: 183600,
+    semestral: 345600,
   },
   {
     title: "Barrio Sur",
-    mensual: 49400,
-    trimestral: 126000,
-    semestral: 237000,
+    mensual: 56000,
+    trimestral: 142800,
+    semestral: 268800,
   },
   {
     title: "Tafí Viejo",
@@ -31,12 +31,11 @@ const preciosPorSede = [
   },
   {
     title: "Terrazas",
-    mensual: 70000,
-    trimestral: 178500,
-    semestral: 336000,
+    mensual: 80000,
+    trimestral: 204000,
+    semestral: 384000,
   },
 ];
-
 
 export const Precios = () => {
     const [sede, setSede] = useState(preciosPorSede[0]);

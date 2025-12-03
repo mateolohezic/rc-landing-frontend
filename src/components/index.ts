@@ -41,3 +41,11 @@ export { FAQAccordion } from "./halloween/FAQAccordion";
 export { SponsorsSection } from "./halloween/SponsorsSection";
 export { FinalCTA } from "./halloween/FinalCTA";
 export { StickyHeader } from "./halloween/StickyHeader";
+
+export { PreciosBlackRC } from "./black-rc/PreciosBlackRC";
+export { BeneficiosBlackRC } from "./black-rc/BeneficiosBlackRC";
+export { EpicoSpecialBlackRC } from "./black-rc/EpicoSpecialBlackRC";
+export { HeroBlackRC } from "./black-rc/HeroBlackRC";
+export { CTAFinalBlackRC } from "./black-rc/CTAFinalBlackRC";
+export { ComparativaBlackRC } from "./black-rc/ComparativaBlackRC";
+export { FAQBlackRC } from "./black-rc/FAQBlackRC";
