@@ -31,7 +31,7 @@ const faqs: FAQ[] = [
         respuesta: "El pase trimestral BLACK RC es específico para la sede que elijas al momento de la compra. Si necesitás cambiar de sede, consultá con recepción las opciones disponibles."
     },
     {
-        pregunta: "¿Qué pasa con BLACK RC ÉPICO del viernes 5?",
+        pregunta: "¿Qué pasa con BLACK RC ÉPICO después del viernes 5?",
         respuesta: "Es una preventa especial de 40% OFF exclusiva para la nueva sede ÉPICO. Solo disponible el viernes 5 de diciembre a las 15hs. Cupos ultra limitados."
     }
 ];

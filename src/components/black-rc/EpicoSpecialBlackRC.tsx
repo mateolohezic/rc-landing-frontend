@@ -104,7 +104,7 @@ export const EpicoSpecialBlackRC = () => {
                             </div>
                             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-center">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                                    <p className="text-3xl font-black text-yellow-300">40%</p>
+                                    <p className="text-3xl font-black text-yellow-300">50%</p>
                                     <p className="text-sm uppercase">Descuento exclusivo</p>
                                 </div>
                                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
