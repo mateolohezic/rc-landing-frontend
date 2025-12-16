@@ -35,6 +35,12 @@ const preciosPorSede = [
     trimestral: 204000,
     semestral: 384000,
   },
+  {
+    title: "Epico",
+    mensual: 72000,
+    trimestral: 183600,
+    semestral: 345600,
+  },
 ];
 
 export const Precios = () => {
