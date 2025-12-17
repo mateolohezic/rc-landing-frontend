@@ -11,8 +11,22 @@ import sede_barrio_sur from "@/assets/home/sedes/sede_barrio_sur.webp";
 import sede_tafi_viejo from "@/assets/home/sedes/sede_tafi_viejo.webp";
 import sede_yerba_buena from "@/assets/home/sedes/sede_yerba_buena.webp";
 import sede_terrazas from "@/assets/home/sedes/sede_terrazas.webp";
+import sede_epico from "@/assets/home/sedes/sede_epico.webp";
 
 const sedes = [
+    {
+        title: "Épico",
+        description: "Contamos con salones climatizados, dispenser de agua fría y caliente, vestuarios, duchas, lockers y zona de cardio equipada.",
+        location: "San Luis 2120, Yerba Buena",
+        img: sede_epico,
+        clases: ["Spinning", "Funcional", "GAP"],
+        horarios: {
+            semana: "6:00 a 23:00",
+            sabado: "9:00 a 13:00 y 16:00 a 20:00",
+            domingo: "17:00 a 20:00"
+        },
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493815959644&text&type=phone_number&app_absent=0"
+    },
     {
         title: "Terrazas",
         description: "Contamos con espacio verde outdoor, estacionamiento gratuito, WiFi, salones climatizados, dispenser de agua fria y caliente, vestuarios, duchas y lockers con candado",
@@ -133,15 +147,15 @@ export const Sedes = () => {
                     )}
                 </AnimatePresence>
             </div>
-            <div className="hidden lg:grid grid-cols-5 gap-6 mt-4 lg:mt-8">
+            <div className="hidden lg:grid grid-cols-6 lg:gap-2 xl:gap-4 2xl:gap-6 mt-4 lg:mt-8">
                 {sedes.map((sede, idx) => (
                     <button
                         key={idx}
                         onClick={() => setSelectedSede(sede)}
                         className={`w-full aspect-square rounded-lg flex flex-col justify-center items-center gap-4 cursor-pointer transition-all border-2 ${selectedSede.title === sede.title ? "bg-gradient-to-br from-background to-red-600 border-white" : "bg-background-sidebar hover:bg-background-sidebar/25 border-background-sidebar hover:border-white/25" }`}
                     >
-                        <RCIcon className="w-16 fill-white" />
-                        <h3 className="text-5xl font-highrise-bold uppercase">{sede.title}</h3>
+                        <RCIcon className="w-12 fill-white" />
+                        <h3 className="text-4xl font-highrise-bold uppercase">{sede.title}</h3>
                     </button>
                 ))}
             </div>
@@ -163,10 +177,10 @@ export const Sedes = () => {
                     >
                         <Image src={selectedSede.img} alt={`Sede ${selectedSede.title}`} className="size-full object-cover absolute top-0 left-0" />
                     </motion.div>
-                    <div className="w-full max-w-2xl flex flex-col items-center lg:items-start lg:pt-8 lg:pl-4">
+                    <div className="w-full lg:max-w-md xl:max-w-xl 2xl:max-w-2xl flex flex-col items-center lg:items-start lg:pt-8 lg:pl-4">
                         <h3 className="text-6xl lg:text-9xl font-highrise-bold">{selectedSede.title}</h3>
                         <h4 className='text-xl uppercase'>{selectedSede.location}</h4>
-                        <p className='mt-4'>{selectedSede.description}</p>
+                        <p className='mt-4 max-w-md'>{selectedSede.description}</p>
                         <div className='mt-8 lg:mt-4 w-fit bg-zinc-700 text-sm rounded-2xl overflow-hidden flex relative'>
                             <div className='w-12 shrink-0 bg-zinc-800 flex justify-center items-center'>
                                 <ClockIcon className='size-6 shrink-0' />
