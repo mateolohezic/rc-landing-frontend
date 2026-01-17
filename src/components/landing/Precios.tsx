@@ -25,9 +25,9 @@ const preciosPorSede = [
   },
   {
     title: "Tafí Viejo",
-    mensual: 60500,
-    trimestral: 154200,
-    semestral: 290400,
+    mensual: 66000,
+    trimestral: 168300,
+    semestral: 316800,
   },
   {
     title: "Terrazas",
