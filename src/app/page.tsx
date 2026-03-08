@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import {
     Portada,
-    Bienvenido,
+    StatsBar,
     Frase,
     Sedes,
     CasoDeExito,
@@ -13,32 +13,32 @@ import {
     SocioPlus,
     SwiperBeneficios,
     Precios,
-    // SwiperTestimonios
+    FooterCTA,
 } from "@/components";
 
 export const metadata: Metadata = {
     title: 'RC Gym',
-    description: "RC Gym",
+    description: "RC Gym - El mejor gimnasio de Tucumán",
 };
 
 export default function HomePage() {
     return (
-        <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900">
+        <main className="w-full grow flex flex-col justify-center items-center bg-[#0a0a0a]">
             <h1 className="sr-only">RC Gym Tucumán</h1>
-            <Portada/>
-            <Bienvenido/>
-            <Frase/>
-            <Sedes/>
-            <CasoDeExito/>
-            <Entrenamientos/>
-            <SwiperDescuentos/>
-            <BannerRC/>
-            <Features/>
-            <ClasesVideo/>
-            <SwiperBeneficios/>
-            <Precios/>
-            <SocioPlus/>
-            {/* <SwiperTestimonios/> */}
+            <Portada />
+            <StatsBar />
+            <Frase />
+            <Sedes />
+            <Features />
+            <Entrenamientos />
+            <ClasesVideo />
+            <BannerRC />
+            <CasoDeExito />
+            <Precios />
+            <SwiperDescuentos />
+            <SwiperBeneficios />
+            <SocioPlus />
+            <FooterCTA />
         </main>
     );
 }

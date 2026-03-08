@@ -1,69 +1,82 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import { FitnessIcon, GroupIcon, GroupWorkIcon } from "@/icons"
-import { useState } from 'react';
+import { FitnessIcon, GroupIcon, GroupWorkIcon } from "@/icons";
+
+const features = [
+    {
+        Icon: FitnessIcon,
+        title: "Instalaciones de primer nivel",
+        description: "Equipos de última tecnología en un ambiente diseñado para maximizar tu rendimiento y comodidad.",
+        gradient: "from-red-500/20 to-transparent",
+    },
+    {
+        Icon: GroupIcon,
+        title: "Entrenadores profesionales",
+        description: "Guía personalizada de expertos en fitness, listos para acompañarte en cada paso de tu transformación.",
+        gradient: "from-orange-500/20 to-transparent",
+    },
+    {
+        Icon: GroupWorkIcon,
+        title: "Clases grupales motivadoras",
+        description: "Desde yoga hasta HIIT, una variedad de clases que se adaptan a tus objetivos y te mantienen inspirado.",
+        gradient: "from-amber-500/20 to-transparent",
+    },
+];
 
 export const Bienvenido = () => {
-    const [inView, setInView] = useState<boolean>(false)
     return (
-        <motion.section
-            initial={{ opacity: 0, y: '50%' }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.5 }}
-            onViewportEnter={() => setInView(true)}
-            className="w-full max-w-7xl px-4 xl:px-0 mb-12 lg:my-24 text-center lg:text-start"
-        >
-            <h2 className="sr-only lg:not-sr-only lg:text-9xl font-highrise-bold uppercase leading-[0.8]">Bienvenido a RC</h2>
-            <div className="mt-4 lg:mt-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-24">
-                <p className="lg:text-white/75 font-thin sr-only lg:not-sr-only">En RC Gym, creemos que el fitness es más que un objetivo: es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas y sentirte mejor cada día. ¡Únete a nuestra comunidad y transforma tu cuerpo y mente!</p>
-                { inView &&
-                    <div className="flex flex-col gap-8 lg:gap-6">
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.5 }}
-                            className="flex flex-col lg:flex-row items-center gap-4"
-                        >
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <FitnessIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Instalaciones de primer nivel</h3>
-                                <p className="text-sm text-white/75">Entrena con equipos de última tecnología y disfruta de un ambiente diseñado para maximizar tu rendimiento y comodidad.</p>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.125 + 0.5 }}
-                            className="flex flex-col lg:flex-row items-center gap-4"
-                        >
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <GroupIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Entrenadores profesionales</h3>
-                                <p className="text-sm text-white/75">Recibe guía personalizada de expertos en fitness, listos para acompañarte en cada paso de tu transformación.</p>
-                            </div>
-                        </motion.div>
-                        <motion.div
-                            initial={{ opacity: 0, x: 100 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.25 + 0.5 }}
-                            className="flex flex-col lg:flex-row items-center gap-4"
-                        >
-                            <div className="size-12 shrink-0 bg-white/10 rounded-xl flex justify-center items-center">
-                                <GroupWorkIcon className="size-8"/>
-                            </div>
-                            <div className="grow flex flex-col gap-1">
-                                <h3 className="font-black uppercase tracking-widest">Clases grupales motivadoras</h3>
-                                <p className="text-sm text-white/75">Desde yoga hasta HIIT, participa en una variedad de clases que se adaptan a tus objetivos y te mantienen inspirado.</p>
-                            </div>
-                        </motion.div>
-                    </div>
-                }
+        <section className="w-full max-w-7xl mx-auto px-6 section-padding">
+            <div className="text-center mb-16">
+                <motion.span
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-xs uppercase tracking-[0.3em] text-red-500 font-semibold"
+                >
+                    Bienvenido a RC
+                </motion.span>
+                <motion.h2
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="mt-4 text-4xl lg:text-7xl font-highrise-bold uppercase"
+                >
+                    Más que un gimnasio
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2 }}
+                    className="mt-4 max-w-2xl mx-auto text-white/50 text-lg"
+                >
+                    En RC Gym, creemos que el fitness es un estilo de vida. Diseñamos un espacio motivador y profesional, pensado para ayudarte a superar tus metas.
+                </motion.p>
             </div>
-        </motion.section>
-    )
-}
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                {features.map((feature, i) => (
+                    <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.15 }}
+                        className="group p-8 glass-card-hover relative overflow-hidden"
+                    >
+                        <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                        <div className="relative z-10">
+                            <div className="size-14 rounded-2xl bg-white/[0.06] border border-white/[0.08] flex justify-center items-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                <feature.Icon className="size-7 text-red-500" />
+                            </div>
+                            <h3 className="text-xl font-bold uppercase tracking-wide mb-3">{feature.title}</h3>
+                            <p className="text-white/50 leading-relaxed">{feature.description}</p>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
+        </section>
+    );
+};

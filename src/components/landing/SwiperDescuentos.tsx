@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from "swiper/modules";
 import 'swiper/css';
@@ -27,44 +28,49 @@ import descuento_19 from "@/assets/home/descuentos/descuento_19.webp";
 import descuento_20 from "@/assets/home/descuentos/descuento_20.webp";
 import descuento_21 from "@/assets/home/descuentos/descuento_21.webp";
 
-const descuentos = [ descuento_1, descuento_2, descuento_3, descuento_4, descuento_5, descuento_6, descuento_7, descuento_8, descuento_9, descuento_10, descuento_11, descuento_12, descuento_13, descuento_14, descuento_15, descuento_16, descuento_17, descuento_18, descuento_19, descuento_20, descuento_21 ]
+const descuentos = [descuento_1, descuento_2, descuento_3, descuento_4, descuento_5, descuento_6, descuento_7, descuento_8, descuento_9, descuento_10, descuento_11, descuento_12, descuento_13, descuento_14, descuento_15, descuento_16, descuento_17, descuento_18, descuento_19, descuento_20, descuento_21];
+
+const breakpoints = {
+    320: { slidesPerView: 1.5, spaceBetween: 12 },
+    640: { slidesPerView: 3, spaceBetween: 16 },
+    768: { slidesPerView: 4 },
+    1024: { slidesPerView: 5 },
+    1280: { slidesPerView: 5.5 },
+    1536: { slidesPerView: 6 },
+};
 
 export const SwiperDescuentos = () => {
-
-    const breakpoints = {
-        320: { slidesPerView: 1.25, spaceBetween: 8 },
-        640: { slidesPerView: 3.75, spaceBetween: 16 },
-        768: { slidesPerView: 4.5 },
-        1024: { slidesPerView: 4.75 },
-        1280: { slidesPerView: 5.5 },
-        1536: { slidesPerView: 6.5 },
-    }
-
     return (
-        <section className="w-full px-4 my-24 flex flex-col justify-center items-center">
-            <div className="mb-4 lg:mb-8 w-full max-w-7xl">
-                <h2 className="text-6xl lg:text-9xl font-highrise-bold uppercase lg:leading-[0.8] [word-spacing:0.25rem] text-center lg:text-start">Descuentos <b className="block text__outline">en tu suscripción</b></h2>
+        <section className="w-full section-padding overflow-hidden">
+            <div className="w-full max-w-7xl mx-auto px-6 mb-10">
+                <div className="text-center">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-highrise-bold uppercase"
+                    >
+                        Descuentos <span className="text-red-500">exclusivos</span>
+                    </motion.h2>
+                </div>
             </div>
             <Swiper
                 breakpoints={breakpoints}
                 loop
                 spaceBetween={16}
                 centeredSlides
-                autoplay={{
-                    delay: 2000,
-                    disableOnInteraction: false,
-                }}
+                autoplay={{ delay: 1800, disableOnInteraction: false }}
                 modules={[Autoplay]}
-                className="w-full cursor-pointer"
+                className="w-full"
             >
                 {descuentos.map((descuento, i) => (
                     <SwiperSlide key={i}>
-                        <div className='w-full aspect-square relative'>
-                            <Image src={descuento} alt={`Descuento ${i + 1}`} className='size-full object-cover absolute top-0 left-0' />
+                        <div className="w-full aspect-square rounded-xl overflow-hidden border border-white/[0.06] relative group">
+                            <Image src={descuento} alt={`Descuento ${i + 1}`} className="size-full object-cover group-hover:scale-105 transition-transform duration-500" />
                         </div>
                     </SwiperSlide>
                 ))}
             </Swiper>
         </section>
-    )
-}
+    );
+};

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import { PlayIcon, CrossIcon } from "@/icons";
 
 interface ClassVideo {
@@ -26,94 +27,105 @@ export const ClasesVideo = () => {
 
     return (
         <>
-            <section className="w-full lg:flex flex-col justify-center items-center hidden">
-                <h2 className="w-full max-w-7xl px-4 xl:px-0 text-9xl font-highrise-bold uppercase leading-[0.8]">
-                    <b className="block text__outline">Clases pensadas</b> para vos
-                </h2>
-                <div className="mt-12 w-full flex border-y-2 border-neutral-800 shadow-xl shadow-black/50">
-                    <div className="flex flex-col divide-y-2 divide-neutral-800">
-                        {classVideos.slice(0, 4).map((clase) => (
-                            <button
-                                key={clase.youtubeId}
-                                disabled={selectedVideo.youtubeId === clase.youtubeId}
-                                type="button"
-                                onClick={() => setSelectedVideo(clase)}
-                                className="h-48 aspect-video flex justify-center items-center relative group"
-                            >
-                                <Image
-                                    src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
-                                    alt={clase.title}
-                                    fill
-                                    className="object-cover absolute top-0 left-0 z-0"
-                                />
-                                <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10" />
-                                    <h3 className={`text-xl font-black uppercase tracking-widest relative z-20 ${selectedVideo.youtubeId !== clase.youtubeId && "group-hover:opacity-0"} transition-200`}>
-                                    {clase.title}
-                                    </h3>
-                                <div className={`size-full flex justify-center items-center absolute top-0 left-0 z-30 ${selectedVideo.youtubeId !== clase.youtubeId ? "bg-white/10 opacity-0 group-hover:opacity-100" : "bg-red-500/25"} transition-200`}>
-                                    {selectedVideo.youtubeId !== clase.youtubeId && (
-                                        <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                        <PlayIcon className="text-white size-14" />
+            <section className="w-full max-w-7xl mx-auto px-6 section-padding">
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-highrise-bold uppercase"
+                    >
+                        Clases pensadas <span className="text-red-500">para vos</span>
+                    </motion.h2>
+                </div>
+
+                {/* Desktop layout */}
+                <div className="hidden lg:block">
+                    <div className="glass-card overflow-hidden">
+                        <div className="flex">
+                            {/* Left thumbnails */}
+                            <div className="w-44 xl:w-56 shrink-0 flex flex-col border-r border-white/[0.06]">
+                                {classVideos.slice(0, 4).map((clase) => (
+                                    <button
+                                        key={clase.youtubeId}
+                                        onClick={() => setSelectedVideo(clase)}
+                                        className={`relative aspect-video overflow-hidden group transition-all duration-300 border-b border-white/[0.06] last:border-b-0 ${
+                                            selectedVideo.youtubeId === clase.youtubeId ? 'ring-inset ring-1 ring-red-500/50' : ''
+                                        }`}
+                                    >
+                                        <Image
+                                            src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
+                                            alt={clase.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className={`absolute inset-0 transition-all duration-300 ${
+                                            selectedVideo.youtubeId === clase.youtubeId
+                                                ? 'bg-red-600/30'
+                                                : 'bg-black/60 group-hover:bg-black/40'
+                                        }`} />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <span className="text-sm font-bold uppercase tracking-wider relative z-10">{clase.title}</span>
                                         </div>
-                                    )}
-                                </div>
-                            </button>
-                        ))}
-                    </div>
-                    <div className="grow bg-background border-x-2 border-neutral-800">
-                        <div className="size-full relative">
-                            <iframe
-                                src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?rel=0&modestbranding=1`}
-                                className="size-full absolute top-0 left-0"
-                                title={`Clase de ${selectedVideo.title}`}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            />
+                                    </button>
+                                ))}
+                            </div>
+
+                            {/* Center video */}
+                            <div className="grow relative aspect-video">
+                                <iframe
+                                    src={`https://www.youtube.com/embed/${selectedVideo.youtubeId}?rel=0&modestbranding=1`}
+                                    className="size-full absolute inset-0"
+                                    title={`Clase de ${selectedVideo.title}`}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                />
+                            </div>
+
+                            {/* Right thumbnails */}
+                            <div className="w-44 xl:w-56 shrink-0 flex flex-col border-l border-white/[0.06]">
+                                {classVideos.slice(4).map((clase) => (
+                                    <button
+                                        key={clase.youtubeId}
+                                        onClick={() => setSelectedVideo(clase)}
+                                        className={`relative aspect-video overflow-hidden group transition-all duration-300 border-b border-white/[0.06] last:border-b-0 ${
+                                            selectedVideo.youtubeId === clase.youtubeId ? 'ring-inset ring-1 ring-red-500/50' : ''
+                                        }`}
+                                    >
+                                        <Image
+                                            src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
+                                            alt={clase.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                        <div className={`absolute inset-0 transition-all duration-300 ${
+                                            selectedVideo.youtubeId === clase.youtubeId
+                                                ? 'bg-red-600/30'
+                                                : 'bg-black/60 group-hover:bg-black/40'
+                                        }`} />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <span className="text-sm font-bold uppercase tracking-wider relative z-10">{clase.title}</span>
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
                         </div>
                     </div>
-                    <div className="flex flex-col divide-y-2 divide-neutral-800">
-                        {classVideos.slice(4).map((clase) => (
-                            <button
-                                key={clase.youtubeId}
-                                disabled={selectedVideo.youtubeId === clase.youtubeId}
-                                type="button"
-                                onClick={() => setSelectedVideo(clase)}
-                                className="h-48 aspect-video flex justify-center items-center relative group"
-                            >
-                                <Image
-                                    src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
-                                    alt={clase.title}
-                                    fill
-                                    className="object-cover absolute top-0 left-0 z-0"
-                                />
-                                <div className="size-full bg-gradient-to-r from-neutral-900/50 to-background absolute top-0 left-0 z-10" />
-                                    <h3 className={`text-xl font-black uppercase tracking-widest relative z-20 ${selectedVideo.youtubeId !== clase.youtubeId && "group-hover:opacity-0"} transition-200`}>
-                                    {clase.title}
-                                    </h3>
-                                <div className={`size-full flex justify-center items-center absolute top-0 left-0 z-30 ${selectedVideo.youtubeId !== clase.youtubeId ? "bg-white/10 opacity-0 group-hover:opacity-100" : "bg-red-500/25"} transition-200`}>
-                                    {selectedVideo.youtubeId !== clase.youtubeId && (
-                                        <div className="size-20 bg-white/10 rounded-full flex justify-center items-center">
-                                        <PlayIcon className="text-white size-14" />
-                                        </div>
-                                    )}
-                                </div>
-                            </button>
-                        ))}
-                    </div>
                 </div>
-            </section>
-            <section className="w-full px-4 lg:hidden">
-                <h2 className="text-5xl font-highrise-bold uppercase text-center mb-6">
-                    Clases para vos
-                </h2>
-                <div className="grid grid-cols-2 gap-4">
-                    {classVideos.map((clase) => (
-                        <button
+
+                {/* Mobile grid */}
+                <div className="grid grid-cols-2 gap-3 lg:hidden">
+                    {classVideos.map((clase, i) => (
+                        <motion.button
                             key={clase.youtubeId}
-                            type="button"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.05 }}
                             onClick={() => setModalVideo(clase)}
-                            className="aspect-video relative group overflow-hidden rounded-lg"
+                            className="aspect-video relative rounded-xl overflow-hidden group border border-white/[0.06]"
                         >
                             <Image
                                 src={`https://img.youtube.com/vi/${clase.youtubeId}/hqdefault.jpg`}
@@ -121,33 +133,51 @@ export const ClasesVideo = () => {
                                 fill
                                 className="object-cover"
                             />
-                            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center">
-                                <PlayIcon className="size-8" />
-                                <span className="mt-2 uppercase font-medium tracking-wide">{clase.title}</span>
+                            <div className="absolute inset-0 bg-black/50 group-active:bg-black/30 transition-colors flex flex-col justify-center items-center gap-1">
+                                <div className="size-10 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm">
+                                    <PlayIcon className="size-5" />
+                                </div>
+                                <span className="text-xs uppercase font-semibold tracking-wider mt-1">{clase.title}</span>
                             </div>
-                        </button>
+                        </motion.button>
                     ))}
                 </div>
-                {modalVideo &&
-                    <div className="p-4 bg-black/80 flex justify-center items-center fixed inset-0 z-50" onClick={() => setModalVideo(null)}>
-                        <div className="w-full max-w-xl bg-zinc-900 rounded-lg aspect-video relative" onClick={(e) => e.stopPropagation()}>
+            </section>
+
+            {/* Modal */}
+            <AnimatePresence>
+                {modalVideo && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 bg-black/90 backdrop-blur-xl flex justify-center items-center z-50 p-4"
+                        onClick={() => setModalVideo(null)}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            className="w-full max-w-2xl aspect-video relative rounded-2xl overflow-hidden"
+                            onClick={(e) => e.stopPropagation()}
+                        >
                             <iframe
                                 src={`https://www.youtube.com/embed/${modalVideo.youtubeId}?autoplay=1&rel=0&modestbranding=1`}
-                                className="size-full rounded-lg absolute top-0 left-0"
+                                className="size-full absolute inset-0"
                                 title={`Clase ${modalVideo.title}`}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen
                             />
                             <button
                                 onClick={() => setModalVideo(null)}
-                                className="p-2 bg-zinc-800 rounded-full shadow absolute -top-4 -right-3"
+                                className="absolute -top-12 right-0 p-2 text-white/60 hover:text-white transition-colors"
                             >
-                                <CrossIcon className="size-3"/>
+                                <CrossIcon className="size-6" />
                             </button>
-                        </div>
-                    </div>
-                }
-            </section>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </>
     );
 };

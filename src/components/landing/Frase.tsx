@@ -1,31 +1,34 @@
 'use client'
 
-import Image from "next/image";
-import { motion } from 'framer-motion';
-import pattern_dot from "@/assets/home/pattern_dot.webp";
-import trainner_3 from "@/assets/home/trainer_3.webp";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Frase = () => {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end start"],
+    });
+
+    const x1 = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+    const x2 = useTransform(scrollYProgress, [0, 1], ["8%", "-8%"]);
+
     return (
-        <section className="hidden w-full bg-background lg:flex shadow-xl shadow-black/25 overflow-x-hidden">
-            <div className="grow px-4 lg:px-24 py-4 lg:py-12 relative">
-                <div className="flex flex-col justify-center relative z-20">
-                    <p className="text-4xl lg:text-8xl font-highrise-bold whitespace-nowrap relative">Resultados <b className="block">que hablan.</b></p>
-                    <p className="text-4xl lg:text-8xl font-highrise-bold whitespace-nowrap text-red-600">Entrenamientos <b className="block">que transforman.</b></p>
-                </div>
-                <div className="size-full bg-gradient-to-r from-transparent to-background absolute top-0 left-0 z-10"></div>
-                <Image src={pattern_dot} alt="Bienvenido a RC Gym" className="size-full object-cover absolute top-0 left-0 z-0"/>
+        <section ref={ref} className="w-full overflow-hidden py-16 lg:py-20 relative">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-950/10 to-transparent" />
+
+            <div className="relative z-10 flex flex-col gap-2 lg:gap-4">
+                <motion.div style={{ x: x1 }} className="whitespace-nowrap">
+                    <p className="text-5xl lg:text-[7rem] font-highrise-bold leading-[0.9] text-center">
+                        Resultados <span className="text-white/20">que hablan.</span> Resultados <span className="text-white/20">que hablan.</span>
+                    </p>
+                </motion.div>
+                <motion.div style={{ x: x2 }} className="whitespace-nowrap">
+                    <p className="text-5xl lg:text-[7rem] font-highrise-bold leading-[0.9] text-center text-red-500">
+                        Entrenamientos <span className="text-red-500/30">que transforman.</span> Entrenamientos <span className="text-red-500/30">que transforman.</span>
+                    </p>
+                </motion.div>
             </div>
-            <motion.div
-                initial={{ opacity: 0, x: '25%' }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ type: 'spring', bounce: 0 }}
-                viewport={{ once: true, amount: 0.5 }}
-                className="w-full max-w-7xl relative"
-            >
-                <div className="size-full bg-gradient-to-r from-background to-transparent absolute top-0 left-0 z-10"></div>
-                <Image src={trainner_3} alt="RC Gym" className="size-full object-cover object-[50%_50%] absolute top-0 left-0"/>
-            </motion.div>
         </section>
-    )
-}
+    );
+};

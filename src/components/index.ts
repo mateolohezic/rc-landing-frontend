@@ -9,6 +9,7 @@ export { Navbar } from "./navbar/Navbar";
 export { NavLink } from "./navbar/NavLink";
 
 export { Portada } from "./landing/Portada";
+export { StatsBar } from "./landing/StatsBar";
 export { Bienvenido } from "./landing/Bienvenido";
 export { Frase } from "./landing/Frase";
 export { Sedes } from "./landing/Sedes";
@@ -22,6 +23,7 @@ export { ClasesVideo } from "./landing/ClasesVideo";
 export { SocioPlus } from "./landing/SocioPlus";
 export { SwiperTestimonios } from "./landing/SwiperTestimonios";
 export { Precios } from "./landing/Precios";
+export { FooterCTA } from "./landing/FooterCTA";
 
 export { SwiperTerrazas } from "./terrazas/SwiperTerrazas";
 export { ClasesTerrazas } from "./terrazas/ClasesTerrazas";

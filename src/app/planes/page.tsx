@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function PlanesPage() {
   return (
-    <main className="w-full grow flex flex-col justify-center items-center bg-neutral-900 text-white">
-      <section className="w-full lg:min-h-svh py-24 lg:py-48 flex flex-col justify-center items-center relative overflow-hidden">
+    <main className="w-full grow flex flex-col justify-center items-center bg-[#0a0a0a] text-white">
+      <section className="w-full lg:min-h-svh pt-28 pb-16 md:pt-32 md:pb-20 lg:py-36 flex flex-col justify-center items-center relative overflow-hidden">
         <Precios/>
       </section>
     </main>
