@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { PlanCard } from '@/components';
 
 const preciosPorSede = [
-    { title: "Barrio Norte", mensual: 55000, trimestral: 140250, semestral: 264000 },
+    { title: "Barrio Norte", mensual: 60000, trimestral: 140250, semestral: 264000 },
     { title: "Aconquija", mensual: 72000, trimestral: 183600, semestral: 345600 },
     { title: "Barrio Sur", mensual: 56000, trimestral: 142800, semestral: 268800 },
     { title: "Tafí Viejo", mensual: 66000, trimestral: 168300, semestral: 316800 },
