@@ -12,18 +12,15 @@ interface PlanCardProps {
 const benefits = ["Acceso a musculación", "Clases grupales", "Matrícula incluida"];
 
 export const PlanCard = ({ title, precio, subtitulo, descripcion, destacado = false }: PlanCardProps) => (
-    <div className={`relative p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 overflow-hidden ${
+    <div className={`relative p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 ${
         destacado
             ? 'border-2 border-red-500/50 bg-red-600/10 shadow-2xl shadow-red-600/10'
             : 'glass-card hover:bg-white/[0.06]'
     }`}>
         {/* Popular badge */}
         {destacado && (
-            <div className="absolute top-0 left-0 right-0">
-                <div className="animated-border h-[2px]" />
-                <div className="px-4 py-1 text-xs font-bold uppercase tracking-widest text-center text-red-400">
-                    Más elegido
-                </div>
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-red-600 text-white text-xs font-bold uppercase tracking-widest shadow-lg shadow-red-600/30 whitespace-nowrap">
+                Más elegido
             </div>
         )}
 

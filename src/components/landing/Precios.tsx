@@ -4,13 +4,22 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { PlanCard } from '@/components';
 
-const preciosPorSede = [
-    { title: "Barrio Norte", mensual: 60000, trimestral: 140250, semestral: 264000 },
+interface SedePrecios {
+    title: string;
+    mensual: number;
+    trimestral: number;
+    semestral: number;
+    anual?: number;
+    soloEfectivoPromos?: boolean;
+}
+
+const preciosPorSede: SedePrecios[] = [
+    { title: "Barrio Norte", mensual: 60000, trimestral: 153000, semestral: 288000, anual: 540000, soloEfectivoPromos: true },
     { title: "Aconquija", mensual: 72000, trimestral: 183600, semestral: 345600 },
     { title: "Barrio Sur", mensual: 56000, trimestral: 142800, semestral: 268800 },
     { title: "Tafí Viejo", mensual: 66000, trimestral: 168300, semestral: 316800 },
     { title: "Terrazas", mensual: 80000, trimestral: 204000, semestral: 384000 },
-    { title: "Epico", mensual: 72000, trimestral: 183600, semestral: 345600 },
+    { title: "Epico", mensual: 72000, trimestral: 194400, semestral: 367200 },
 ];
 
 export const Precios = () => {
@@ -64,7 +73,7 @@ export const Precios = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3 }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                    className={`grid grid-cols-1 gap-6 ${sede.anual ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'}`}
                 >
                     <PlanCard
                         title="Mensual"
@@ -85,8 +94,28 @@ export const Precios = () => {
                         descripcion="Plan ideal para quienes ya están decididos. Ahorro y constancia asegurada."
                         destacado
                     />
+                    {sede.anual && (
+                        <PlanCard
+                            title="Anual"
+                            precio={sede.anual}
+                            subtitulo="Máximo ahorro"
+                            descripcion="El mejor precio del año. Para los que viven el RC todo el año."
+                        />
+                    )}
                 </motion.div>
             </AnimatePresence>
+
+            {sede.soloEfectivoPromos && (
+                <motion.p
+                    key={`nota-${sede.title}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.3 }}
+                    className="mt-8 text-center text-sm text-white/40"
+                >
+                    * Trimestral, semestral y anual disponibles únicamente abonando en efectivo.
+                </motion.p>
+            )}
         </section>
     );
 };
