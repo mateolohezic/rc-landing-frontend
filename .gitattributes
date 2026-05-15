@@ -1,0 +1,4 @@
+# Force LF line endings on all text files, regardless of OS.
+# Prevents Windows/Mac/Linux contributors from creating spurious diffs
+# when their editor or git client uses a different line-ending convention.
+* text=auto eol=lf
