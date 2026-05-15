@@ -7,19 +7,19 @@ import { PlanCard } from '@/components';
 interface SedePrecios {
     title: string;
     mensual: number;
+    debitoAutomatico?: number;
     trimestral: number;
     semestral: number;
-    anual?: number;
     soloEfectivoPromos?: boolean;
 }
 
 const preciosPorSede: SedePrecios[] = [
-    { title: "Barrio Norte", mensual: 60000, trimestral: 153000, semestral: 288000, anual: 540000, soloEfectivoPromos: true },
-    { title: "Aconquija", mensual: 72000, trimestral: 183600, semestral: 345600 },
-    { title: "Barrio Sur", mensual: 56000, trimestral: 142800, semestral: 268800 },
-    { title: "Tafí Viejo", mensual: 66000, trimestral: 168300, semestral: 316800 },
-    { title: "Terrazas", mensual: 80000, trimestral: 204000, semestral: 384000 },
-    { title: "Epico", mensual: 72000, trimestral: 194400, semestral: 367200 },
+    { title: "Barrio Norte", mensual: 60000, trimestral: 153000, semestral: 288000, soloEfectivoPromos: true },
+    { title: "Aconquija", mensual: 80000, debitoAutomatico: 64000, trimestral: 200000, semestral: 380000 },
+    { title: "Barrio Sur", mensual: 61000, debitoAutomatico: 48800, trimestral: 155400, semestral: 292800 },
+    { title: "Tafí Viejo", mensual: 72000, debitoAutomatico: 57000, trimestral: 183000, semestral: 342000 },
+    { title: "Terrazas", mensual: 90000, debitoAutomatico: 72000, trimestral: 243000, semestral: 459000 },
+    { title: "Epico", mensual: 80000, debitoAutomatico: 64000, trimestral: 216000, semestral: 408000 },
 ];
 
 export const Precios = () => {
@@ -35,7 +35,7 @@ export const Precios = () => {
                     viewport={{ once: true }}
                     className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-highrise-bold uppercase"
                 >
-                    Elegí tu <span className="text-red-500">plan</span>
+                    Encontrá tu <span className="text-red-500">cuota</span>
                 </motion.h2>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,9 @@ export const Precios = () => {
                     transition={{ delay: 0.2 }}
                     className="mt-4 max-w-xl mx-auto text-white/50 text-lg"
                 >
-                    Seleccioná tu sede y conocé nuestros precios.
+                    {sede.debitoAutomatico
+                        ? "El precio más bajo siempre es con débito automático."
+                        : "Seleccioná tu sede y conocé nuestros planes."}
                 </motion.p>
             </div>
 
@@ -73,35 +75,34 @@ export const Precios = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}
                     transition={{ duration: 0.3 }}
-                    className={`grid grid-cols-1 gap-6 ${sede.anual ? 'md:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3'}`}
+                    className="grid grid-cols-1 gap-6 md:grid-cols-3"
                 >
                     <PlanCard
                         title="Mensual"
                         precio={sede.mensual}
-                        subtitulo="Plan flexible"
-                        descripcion="Ideal para tu primer acercamiento a la familia RC."
+                        precioDebito={sede.debitoAutomatico}
+                        subtitulo={sede.debitoAutomatico ? "Tu cuota más baja" : "Mes a mes"}
+                        descripcion={sede.debitoAutomatico
+                            ? "La cuota más baja de RC, debitada cada mes."
+                            : "Probá RC, mes a mes."}
+                        cta={sede.debitoAutomatico ? "Sumate con débito" : "Sumate a RC"}
+                        destacado={Boolean(sede.debitoAutomatico)}
                     />
                     <PlanCard
                         title="Trimestral"
                         precio={sede.trimestral}
-                        subtitulo="Compromiso que rinde"
-                        descripcion="Entrená 3 meses con un solo pago. Perfecto para establecer una rutina."
+                        subtitulo="Pago único · 3 meses"
+                        descripcion="Pagás una vez y entrenás 3 meses."
+                        cta="Entrenar 3 meses"
                     />
                     <PlanCard
                         title="Semestral"
                         precio={sede.semestral}
-                        subtitulo="Mejor precio-beneficio"
-                        descripcion="Plan ideal para quienes ya están decididos. Ahorro y constancia asegurada."
-                        destacado
+                        subtitulo="Pago único · 6 meses"
+                        descripcion="Pagás una vez y entrenás 6 meses."
+                        cta="Entrenar 6 meses"
+                        destacado={!sede.debitoAutomatico}
                     />
-                    {sede.anual && (
-                        <PlanCard
-                            title="Anual"
-                            precio={sede.anual}
-                            subtitulo="Máximo ahorro"
-                            descripcion="El mejor precio del año. Para los que viven el RC todo el año."
-                        />
-                    )}
                 </motion.div>
             </AnimatePresence>
 
@@ -113,7 +114,7 @@ export const Precios = () => {
                     transition={{ delay: 0.3 }}
                     className="mt-8 text-center text-sm text-white/40"
                 >
-                    * Trimestral, semestral y anual disponibles únicamente abonando en efectivo.
+                    * Trimestral y semestral disponibles únicamente abonando en efectivo.
                 </motion.p>
             )}
         </section>

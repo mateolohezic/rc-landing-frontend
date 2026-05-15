@@ -4,14 +4,16 @@ import { CheckIcon } from "@/icons";
 interface PlanCardProps {
     title: string;
     precio: number;
+    precioDebito?: number;
     subtitulo?: string;
     descripcion?: string;
+    cta?: string;
     destacado?: boolean;
 }
 
 const benefits = ["Acceso a musculación", "Clases grupales", "Matrícula incluida"];
 
-export const PlanCard = ({ title, precio, subtitulo, descripcion, destacado = false }: PlanCardProps) => (
+export const PlanCard = ({ title, precio, precioDebito, subtitulo, descripcion, cta = "Quiero este plan", destacado = false }: PlanCardProps) => (
     <div className={`relative p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 ${
         destacado
             ? 'border-2 border-red-500/50 bg-red-600/10 shadow-2xl shadow-red-600/10'
@@ -27,9 +29,30 @@ export const PlanCard = ({ title, precio, subtitulo, descripcion, destacado = fa
         <h3 className="mt-4 text-xl font-bold uppercase tracking-wider">{title}</h3>
         {subtitulo && <p className="mt-1 text-sm text-white/40 uppercase tracking-widest">{subtitulo}</p>}
 
-        <div className="mt-8 mb-8">
-            <span className="text-sm text-white/40">$</span>
-            <span className="text-4xl sm:text-5xl font-highrise-bold">{precio.toLocaleString()}</span>
+        <div className="mt-8 mb-8 grid grid-rows-[1.5rem_auto_1.75rem_1rem] place-items-center gap-1">
+            <span className={`text-lg font-medium leading-none ${precioDebito ? 'text-white/30 line-through' : 'invisible'}`}>
+                ${precio.toLocaleString()}
+            </span>
+            <div className="leading-none">
+                <span className="text-sm text-white/40 align-top">$</span>
+                <span className="text-4xl sm:text-5xl font-highrise-bold">
+                    {(precioDebito ?? precio).toLocaleString()}
+                </span>
+            </div>
+            {precioDebito ? (
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full border border-red-500/30 bg-red-500/[0.06] text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-red-400 leading-none">
+                    −20% con débito automático
+                </span>
+            ) : (
+                <span className="invisible">.</span>
+            )}
+            {precioDebito ? (
+                <span className="text-xs text-white/50 leading-none">
+                    Ahorrás ${(precio - precioDebito).toLocaleString()} cada mes
+                </span>
+            ) : (
+                <span className="invisible">.</span>
+            )}
         </div>
 
         <ul className="w-full space-y-3 mb-8">
@@ -52,7 +75,7 @@ export const PlanCard = ({ title, precio, subtitulo, descripcion, destacado = fa
                     : 'bg-white/[0.08] hover:bg-white/[0.12] border border-white/[0.08]'
             }`}
         >
-            Quiero este plan
+            {cta}
         </Link>
     </div>
 );
