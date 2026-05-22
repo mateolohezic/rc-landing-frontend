@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 
 const items = [
-  '25 m semiolímpica',
+  'Semi-olímpica',
   'Climatizada todo el año',
-  'Profes que te miran',
-  'Única en gimnasios de Tucumán',
-  '+1.000 socios en RC',
-  '+10 años de trayectoria',
+  'Acompañamiento profesional',
+  'Única en Tucumán',
+  '+3.000 socios en RC',
+  '+30 años de trayectoria',
   '4.5★ en Google',
 ];
 

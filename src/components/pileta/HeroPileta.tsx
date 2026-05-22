@@ -82,7 +82,7 @@ export const HeroPileta = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-12 lg:mt-16 text-xs lg:text-sm uppercase tracking-[0.3em] text-white/55 font-bold"
         >
-          25 m climatizada · Profes que te miran · Primera clase gratis
+          Climatizada todo el año · Acompañamiento profesional · Yerba Buena
         </motion.p>
       </div>
 

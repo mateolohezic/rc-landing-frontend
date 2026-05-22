@@ -57,13 +57,13 @@ export const PLANES: Plan[] = [
   },
   {
     id: 'libre',
-    titulo: 'Nado libre',
-    bajada: 'Cuando vos quieras',
+    titulo: 'Pileta libre',
+    bajada: 'En turnos disponibles',
     precio: 100000,
     unidad: '/mes',
     features: [
-      'Nadás cuando vos quieras',
-      'Acceso a todos los turnos disponibles',
+      'Acceso en turnos disponibles',
+      'Reservás según los horarios libres',
       'Vestuarios, lockers y duchas',
     ],
   },
@@ -86,7 +86,7 @@ export const PLANES: Plan[] = [
 export const PLAN_LABELS: Record<PlanId, string> = {
   'natacion-2x': 'Natación 2x semana',
   'natacion-3x': 'Natación 3x semana',
-  'libre': 'Nado libre',
+  'libre': 'Pileta libre',
   'aquagym': 'Aquagym 2x semana',
 };
 
@@ -142,22 +142,26 @@ export const CLASES = [
   {
     nombre: 'Natación adultos',
     desc: 'Aprendé desde cero o pulí tu técnica. 4 estilos, drills, series.',
-    cupo: 15,
+    horarios: 'Lun a vie · 6–11 y 16–22 hs',
+    detalle: 'Última clase: 10–11 hs y 21–22 hs',
   },
   {
     nombre: 'Natación niños',
     desc: 'Escuela de natación con profes especializados en chicos.',
-    cupo: 10,
+    horarios: 'Lun a vie · 17–20 hs',
+    detalle: 'Última clase: 19–20 hs',
   },
   {
     nombre: 'Aquagym',
-    desc: 'Entrenamiento dirigido en el agua. Bajo impacto, alta diversión.',
-    cupo: 30,
+    desc: 'Entrenamiento dirigido en el agua. Bajo impacto, ritmo alto.',
+    horarios: 'Mar y jue · 16–17 hs',
+    detalle: '',
   },
   {
-    nombre: 'Nado libre',
-    desc: 'Vení cuando quieras. La pileta es tuya en cualquier turno disponible.',
-    cupo: null,
+    nombre: 'Pileta libre',
+    desc: 'Reservás un turno disponible y nadás a tu ritmo durante esa hora.',
+    horarios: 'Lun a vie · 11–16 hs · Sáb 9–13 hs',
+    detalle: '',
   },
 ];
 
@@ -253,10 +257,9 @@ export const METRICAS_RC = [
 
 // Specs técnicas de la pileta (para sección solución)
 export const PILETA_SPECS = [
-  '25 metros de largo',
-  'Semiolímpica · 12 m de ancho',
-  'Climatizada todo el año',
+  'Pileta climatizada todo el año',
+  'Semi-olímpica',
   'Lockers, vestuarios y duchas',
-  'Profes que te miran',
-  'Única en gimnasios de Tucumán',
+  'Única en Tucumán',
+  'La mejor atención',
 ];

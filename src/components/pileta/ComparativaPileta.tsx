@@ -26,7 +26,7 @@ const rows: Row[] = [
     rcStrong: true,
   },
   {
-    feature: 'Profes que te miran',
+    feature: 'Acompañamiento profesional',
     rc: 'Corrigen técnica clase a clase',
     otros: 'Te tiran a nadar y miran al fondo',
   },

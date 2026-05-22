@@ -63,7 +63,6 @@ export { TestimoniosPileta } from "./pileta/TestimoniosPileta";
 export { ClasesPileta } from "./pileta/ClasesPileta";
 export { ProfesPileta } from "./pileta/ProfesPileta";
 export { PreciosPileta } from "./pileta/PreciosPileta";
-export { GarantiaPileta } from "./pileta/GarantiaPileta";
 export { CasaRC } from "./pileta/CasaRC";
 export { FAQPileta } from "./pileta/FAQPileta";
 export { CTAFinalPileta } from "./pileta/CTAFinalPileta";

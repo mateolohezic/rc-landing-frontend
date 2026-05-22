@@ -14,7 +14,6 @@ const STACK_INCLUYE = [
   { t: 'Vestuarios + duchas + lockers', d: 'Como en RC, premium' },
   { t: 'Sede Terrazas · Yerba Buena', d: 'En el corazón de la ciudad' },
   { t: 'Comunidad RC', d: '+30 años · 4.5 en Google · +1.000 socios' },
-  { t: 'Primera clase gratis', d: 'Si no te gusta, no pagás nada' },
   { t: 'Atención por WhatsApp', d: 'Te escribimos para confirmar tu plan' },
 ];
 
@@ -75,7 +74,7 @@ export const PreciosPileta = () => {
           </ul>
         </motion.div>
 
-        {/* 3 planes: Natación dirigida (con 2 frecuencias) · Nado libre · Aquagym */}
+        {/* 3 planes: Natación dirigida (con 2 frecuencias) · Pileta libre · Aquagym */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">
           {/* Natación dirigida — destacado, con dual pricing */}
           <motion.div
@@ -140,7 +139,7 @@ export const PreciosPileta = () => {
             </Link>
           </motion.div>
 
-          {/* Nado libre */}
+          {/* Pileta libre */}
           <PlanCard plan={libre} delay={0.35} isInView={isInView} />
 
           {/* Aquagym */}

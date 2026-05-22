@@ -10,7 +10,7 @@ const ESENCIA = [
   'Profesionales formados en natación y deporte',
   'Te conocen, te corrigen, se acuerdan de tu nombre',
   'Misma calidad que ya conocés del gym de RC',
-  'Cada clase con un profe presente, no nado libre',
+  'Cada clase con un profe presente y dedicado',
 ];
 
 export const ProfesPileta = () => {
@@ -31,8 +31,8 @@ export const ProfesPileta = () => {
             El equipo
           </p>
           <h2 className="text-4xl lg:text-6xl font-black tracking-tight uppercase leading-[0.95]">
-            Profes que te
-            <span className="block text-red-500">van a mirar</span>
+            Acompañamiento
+            <span className="block text-red-500">profesional</span>
           </h2>
           <p className="mt-6 text-base lg:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
             No es una pileta donde te tirás solo. Cada clase tiene un profesional dedicado

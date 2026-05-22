@@ -26,7 +26,7 @@ export const ClasesPileta = () => {
           </h2>
           <p className="mt-4 text-base lg:text-lg text-white/70 max-w-2xl mx-auto">
             Niños, adultos, adultos mayores, embarazadas, principiantes y avanzados.
-            Cupos chicos para que el profe te mire de verdad.
+            Cupos reducidos con acompañamiento profesional en cada clase.
           </p>
         </motion.div>
 
@@ -47,9 +47,12 @@ export const ClasesPileta = () => {
               </h3>
               <p className="mt-3 text-white/70 text-sm lg:text-base leading-relaxed">{c.desc}</p>
               <div className="mt-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold uppercase tracking-wider">
-                <span className="size-1.5 bg-red-500 rounded-full" />
-                Turnos de 6 a 22 hs
+                <span className="size-1.5 bg-red-500 rounded-full shrink-0" />
+                {c.horarios}
               </div>
+              {c.detalle && (
+                <p className="mt-2 text-xs text-white/40 italic">{c.detalle}</p>
+              )}
             </motion.div>
           ))}
         </div>

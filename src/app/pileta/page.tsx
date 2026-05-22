@@ -11,7 +11,6 @@ import {
   ClasesPileta,
   ProfesPileta,
   PreciosPileta,
-  GarantiaPileta,
   CasaRC,
   FAQPileta,
   CTAFinalPileta,
@@ -23,7 +22,7 @@ import { FAQ, PLANES } from '@/components/pileta/constants';
 export const metadata: Metadata = {
   title: 'Pileta Climatizada RC Terrazas · Tucumán | Preventa abierta',
   description:
-    'La única pileta climatizada semiolímpica de un gimnasio en Tucumán. Natación, aquagym y nado libre con los mejores profes. Reservá tu cupo en preventa — cierra el 25 de mayo.',
+    'La única pileta climatizada semiolímpica de un gimnasio en Tucumán. Natación, aquagym y pileta libre con acompañamiento profesional. Reservá tu cupo en preventa — cierra el 25 de mayo.',
   keywords: [
     'pileta climatizada tucuman',
     'natacion tucuman',
@@ -42,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pileta Climatizada RC · La única de un gimnasio en Tucumán',
     description:
-      'Preventa abierta. 25m semiolímpica, climatizada, con profes que te miran. Reservá tu cupo — sin pago anticipado.',
+      'Preventa abierta. Pileta semiolímpica climatizada con acompañamiento profesional, en Yerba Buena. Reservá tu cupo — sin pago anticipado.',
     url: 'https://rcgym.com.ar/pileta',
     type: 'website',
     images: [
@@ -63,7 +62,7 @@ const jsonLd = [
     name: 'Pileta RC Terrazas',
     alternateName: 'Pileta Climatizada RC Gym Tucumán',
     description:
-      'Pileta semiolímpica climatizada de 25 metros con profesores dedicados. Clases de natación adultos, niños, aquagym y nado libre.',
+      'Pileta semiolímpica climatizada con profesores dedicados. Clases de natación adultos, niños, aquagym y pileta libre.',
     url: 'https://rcgym.com.ar/pileta',
     image: 'https://rcgym.com.ar/apple-icon.png',
     telephone: '+5493815555555',
@@ -158,7 +157,6 @@ export default function PiletaPage() {
       <ClasesPileta />
       <ProfesPileta />
       <PreciosPileta />
-      <GarantiaPileta />
       <CasaRC />
       <FAQPileta />
       <CTAFinalPileta />
