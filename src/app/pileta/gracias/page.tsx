@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect, useRef } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -19,21 +19,12 @@ function GraciasContent() {
   const params = useSearchParams();
   const nombre = params.get('nombre') || '';
   const plan = params.get('plan') || '';
-  const redirected = useRef(false);
 
   const waLink = buildWhatsappLink({ nombre, plan });
 
   useEffect(() => {
     trackPileta('gracias_view', { plan });
-    // Auto-open WhatsApp once, 1.2 s after mount to feel intentional
-    const t = setTimeout(() => {
-      if (!redirected.current) {
-        redirected.current = true;
-        window.open(waLink, '_blank', 'noopener,noreferrer');
-      }
-    }, 1200);
-    return () => clearTimeout(t);
-  }, [waLink, plan]);
+  }, [plan]);
 
   return (
     <main className="min-h-screen w-full bg-black flex flex-col items-center justify-center px-4 py-20 overflow-x-hidden">
@@ -75,12 +66,9 @@ function GraciasContent() {
           <span className="block text-red-500">Tu cupo está reservado</span>
         </h1>
 
-        <p className="text-base lg:text-lg text-white/75 mb-2">
+        <p className="text-base lg:text-lg text-white/75 mb-10">
           Te contactamos por <span className="text-white font-bold">WhatsApp</span> para
           confirmar tu plan{plan ? ` (${plan})` : ''} y coordinar el pago.
-        </p>
-        <p className="text-sm text-white/50 mb-10">
-          También se está abriendo WhatsApp automáticamente para que puedas escribirnos vos también.
         </p>
 
         {/* Primary CTA */}

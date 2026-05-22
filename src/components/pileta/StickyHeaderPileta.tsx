@@ -21,7 +21,10 @@ export const StickyHeaderPileta = () => {
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className="fixed bottom-0 left-0 w-full bg-black/95 backdrop-blur-md border-t border-red-500/30 z-40 lg:hidden shadow-2xl shadow-black/50"
     >
-      <div className="px-3 py-3 flex items-center gap-3">
+      <div
+        className="px-3 pt-3 flex items-center gap-3"
+        style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
+      >
         <div className="flex-1 min-w-0">
           <p className="text-[10px] uppercase tracking-widest text-red-400 font-bold mb-0.5">
             Preventa cierra en
