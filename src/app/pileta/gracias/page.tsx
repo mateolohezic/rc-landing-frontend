@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { buildWhatsappLink } from '@/components/pileta/constants';
 import { trackPileta } from '@/components/pileta/PiletaTracker';
+import { trackMetaEvent } from '@/components';
 
 export default function GraciasPage() {
   return (
@@ -24,6 +25,12 @@ function GraciasContent() {
 
   useEffect(() => {
     trackPileta('gracias_view', { plan });
+    trackMetaEvent('Lead', {
+      value: 100000,
+      currency: 'ARS',
+      content_name: 'pileta-preventa',
+      content_category: plan || 'sin-plan',
+    });
   }, [plan]);
 
   return (

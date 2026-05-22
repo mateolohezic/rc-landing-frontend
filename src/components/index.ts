@@ -2,6 +2,7 @@ export { RCLogo } from "./RCLogo";
 export { RCIcon } from "./RCIcon";
 export { PlanCard } from "./PlanCard";
 export { ClarityTracker } from "./ClarityTracker";
+export { MetaPixel, trackMetaEvent } from "./MetaPixel";
 
 export { VideoIntro } from "./intro/VideoIntro";
 
