@@ -1,18 +1,25 @@
-import { MetadataRoute } from 'next'
- 
+import { MetadataRoute } from 'next';
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
   return [
     {
       url: 'https://rcgym.com.ar',
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
       priority: 0.5,
     },
     {
       url: 'https://rcgym.com.ar/planes',
-      lastModified: new Date(),
+      lastModified,
       changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://rcgym.com.ar/pileta',
+      lastModified,
+      changeFrequency: 'daily',
       priority: 1,
-    }
-  ]
+    },
+  ];
 }

@@ -6,11 +6,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { CrossIcon, InstagramIcon, MenuIcon, TiktokIcon, YoutubeIcon } from "@/icons";
 import { RCIcon } from "@/components";
 
-const links = [
+interface NavLink {
+    title: string;
+    href: string;
+    highlight?: boolean;
+}
+
+const links: NavLink[] = [
     { title: 'Inicio', href: '/' },
     { title: 'Sedes', href: '#sedes' },
     { title: 'Entrenamientos', href: '#entrenamientos' },
     { title: 'Planes', href: '/planes' },
+    { title: 'Pileta', href: '/pileta', highlight: true },
 ];
 
 const socialMedias = [
@@ -61,9 +68,16 @@ export const Navbar = () => {
                                 <li key={link.title}>
                                     <Link
                                         href={link.href}
-                                        className="px-4 py-2 text-sm text-white/60 hover:text-white rounded-full hover:bg-white/[0.06] transition-all duration-200"
+                                        className={`relative px-4 py-2 text-sm rounded-full transition-all duration-200 ${
+                                            link.highlight
+                                                ? 'text-red-400 hover:text-red-300 font-semibold'
+                                                : 'text-white/60 hover:text-white hover:bg-white/[0.06]'
+                                        }`}
                                     >
                                         {link.title}
+                                        {link.highlight && (
+                                            <span className="absolute -top-0.5 -right-1 size-2 bg-red-500 rounded-full animate-pulse" />
+                                        )}
                                     </Link>
                                 </li>
                             ))}
@@ -114,9 +128,16 @@ export const Navbar = () => {
                                     <Link
                                         href={link.href}
                                         onClick={() => setMenuOpen(false)}
-                                        className="text-3xl font-highrise-bold uppercase tracking-wider text-white/80 hover:text-white transition-colors"
+                                        className={`relative text-3xl font-highrise-bold uppercase tracking-wider transition-colors ${
+                                            link.highlight
+                                                ? 'text-red-400 hover:text-red-300'
+                                                : 'text-white/80 hover:text-white'
+                                        }`}
                                     >
                                         {link.title}
+                                        {link.highlight && (
+                                            <span className="absolute -top-1 -right-3 size-2.5 bg-red-500 rounded-full animate-pulse" />
+                                        )}
                                     </Link>
                                 </motion.div>
                             ))}

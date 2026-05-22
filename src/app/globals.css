@@ -79,6 +79,14 @@
   .section-padding {
     @apply py-16 lg:py-24;
   }
+
+  /* Form input usado en /pileta */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg bg-white/[0.04] border border-white/15 focus:border-red-500/70 focus:bg-white/[0.06] text-white placeholder:text-white/40 transition-colors duration-200;
+  }
+  select.form-input {
+    @apply appearance-none bg-[url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23ffffff80%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[length:24px_24px] bg-[right_0.75rem_center] pr-10;
+  }
 }
 
 @layer base {
