@@ -150,8 +150,8 @@ export const TestimoniosPileta = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center text-xs lg:text-sm text-white/40 mt-8 italic"
         >
-          Reseñas reales de socios de RC en Google. La pileta abre en mayo — los primeros
-          en nadar van a ser los que reserven en preventa.
+          Reseñas reales de socios de RC en Google. La pileta abre el martes 26 de mayo — los
+          primeros en nadar van a ser los que reserven en preventa.
         </motion.p>
       </div>
     </section>

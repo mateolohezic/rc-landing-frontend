@@ -232,7 +232,7 @@ export const FAQ = [
   },
   {
     q: '¿Cuándo abre exactamente?',
-    a: 'En mayo. Estamos terminando los últimos detalles de habilitación. La preventa cierra el lunes 25 de mayo a las 23:59 — los que reserven ahora son los primeros en entrar.',
+    a: 'El martes 26 de mayo de 2026. La preventa cierra el lunes 25 de mayo a las 23:59 — los que reserven ahora entran el primer día.',
   },
   {
     q: '¿Cómo es el horario?',
