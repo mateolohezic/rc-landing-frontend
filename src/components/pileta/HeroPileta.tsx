@@ -55,7 +55,7 @@ export const HeroPileta = () => {
           className="mt-6 lg:mt-8 text-base lg:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
         >
           Más de 30 años cuidando a Tucumán nos llevaron acá. Mismos profes, misma comunidad,
-          misma confianza. Ahora también dentro del agua.
+          misma confianza. Ahora también dentro del agua, en nuestra sede Terrazas (Yerba Buena).
         </motion.p>
 
         {/* CTA + Countdown */}
@@ -82,7 +82,7 @@ export const HeroPileta = () => {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="mt-12 lg:mt-16 text-xs lg:text-sm uppercase tracking-[0.3em] text-white/55 font-bold"
         >
-          Climatizada todo el año · Acompañamiento profesional · Yerba Buena
+          Climatizada todo el año · Sede Terrazas · Yerba Buena
         </motion.p>
       </div>
 

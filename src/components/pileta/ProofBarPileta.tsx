@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 
 const items = [
+  'Sede RC Terrazas · Yerba Buena',
   'Semi-olímpica',
   'Climatizada todo el año',
   'Acompañamiento profesional',
