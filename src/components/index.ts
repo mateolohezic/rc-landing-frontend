@@ -56,7 +56,6 @@ export { FAQBlackRC } from "./black-rc/FAQBlackRC";
 export { HeroPileta } from "./pileta/HeroPileta";
 export { ProofBarPileta } from "./pileta/ProofBarPileta";
 export { SolucionPileta } from "./pileta/SolucionPileta";
-export { GaleriaPileta } from "./pileta/GaleriaPileta";
 export { ComparativaPileta } from "./pileta/ComparativaPileta";
 export { TestimoniosPileta } from "./pileta/TestimoniosPileta";
 export { HorariosPileta } from "./pileta/HorariosPileta";

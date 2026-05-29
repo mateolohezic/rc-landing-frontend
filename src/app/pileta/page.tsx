@@ -3,7 +3,6 @@ import {
   HeroPileta,
   ProofBarPileta,
   SolucionPileta,
-  GaleriaPileta,
   ComparativaPileta,
   TestimoniosPileta,
   HorariosPileta,
@@ -147,7 +146,6 @@ export default function PiletaPage() {
       <HeroPileta />
       <ProofBarPileta />
       <SolucionPileta />
-      <GaleriaPileta />
       <ComparativaPileta />
       <TestimoniosPileta />
       <HorariosPileta />

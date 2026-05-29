@@ -1,7 +1,6 @@
 export { HeroPileta } from './HeroPileta';
 export { ProofBarPileta } from './ProofBarPileta';
 export { SolucionPileta } from './SolucionPileta';
-export { GaleriaPileta } from './GaleriaPileta';
 export { ComparativaPileta } from './ComparativaPileta';
 export { TestimoniosPileta } from './TestimoniosPileta';
 export { HorariosPileta } from './HorariosPileta';
