@@ -9,6 +9,7 @@ import {
   ComparativaPileta,
   TestimoniosPileta,
   ClasesPileta,
+  HorariosPileta,
   ProfesPileta,
   PreciosPileta,
   CasaRC,
@@ -69,7 +70,7 @@ const jsonLd = [
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Av. Juan Domingo Perón 2397',
+      streetAddress: 'Av. Perón 2400',
       addressLocality: 'Yerba Buena',
       addressRegion: 'Tucumán',
       addressCountry: 'AR',
@@ -155,6 +156,7 @@ export default function PiletaPage() {
       <ComparativaPileta />
       <TestimoniosPileta />
       <ClasesPileta />
+      <HorariosPileta />
       <ProfesPileta />
       <PreciosPileta />
       <CasaRC />

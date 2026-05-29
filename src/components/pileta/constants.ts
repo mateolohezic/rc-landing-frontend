@@ -165,6 +165,76 @@ export const CLASES = [
   },
 ];
 
+// ───────────────────────────────────────────────
+// Grilla de horarios de la pileta (sede Terrazas)
+// Actualizar acá cuando cambien profes o franjas.
+// ───────────────────────────────────────────────
+export type PiletaCat = 'adultos' | 'ninos' | 'aquagym' | 'libre';
+
+export interface PiletaSlot {
+  prof?: string;
+  cat: PiletaCat;
+}
+
+export interface PiletaHorarioRow {
+  franja: string;
+  lun?: PiletaSlot[];
+  mar?: PiletaSlot[];
+  mie?: PiletaSlot[];
+  jue?: PiletaSlot[];
+  vie?: PiletaSlot[];
+}
+
+export const PILETA_CAT_LABELS: Record<PiletaCat, string> = {
+  adultos: 'Adultos',
+  ninos: 'Niños',
+  aquagym: 'Aquagym',
+  libre: 'Pileta libre',
+};
+
+// Helpers para no repetir { prof, cat } en cada celda
+const ad = (prof: string): PiletaSlot => ({ prof, cat: 'adultos' });
+const ni = (prof: string): PiletaSlot => ({ prof, cat: 'ninos' });
+const ag = (prof: string): PiletaSlot => ({ prof, cat: 'aquagym' });
+const libre: PiletaSlot = { cat: 'libre' };
+
+export const HORARIOS_PILETA: PiletaHorarioRow[] = [
+  {
+    franja: '6 a 11',
+    lun: [ad('Gastón')], mar: [ad('Gastón')], mie: [ad('Gastón')], jue: [ad('Gastón')], vie: [ad('Gastón')],
+  },
+  {
+    franja: '11 a 16',
+    lun: [libre], mar: [libre], mie: [libre], jue: [libre], vie: [libre],
+  },
+  {
+    franja: '16 a 17',
+    lun: [ad('Melisa')], mar: [ag('Carla')], mie: [ad('Melisa')], jue: [ag('Carla')], vie: [ad('Melisa')],
+  },
+  {
+    franja: '17 a 18',
+    lun: [ad('Melisa'), ni('Agustina')], mar: [ad('Franco'), ni('Carla')], mie: [ad('Melisa'), ni('Agustina')], jue: [ad('Franco'), ni('Carla')], vie: [ad('Melisa'), ni('Agustina')],
+  },
+  {
+    franja: '18 a 19',
+    lun: [ad('Celeste'), ni('Agustina')], mar: [ad('Franco'), ni('Lucía')], mie: [ad('Celeste'), ni('Agustina')], jue: [ad('Franco'), ni('Lucía')], vie: [ad('Celeste'), ni('Agustina')],
+  },
+  {
+    franja: '19 a 20',
+    lun: [ad('Celeste'), ni('Agustina')], mar: [ad('Franco'), ni('Lucía')], mie: [ad('Celeste'), ni('Agustina')], jue: [ad('Franco'), ni('Lucía')], vie: [ad('Celeste'), ni('Agustina')],
+  },
+  {
+    franja: '20 a 21',
+    lun: [ad('Camila')], mar: [ad('Andrés')], mie: [ad('Camila')], jue: [ad('Andrés')], vie: [ad('Camila')],
+  },
+  {
+    franja: '21 a 22',
+    lun: [ad('Camila')], mar: [ad('Andrés')], mie: [ad('Camila')], jue: [ad('Andrés')], vie: [ad('Camila')],
+  },
+];
+
+export const HORARIOS_PILETA_SABADO = 'Pileta libre · 9 a 13 hs';
+
 // Profes (placeholder hasta que el usuario pase fotos + nombres)
 export interface Profe {
   nombre: string;

@@ -166,7 +166,7 @@ export const sedes: Sede[] = [
         schedule: [
             { time: "07:30", lun: ["Aeróbicos"], mar: ["Spinning"], mie: ["Aeróbicos"], jue: ["Spinning"], vie: ["Aeróbicos"] },
             { time: "14:30", lun: ["Spinning"], mar: ["Funcional"], mie: ["Spinning"], jue: ["Funcional"], vie: ["Spinning"] },
-            { time: "15:30", lun: ["BAP"], mar: ["Mini Tramp"], mie: ["BAP"], jue: ["Mini Tramp"], vie: ["BAP"] },
+            { time: "15:30", lun: ["BAP"], mar: ["Mini Tramp + GAP"], mie: ["BAP"], jue: ["Mini Tramp + GAP"], vie: ["BAP"] },
             { time: "19:00", lun: ["Full Body"], mie: ["Full Body"], vie: ["Full Body"] },
             { time: "20:00", lun: ["Spinning"], mar: ["Spinning"], mie: ["Spinning"], jue: ["Spinning"], vie: ["Spinning"] },
         ],
