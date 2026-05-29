@@ -55,13 +55,10 @@ export { FAQBlackRC } from "./black-rc/FAQBlackRC";
 
 export { HeroPileta } from "./pileta/HeroPileta";
 export { ProofBarPileta } from "./pileta/ProofBarPileta";
-export { ProblemaPileta } from "./pileta/ProblemaPileta";
 export { SolucionPileta } from "./pileta/SolucionPileta";
 export { GaleriaPileta } from "./pileta/GaleriaPileta";
-export { BeneficiosNado } from "./pileta/BeneficiosNado";
 export { ComparativaPileta } from "./pileta/ComparativaPileta";
 export { TestimoniosPileta } from "./pileta/TestimoniosPileta";
-export { ClasesPileta } from "./pileta/ClasesPileta";
 export { HorariosPileta } from "./pileta/HorariosPileta";
 export { ProfesPileta } from "./pileta/ProfesPileta";
 export { PreciosPileta } from "./pileta/PreciosPileta";

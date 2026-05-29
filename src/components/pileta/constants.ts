@@ -109,62 +109,6 @@ export const COMBO_SOCIO = {
     'En la práctica: aplicamos un 20% de descuento sobre tu cuota del gym al sumar pileta, así sumar pileta te queda en $80.000 efectivos al mes.',
 };
 
-// Beneficios del nado (sección educativa: por qué nadar)
-export const BENEFICIOS_NADO = [
-  {
-    titulo: 'Tu corazón en su mejor versión',
-    desc: '30 minutos de nado equivalen a 90 de gym a nivel cardiovascular. Sin desgaste, sin lesiones.',
-  },
-  {
-    titulo: 'Cero impacto en articulaciones',
-    desc: 'El agua amortigua el 90% de tu peso. Ideal para post-lesiones, embarazo y adultos mayores.',
-  },
-  {
-    titulo: 'Energía que dura todo el día',
-    desc: 'Sin agotamiento, sin agujetas, sin saltarte un día por dolor. Volvés a tu casa con la cabeza despejada.',
-  },
-  {
-    titulo: 'Mejor postura y respiración',
-    desc: 'Cada largo te alinea. La respiración consciente baja el cortisol y mejora tu sueño.',
-  },
-  {
-    titulo: 'Complemento del gym',
-    desc: 'Si entrenás fuerza, nadar acelera tu recuperación y mejora tu rendimiento entre semanas.',
-  },
-  {
-    titulo: 'Para todas las edades',
-    desc: 'Niños desde escuela, adultos, embarazadas, adultos mayores. Cada etapa, su clase, su profe.',
-  },
-];
-
-// Clases que se dictan
-export const CLASES = [
-  {
-    nombre: 'Natación adultos',
-    desc: 'Aprendé desde cero o pulí tu técnica. 4 estilos, drills, series.',
-    horarios: 'Lun a vie · 6–11 y 16–22 hs',
-    detalle: 'Última clase: 10–11 hs y 21–22 hs',
-  },
-  {
-    nombre: 'Natación niños',
-    desc: 'Escuela de natación con profes especializados en chicos.',
-    horarios: 'Lun a vie · 17–20 hs',
-    detalle: 'Última clase: 19–20 hs',
-  },
-  {
-    nombre: 'Aquagym',
-    desc: 'Entrenamiento dirigido en el agua. Bajo impacto, ritmo alto.',
-    horarios: 'Mar y jue · 16–17 hs',
-    detalle: '',
-  },
-  {
-    nombre: 'Pileta libre',
-    desc: 'Reservás un turno disponible y nadás a tu ritmo durante esa hora.',
-    horarios: 'Lun a vie · 11–16 hs · Sáb 9–13 hs',
-    detalle: '',
-  },
-];
-
 // ───────────────────────────────────────────────
 // Grilla de horarios de la pileta (sede Terrazas)
 // Actualizar acá cuando cambien profes o franjas.
@@ -234,33 +178,6 @@ export const HORARIOS_PILETA: PiletaHorarioRow[] = [
 ];
 
 export const HORARIOS_PILETA_SABADO = 'Pileta libre · 9 a 13 hs';
-
-// Profes (placeholder hasta que el usuario pase fotos + nombres)
-export interface Profe {
-  nombre: string;
-  rol: string;
-  bio: string;
-  foto?: string; // path al asset webp cuando lo tengamos
-  instagram?: string;
-}
-
-export const PROFES: Profe[] = [
-  {
-    nombre: 'Profe 1',
-    rol: 'Natación adultos',
-    bio: 'Especialista en técnica de los 4 estilos. Te corrige hasta el último detalle.',
-  },
-  {
-    nombre: 'Profe 2',
-    rol: 'Escuela de natación niños',
-    bio: 'Convierte el miedo al agua en confianza. Más de X años con chicos.',
-  },
-  {
-    nombre: 'Profe 3',
-    rol: 'Aquagym',
-    bio: 'Energía pura. Sus clases son cardio + fuerza + buena onda.',
-  },
-];
 
 // FAQ
 export const FAQ = [

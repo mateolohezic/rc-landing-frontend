@@ -44,7 +44,7 @@ export const SolucionPileta = () => {
             transition={{ duration: 0.6 }}
             className="text-red-500 uppercase tracking-widest text-sm font-bold mb-4"
           >
-            La solución
+            La pileta
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -52,8 +52,8 @@ export const SolucionPileta = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-4xl lg:text-6xl font-black uppercase leading-[0.95] tracking-tight"
           >
-            Una pileta como
-            <span className="block text-red-500">ninguna otra</span>
+            La única pileta climatizada
+            <span className="block text-red-500">de un gimnasio</span>
             <span className="block">en Tucumán</span>
           </motion.h2>
 
@@ -63,9 +63,8 @@ export const SolucionPileta = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-lg lg:text-xl text-white/80"
           >
-            Semiolímpica, climatizada todo el año, con instalaciones premium y los mejores
-            profes mirándote en cada largo. Pensada para que entrenes 12 meses al año, sin
-            excusas.
+            25 metros, semiolímpica, climatizada los 12 meses del año. Con un profe presente en
+            cada clase corrigiendo técnica clase a clase.
           </motion.p>
 
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3">

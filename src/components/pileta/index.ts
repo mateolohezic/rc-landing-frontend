@@ -1,12 +1,9 @@
 export { HeroPileta } from './HeroPileta';
 export { ProofBarPileta } from './ProofBarPileta';
-export { ProblemaPileta } from './ProblemaPileta';
 export { SolucionPileta } from './SolucionPileta';
 export { GaleriaPileta } from './GaleriaPileta';
-export { BeneficiosNado } from './BeneficiosNado';
 export { ComparativaPileta } from './ComparativaPileta';
 export { TestimoniosPileta } from './TestimoniosPileta';
-export { ClasesPileta } from './ClasesPileta';
 export { HorariosPileta } from './HorariosPileta';
 export { ProfesPileta } from './ProfesPileta';
 export { PreciosPileta } from './PreciosPileta';

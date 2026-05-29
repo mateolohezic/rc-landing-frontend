@@ -11,9 +11,10 @@ const formatPrice = (n: number) => n.toLocaleString('es-AR');
 
 const STACK_INCLUYE = [
   { t: 'Pileta climatizada todo el año', d: '25 m semiolímpica' },
-  { t: 'Vestuarios + duchas + lockers', d: 'Como en RC, premium' },
-  { t: 'Sede Terrazas · Yerba Buena', d: 'En el corazón de la ciudad' },
-  { t: 'Comunidad RC', d: '+30 años · 4.5 en Google · +1.000 socios' },
+  { t: 'Vestuarios, duchas y lockers', d: 'Incluidos en cualquier plan' },
+  { t: 'Sede Terrazas · Yerba Buena', d: 'Av. Perón 2400' },
+  { t: 'Cupos reducidos', d: '15 adultos · 10 niños · 30 aquagym por turno' },
+  { t: 'Profesores con nombre', d: 'Mismo profe semana a semana' },
   { t: 'Atención por WhatsApp', d: 'Te escribimos para confirmar tu plan' },
 ];
 

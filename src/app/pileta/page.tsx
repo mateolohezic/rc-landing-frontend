@@ -2,13 +2,10 @@ import type { Metadata } from 'next';
 import {
   HeroPileta,
   ProofBarPileta,
-  ProblemaPileta,
   SolucionPileta,
   GaleriaPileta,
-  BeneficiosNado,
   ComparativaPileta,
   TestimoniosPileta,
-  ClasesPileta,
   HorariosPileta,
   ProfesPileta,
   PreciosPileta,
@@ -149,18 +146,15 @@ export default function PiletaPage() {
       <PiletaTracker />
       <HeroPileta />
       <ProofBarPileta />
-      <ProblemaPileta />
       <SolucionPileta />
       <GaleriaPileta />
-      <BeneficiosNado />
       <ComparativaPileta />
       <TestimoniosPileta />
-      <ClasesPileta />
       <HorariosPileta />
       <ProfesPileta />
       <PreciosPileta />
-      <CasaRC />
       <ComoLlegar />
+      <CasaRC />
       <FAQPileta />
       <CTAFinalPileta />
       <StickyHeaderPileta />

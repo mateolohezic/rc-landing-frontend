@@ -64,8 +64,8 @@ export const HeroPileta = () => {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-6 lg:mt-8 text-base lg:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
         >
-          Acompañamiento profesional en cada clase, en la sede Terrazas de RC. Más de 30 años
-          cuidando a Tucumán, ahora también dentro del agua. Empezá esta semana.
+          Clases con cupos reducidos y un profe que te corrige cada largo. Av. Perón 2400,
+          Yerba Buena. Empezá esta semana.
         </motion.p>
 
         {/* CTA */}
