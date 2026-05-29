@@ -148,9 +148,9 @@ export default function PiletaPage() {
       <SolucionPileta />
       <ComparativaPileta />
       <TestimoniosPileta />
+      <PreciosPileta />
       <HorariosPileta />
       <ProfesPileta />
-      <PreciosPileta />
       <ComoLlegar />
       <CasaRC />
       <FAQPileta />
