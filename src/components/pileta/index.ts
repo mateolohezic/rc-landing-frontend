@@ -10,6 +10,7 @@ export { ClasesPileta } from './ClasesPileta';
 export { HorariosPileta } from './HorariosPileta';
 export { ProfesPileta } from './ProfesPileta';
 export { PreciosPileta } from './PreciosPileta';
+export { ComoLlegar } from './ComoLlegar';
 export { CasaRC } from './CasaRC';
 export { FAQPileta } from './FAQPileta';
 export { CTAFinalPileta } from './CTAFinalPileta';

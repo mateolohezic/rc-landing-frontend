@@ -282,7 +282,7 @@ export const FAQ = [
   },
   {
     q: '¿Cómo puedo pagar?',
-    a: 'Aceptamos efectivo o transferencia. Importante: el precio de preventa es válido únicamente en efectivo contado. Si elegís transferencia o pago en cuotas, aplica el precio regular post-apertura.',
+    a: 'Aceptamos efectivo y transferencia. Coordinamos el medio de pago con vos cuando confirmemos tu inscripción por WhatsApp.',
   },
   {
     q: '¿Puedo ir si estoy embarazada?',
@@ -301,20 +301,16 @@ export const FAQ = [
     a: 'Malla, gorra, antiparras, ojotas y toalla. Lockers gratis. Si no tenés algo, te ayudamos a conseguirlo.',
   },
   {
-    q: '¿Cuándo abre exactamente?',
-    a: 'El martes 26 de mayo de 2026. La preventa cierra el lunes 25 de mayo a las 23:59 — los que reserven ahora entran el primer día.',
-  },
-  {
     q: '¿Cómo es el horario?',
-    a: 'De lunes a viernes de 6:00 a 22:00 (último turno 21:00). Sábados y domingos próximamente.',
+    a: 'De lunes a viernes de 6:00 a 22:00 (último turno 21:00) y sábados de 9 a 13 hs para pileta libre. Mirá la grilla completa en la sección de horarios.',
   },
   {
     q: '¿La pileta es climatizada todo el año?',
-    a: 'Sí. 25 metros, semiolímpica, climatizada. Es la única pileta climatizada de un gimnasio en Tucumán.',
+    a: 'Sí. Semiolímpica, climatizada. Es la única pileta climatizada de un gimnasio en Tucumán.',
   },
   {
-    q: '¿Cómo reservo mi cupo?',
-    a: 'Llenás el formulario al final de esta página. Te contactamos por WhatsApp para confirmar tu plan y coordinar el pago.',
+    q: '¿Cómo me inscribo?',
+    a: 'Completá el formulario al final de esta página con tu plan elegido. Te contactamos por WhatsApp para coordinar tu primera clase, la inscripción y el pago.',
   },
 ];
 

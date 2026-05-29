@@ -12,6 +12,7 @@ import {
   HorariosPileta,
   ProfesPileta,
   PreciosPileta,
+  ComoLlegar,
   CasaRC,
   FAQPileta,
   CTAFinalPileta,
@@ -21,9 +22,9 @@ import {
 import { FAQ, PLANES } from '@/components/pileta/constants';
 
 export const metadata: Metadata = {
-  title: 'Pileta Climatizada RC Terrazas · Tucumán | Preventa abierta',
+  title: 'Pileta Climatizada RC Terrazas · Tucumán | Abierta',
   description:
-    'La única pileta climatizada semiolímpica de un gimnasio en Tucumán. Natación, aquagym y pileta libre con acompañamiento profesional. Reservá tu cupo en preventa — cierra el 25 de mayo.',
+    'La única pileta climatizada semiolímpica de un gimnasio en Tucumán. Natación, aquagym y pileta libre con acompañamiento profesional. Abierta en RC Terrazas, Yerba Buena.',
   keywords: [
     'pileta climatizada tucuman',
     'natacion tucuman',
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pileta Climatizada RC · La única de un gimnasio en Tucumán',
     description:
-      'Preventa abierta. Pileta semiolímpica climatizada con acompañamiento profesional, en Yerba Buena. Reservá tu cupo — sin pago anticipado.',
+      'Pileta semiolímpica climatizada con acompañamiento profesional, en RC Terrazas (Yerba Buena). Empezá esta semana — coordinamos por WhatsApp.',
     url: 'https://rcgym.com.ar/pileta',
     type: 'website',
     images: [
@@ -116,8 +117,7 @@ const jsonLd = [
       description: p.bajada,
       price: p.precio,
       priceCurrency: 'ARS',
-      priceValidUntil: '2026-05-25',
-      availability: 'https://schema.org/PreOrder',
+      availability: 'https://schema.org/InStock',
       url: 'https://rcgym.com.ar/pileta#planes',
     })),
   },
@@ -144,7 +144,7 @@ export default function PiletaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <h1 className="sr-only">
-        Pileta climatizada semiolímpica en RC Terrazas, Tucumán — Preventa abierta
+        Pileta climatizada semiolímpica en RC Terrazas, Tucumán — Abierta en Yerba Buena
       </h1>
       <PiletaTracker />
       <HeroPileta />
@@ -160,6 +160,7 @@ export default function PiletaPage() {
       <ProfesPileta />
       <PreciosPileta />
       <CasaRC />
+      <ComoLlegar />
       <FAQPileta />
       <CTAFinalPileta />
       <StickyHeaderPileta />

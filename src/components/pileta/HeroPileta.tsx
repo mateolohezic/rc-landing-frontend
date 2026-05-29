@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { CountdownPileta } from './CountdownPileta';
 import { trackPileta } from './PiletaTracker';
 import heroImg from '@/assets/pileta/crawl-mujer-1.webp';
 
@@ -35,16 +34,27 @@ export const HeroPileta = () => {
 
       {/* Main content centered */}
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 py-32 lg:py-40 text-center flex flex-col items-center">
+        {/* Eyebrow — ya abierta */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/15 backdrop-blur-md border border-emerald-400/40 text-emerald-300 text-xs lg:text-sm uppercase tracking-[0.25em] font-bold"
+        >
+          <span className="size-1.5 bg-emerald-400 rounded-full animate-pulse" />
+          Abierta · Sede Terrazas
+        </motion.div>
+
         {/* Promise headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.05 }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-black uppercase leading-[0.95] tracking-tight max-w-4xl drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
+          className="mt-6 text-4xl sm:text-5xl lg:text-7xl font-black uppercase leading-[0.95] tracking-tight max-w-4xl drop-shadow-[0_4px_24px_rgba(0,0,0,0.85)]"
         >
-          Preventa
-          <span className="block">Pileta semiolímpica</span>
-          <span className="block text-red-500">climatizada</span>
+          Pileta semiolímpica
+          <span className="block">climatizada</span>
+          <span className="block text-red-500">en Yerba Buena</span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -54,11 +64,11 @@ export const HeroPileta = () => {
           transition={{ duration: 0.6, delay: 0.35 }}
           className="mt-6 lg:mt-8 text-base lg:text-lg text-white/90 max-w-2xl leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
         >
-          Más de 30 años cuidando a Tucumán nos llevaron acá. Mismos profes, misma comunidad,
-          misma confianza. Ahora también dentro del agua, en nuestra sede Terrazas (Yerba Buena).
+          Acompañamiento profesional en cada clase, en la sede Terrazas de RC. Más de 30 años
+          cuidando a Tucumán, ahora también dentro del agua. Empezá esta semana.
         </motion.p>
 
-        {/* CTA + Countdown */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,9 +80,8 @@ export const HeroPileta = () => {
             onClick={() => trackPileta('hero_cta_click')}
             className="px-10 py-4 lg:px-12 lg:py-5 text-base lg:text-lg font-black uppercase tracking-widest bg-gradient-to-r from-red-600 to-red-500 rounded-xl hover:scale-[1.02] transition-transform duration-300 shadow-2xl shadow-red-500/40"
           >
-            Reservá tu cupo
+            Reservar mi clase
           </Link>
-          <CountdownPileta variant="hero" />
         </motion.div>
 
         {/* Bottom proof line */}

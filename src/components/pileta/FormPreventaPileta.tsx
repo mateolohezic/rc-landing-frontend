@@ -89,10 +89,10 @@ export const FormPreventaPileta = () => {
     >
       <div className="text-center mb-6">
         <h3 className="text-3xl lg:text-4xl font-black tracking-tight uppercase leading-tight">
-          Reservá tu cupo
+          Reservar mi clase
         </h3>
         <p className="mt-2 text-sm lg:text-base text-white/70">
-          Te respondemos por WhatsApp para confirmar tu plan.
+          Te respondemos por WhatsApp para coordinar tu inscripción.
         </p>
       </div>
 

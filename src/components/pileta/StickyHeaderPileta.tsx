@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { CountdownPileta } from './CountdownPileta';
 import { trackPileta } from './PiletaTracker';
 
 export const StickyHeaderPileta = () => {
@@ -26,17 +25,20 @@ export const StickyHeaderPileta = () => {
         style={{ paddingBottom: 'calc(0.75rem + env(safe-area-inset-bottom))' }}
       >
         <div className="flex-1 min-w-0">
-          <p className="text-[10px] uppercase tracking-widest text-red-400 font-bold mb-0.5">
-            Preventa cierra en
+          <p className="text-[10px] uppercase tracking-widest text-emerald-300 font-bold mb-0.5 flex items-center gap-1.5">
+            <span className="size-1.5 bg-emerald-400 rounded-full animate-pulse" />
+            Pileta abierta · Sede Terrazas
           </p>
-          <CountdownPileta variant="inline" />
+          <p className="text-xs text-white/85 font-semibold truncate">
+            Empezá esta semana
+          </p>
         </div>
         <Link
           href="#reservar"
           onClick={() => trackPileta('sticky_cta_click')}
           className="px-4 py-2.5 rounded-lg bg-gradient-to-r from-red-600 to-red-500 text-xs font-black uppercase tracking-wider whitespace-nowrap shrink-0"
         >
-          Reservar cupo
+          Reservar clase
         </Link>
       </div>
     </motion.div>

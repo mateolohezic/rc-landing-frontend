@@ -39,15 +39,14 @@ export const PreciosPileta = () => {
           className="text-center mb-12 lg:mb-16"
         >
           <p className="text-red-500 uppercase tracking-widest text-sm font-bold mb-4">
-            Planes de preventa · Mayo 2026
+            Planes mensuales
           </p>
           <h2 className="text-4xl lg:text-7xl font-black tracking-tight uppercase leading-tight">
             Elegí cómo querés
             <span className="block text-red-500">entrenar</span>
           </h2>
           <p className="mt-4 text-base lg:text-lg text-white/70 max-w-2xl mx-auto">
-            Precios fijos hasta el lunes 25 de mayo. Después de la apertura los planes
-            pueden ajustarse.
+            Cuotas mensuales. Coordinamos pago e inscripción por WhatsApp cuando completes el form.
           </p>
         </motion.div>
 
