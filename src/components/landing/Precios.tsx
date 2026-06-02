@@ -14,7 +14,7 @@ interface SedePrecios {
 }
 
 const preciosPorSede: SedePrecios[] = [
-    { title: "Barrio Norte", mensual: 60000, trimestral: 153000, semestral: 288000, soloEfectivoPromos: true },
+    { title: "Barrio Norte", mensual: 70000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
     { title: "Aconquija", mensual: 80000, debitoAutomatico: 64000, trimestral: 200000, semestral: 380000 },
     { title: "Barrio Sur", mensual: 61000, debitoAutomatico: 48800, trimestral: 155400, semestral: 292800 },
     { title: "Tafí Viejo", mensual: 72000, debitoAutomatico: 57000, trimestral: 183000, semestral: 342000 },
