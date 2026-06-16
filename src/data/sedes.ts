@@ -170,7 +170,7 @@ export const sedes: Sede[] = [
             { time: "19:00", lun: ["Full Body"], mie: ["Full Body"], vie: ["Full Body"] },
             { time: "20:00", lun: ["Spinning"], mar: ["Spinning"], mie: ["Spinning"], jue: ["Spinning"], vie: ["Spinning"] },
         ],
-        precios: { mensual: 60000, trimestral: 153000, semestral: 288000, soloEfectivoPromos: true },
+        precios: { mensual: 70000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
     },
 ];
 
