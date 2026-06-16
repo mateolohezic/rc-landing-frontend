@@ -3,8 +3,8 @@
 // A beneficio de la Fundación Copa de Leche Los Indiecitos.
 // ───────────────────────────────────────────────
 
-// WhatsApp del evento (placeholder editable). Solo dígitos, formato internacional sin "+".
-export const EVENTO_WHATSAPP = process.env.NEXT_PUBLIC_EVENTO_WHATSAPP || '5493815555555';
+// WhatsApp del evento. Por defecto, el de la sede Terrazas. Override con la env var si hay número dedicado.
+export const EVENTO_WHATSAPP = process.env.NEXT_PUBLIC_EVENTO_WHATSAPP || '5493815145550';
 
 export const EVENTO = {
   fechaLarga: 'Domingo 28 de junio de 2026',
