@@ -12,7 +12,9 @@ export {
     FaCheck as CheckIcon,
     FaMoon as MoonIcon,
     FaUser as UserIcon,
-    FaHeart as HeartIcon
+    FaHeart as HeartIcon,
+    FaRegCalendar as CalendarIcon,
+    FaBowlFood as FoodIcon
 } from "react-icons/fa6";
 
 export {

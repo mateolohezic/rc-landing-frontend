@@ -15,9 +15,9 @@ interface NavLink {
 const links: NavLink[] = [
     { title: 'Inicio', href: '/' },
     { title: 'Sedes', href: '/links' },
-    { title: 'Entrenamientos', href: '#entrenamientos' },
     { title: 'Planes', href: '/planes' },
-    { title: 'Pileta', href: '/pileta', highlight: true },
+    { title: 'Pileta', href: '/pileta' },
+    { title: 'Running', href: '/running', highlight: true },
 ];
 
 const socialMedias = [
