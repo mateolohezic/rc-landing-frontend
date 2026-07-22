@@ -50,7 +50,7 @@ export const sedes: Sede[] = [
         img: sede_epico,
         clases: ["Spinning", "Funcional", "GAP"],
         horarios: { semana: "6:00 a 23:00", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
-        phonenumber: "https://api.whatsapp.com/send/?phone=5493815959644&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20%C3%89pico&type=phone_number&app_absent=0",
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493816396164&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20%C3%89pico&type=phone_number&app_absent=0",
         schedule: [
             { time: "08:30", lun: ["Spinning"], mar: ["Funcional"], mie: ["Spinning"], jue: ["Funcional"], vie: ["Spinning"] },
             { time: "10:30", sab: ["Spinning"] },

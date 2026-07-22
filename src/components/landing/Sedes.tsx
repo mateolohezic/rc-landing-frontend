@@ -20,7 +20,7 @@ const sedes = [
         img: sede_epico,
         clases: ["Spinning", "Funcional", "GAP"],
         horarios: { semana: "6:00 a 23:00", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
-        phonenumber: "https://api.whatsapp.com/send/?phone=5493815959644&text&type=phone_number&app_absent=0"
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493816396164&text&type=phone_number&app_absent=0"
     },
     {
         title: "Terrazas",
