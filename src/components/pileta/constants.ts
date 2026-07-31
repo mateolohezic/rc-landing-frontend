@@ -238,6 +238,62 @@ export const METRICAS_RC = [
   { numero: '6', label: 'Sedes en Tucumán' },
 ];
 
+// Beneficios de nadar (sección "Sabías que…")
+// El orden importa: BeneficiosNado.tsx asigna un ícono por índice
+// (Heart, Shield, Zap, Sun, TrendingUp, Users). Si agregás items, sumá íconos allá.
+export const BENEFICIOS_NADO = [
+  {
+    titulo: 'Cardio sin golpear el cuerpo',
+    desc: 'En el agua pesás una fracción de lo que pesás en tierra. Subís pulsaciones sin el impacto que te dejan la cinta o el salto.',
+  },
+  {
+    titulo: 'Cuida rodillas y columna',
+    desc: 'No hay impacto contra el piso. Es la opción que recomiendan los kinesiólogos para rehabilitación y para quienes tienen problemas de articulaciones.',
+  },
+  {
+    titulo: 'Trabaja todo el cuerpo junto',
+    desc: 'Un largo de crol usa espalda, hombros, core y piernas al mismo tiempo. No hay día de pierna y día de brazo.',
+  },
+  {
+    titulo: 'Climatizada los 12 meses',
+    desc: 'No dependés del clima ni de la época del año. En julio entrás al agua a la misma temperatura que en enero.',
+  },
+  {
+    titulo: 'Mejora la capacidad respiratoria',
+    desc: 'Nadar te obliga a manejar la respiración con un ritmo fijo. Es el trabajo respiratorio que ningún otro ejercicio te exige.',
+  },
+  {
+    titulo: 'Sirve a cualquier edad',
+    desc: 'Tenemos gente de 5 años y gente de 70 en la misma pileta, en distintos turnos. No hay una edad para empezar.',
+  },
+];
+
+// Clases dirigidas de la pileta (sede Terrazas)
+// ClasesPileta.tsx usa grid de 4 columnas: mantener múltiplos de 4 idealmente.
+// `horario` tiene que coincidir con HORARIOS_PILETA: si cambia la grilla, actualizar acá también.
+export const CLASES = [
+  {
+    nombre: 'Natación niños',
+    desc: 'Desde 5 años. Grupos por edad y nivel. Requiere consentimiento médico firmado antes de la primera clase.',
+    horario: 'Lun a vie · 17 a 20 hs',
+  },
+  {
+    nombre: 'Natación adultos',
+    desc: 'Desde cero o para mejorar técnica. Si nunca diste un largo, arrancás igual: el profe te enseña de entrada.',
+    horario: 'Lun a vie · 6 a 11 y 16 a 22 hs',
+  },
+  {
+    nombre: 'Aquagym',
+    desc: 'Bajo impacto, alta intensidad. Grupos de hasta 30. Es la opción para post-lesión y embarazo.',
+    horario: 'Mar y jue · 16 a 17 hs',
+  },
+  {
+    nombre: 'Pileta libre',
+    desc: 'Nadás por tu cuenta en los turnos disponibles, sin clase dirigida.',
+    horario: 'Lun a vie · 11 a 16 · Sáb 9 a 13 hs',
+  },
+];
+
 // Specs técnicas de la pileta (para sección solución)
 export const PILETA_SPECS = [
   'Pileta climatizada todo el año',
