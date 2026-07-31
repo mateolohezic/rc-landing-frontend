@@ -17,7 +17,6 @@ const links: NavLink[] = [
     { title: 'Sedes', href: '/links' },
     { title: 'Planes', href: '/planes' },
     { title: 'Pileta', href: '/pileta' },
-    { title: 'Running', href: '/running', highlight: true },
 ];
 
 const socialMedias = [

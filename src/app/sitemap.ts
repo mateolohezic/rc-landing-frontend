@@ -21,11 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1,
     },
-    {
-      url: 'https://rcgym.com.ar/running',
-      lastModified,
-      changeFrequency: 'daily',
-      priority: 1,
-    },
   ];
 }
