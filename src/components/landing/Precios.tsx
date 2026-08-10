@@ -13,13 +13,19 @@ interface SedePrecios {
     soloEfectivoPromos?: boolean;
 }
 
+// Esquema de precios vigente desde agosto 2026. Todo se deriva de la cuota
+// mensual de lista de cada sede, con el mismo descuento en las 6:
+//   debitoAutomatico = mensual * 0,80          (-20%)
+//   trimestral       = mensual * 0,80 * 3      (-20% por mes, igual que el debito)
+//   semestral        = mensual * 0,75 * 6      (-25% por mes)
+// Trimestral y semestral se pagan en 3 y 6 cuotas sin interes con tarjeta Macro.
 const preciosPorSede: SedePrecios[] = [
-    { title: "Barrio Norte", mensual: 70000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
-    { title: "Aconquija", mensual: 80000, debitoAutomatico: 64000, trimestral: 200000, semestral: 380000 },
-    { title: "Barrio Sur", mensual: 61000, debitoAutomatico: 48800, trimestral: 155400, semestral: 292800 },
-    { title: "Tafí Viejo", mensual: 72000, debitoAutomatico: 58000, trimestral: 183000, semestral: 342000 },
-    { title: "Terrazas", mensual: 90000, debitoAutomatico: 72000, trimestral: 243000, semestral: 459000 },
-    { title: "Epico", mensual: 80000, debitoAutomatico: 64000, trimestral: 216000, semestral: 408000 },
+    { title: "Barrio Norte", mensual: 70000, debitoAutomatico: 56000, trimestral: 168000, semestral: 315000 },
+    { title: "Aconquija", mensual: 80000, debitoAutomatico: 64000, trimestral: 192000, semestral: 360000 },
+    { title: "Barrio Sur", mensual: 61000, debitoAutomatico: 48800, trimestral: 146400, semestral: 274500 },
+    { title: "Tafí Viejo", mensual: 72000, debitoAutomatico: 57600, trimestral: 172800, semestral: 324000 },
+    { title: "Terrazas", mensual: 90000, debitoAutomatico: 72000, trimestral: 216000, semestral: 405000 },
+    { title: "Epico", mensual: 80000, debitoAutomatico: 64000, trimestral: 192000, semestral: 360000 },
 ];
 
 export const Precios = () => {
