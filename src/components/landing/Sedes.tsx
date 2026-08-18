@@ -36,7 +36,7 @@ const sedes = [
         description: "Contamos con una amplia terraza al aire libre, wifi, duchas, vestuarios, secador de pelo, dispenser de agua, salones climatizados y estacionamiento.",
         location: "Av Aconquija 2122",
         img: sede_yerba_buena,
-        clases: ["Funcional", "Spinning", "Yoga", "Full Body", "Pilates MAT", "Body Pump", "Ritmos Latinos", "TRX", "Boxeo", "HIT", "Calistenia"],
+        clases: ["Funcional", "Indoor", "Yoga", "Body", "Bodypump", "Ritmos Latinos", "Boxeo", "Crossfit", "Calistenia"],
         horarios: { semana: "6:00 a 22:30", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
         phonenumber: "https://api.whatsapp.com/send/?phone=5493816454929&text&type=phone_number&app_absent=0"
     },
