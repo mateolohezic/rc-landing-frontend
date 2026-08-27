@@ -114,7 +114,7 @@ export const sedes: Sede[] = [
         img: sede_barrio_sur,
         clases: ["Funcional", "Spinning", "Pilates MAT", "Calistenia", "Crossfit", "Zumba"],
         horarios: { semana: "6:00 a 23:00", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
-        phonenumber: "https://api.whatsapp.com/send/?phone=5493812094717&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20Barrio%20Sur&type=phone_number&app_absent=0",
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493816338283&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20Barrio%20Sur&type=phone_number&app_absent=0",
         schedule: [
             { time: "08:00", lun: ["Crossfit"], mar: ["Funcional"], mie: ["Crossfit"], jue: ["Funcional"], vie: ["Crossfit"] },
             { time: "09:00", lun: ["Indoor"], mie: ["Indoor"], vie: ["Indoor"] },

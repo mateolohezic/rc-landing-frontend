@@ -47,7 +47,7 @@ const sedes = [
         img: sede_barrio_sur,
         clases: ["Funcional", "Spinning", "Pilates MAT", "Calistenia", "Crossfit", "Zumba"],
         horarios: { semana: "6:00 a 23:00", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
-        phonenumber: "https://api.whatsapp.com/send/?phone=5493812094717&text&type=phone_number&app_absent=0"
+        phonenumber: "https://api.whatsapp.com/send/?phone=5493816338283&text&type=phone_number&app_absent=0"
     },
     {
         title: "Tafí Viejo",
