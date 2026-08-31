@@ -19,8 +19,10 @@ interface SedePrecios {
 //   trimestral       = mensual * 0,80 * 3      (-20% por mes, igual que el debito)
 //   semestral        = mensual * 0,75 * 6      (-25% por mes)
 // Trimestral y semestral se pagan en 3 y 6 cuotas sin interes con tarjeta Macro.
+// Excepcion: Barrio Norte todavia no tiene debito automatico habilitado, asi
+// que no tiene descuento y sus planes trimestral/semestral son solo en efectivo.
 const preciosPorSede: SedePrecios[] = [
-    { title: "Barrio Norte", mensual: 70000, debitoAutomatico: 56000, trimestral: 168000, semestral: 315000 },
+    { title: "Barrio Norte", mensual: 70000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
     { title: "Aconquija", mensual: 80000, debitoAutomatico: 64000, trimestral: 192000, semestral: 360000 },
     { title: "Barrio Sur", mensual: 61000, debitoAutomatico: 48800, trimestral: 146400, semestral: 274500 },
     { title: "Tafí Viejo", mensual: 72000, debitoAutomatico: 57600, trimestral: 172800, semestral: 324000 },
