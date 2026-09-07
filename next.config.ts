@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
                 hostname: "img.youtube.com",
                 pathname: "/vi/**",
             },
+            {
+                // Placeholder de stock para /primavera-running mientras llegan las fotos reales de Alterpoint.
+                protocol: "https",
+                hostname: "picsum.photos",
+            },
         ],
     },
 };
