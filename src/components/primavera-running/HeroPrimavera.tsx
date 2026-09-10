@@ -4,13 +4,13 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { headlineFont } from './fonts';
 import { trackPrimavera } from './PrimaveraTracker';
-import { PRIMAVERA_FOTOS } from './constants';
 import logoLockup from '@/assets/primavera-running/logo-lockup.png';
+import heroFoto from '@/assets/primavera-running/hero-rc-terrazas.png';
 
 export const HeroPrimavera = () => {
   return (
     <section className="relative w-full min-h-[100svh] flex flex-col items-center justify-between overflow-hidden px-6 py-16">
-      <Image src={PRIMAVERA_FOTOS.hero} alt="" fill sizes="100vw" priority className="object-cover" />
+      <Image src={heroFoto} alt="" fill sizes="100vw" priority className="object-cover" />
       <div
         aria-hidden
         className="absolute inset-0 bg-gradient-to-br from-[#e2941f]/85 via-[#c47420]/80 to-[#2e3712]/90"
