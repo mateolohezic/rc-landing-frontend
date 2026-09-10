@@ -3,6 +3,8 @@ export { HeroPrimavera } from './HeroPrimavera';
 export { CountdownPrimavera } from './CountdownPrimavera';
 export { StoryIntroPrimavera } from './StoryIntroPrimavera';
 export { MomentosPrimavera } from './MomentosPrimavera';
+export { CronogramaPrimavera } from './CronogramaPrimavera';
+export { MapaCircuitoPrimavera } from './MapaCircuitoPrimavera';
 export { FormInscripcionPrimavera } from './FormInscripcionPrimavera';
 export { FAQPrimavera } from './FAQPrimavera';
 export { SponsorsPrimavera } from './SponsorsPrimavera';

@@ -62,9 +62,10 @@ const getClientIp = (req: NextRequest): string => {
   return 'unknown';
 };
 
-const sanitize = (s: string): string => s.replace(/[ -]/g, '').trim().slice(0, 200);
+// Solo saca saltos de línea/tabs (para no romper el POST al Google Form). No toca espacios ni guiones.
+const sanitize = (s: string): string => s.replace(/[\r\n\t]/g, ' ').trim().slice(0, 200);
 
-const VALID_ACTIVIDADES = ['cycling', 'running'] as const;
+const VALID_ACTIVIDADES = ['running', 'spinning', 'funcional'] as const;
 
 export async function POST(req: NextRequest) {
   const ip = getClientIp(req);
@@ -112,12 +113,15 @@ export async function POST(req: NextRequest) {
   }
 
   // Opciones de actividad tal como están cargadas como opciones del checkbox en el Google Form.
+  // El Google Form dejó la opción vieja "Cycling" tal cual (no se renombró a "Spinning"),
+  // así que mandamos "Cycling" para esa actividad aunque en la landing diga "Spinning".
   const actividadOpciones: string[] = [];
   if (soloAfter) {
     actividadOpciones.push('Solo el after');
   } else {
-    if (actividades.includes('cycling')) actividadOpciones.push('Cycling');
     if (actividades.includes('running')) actividadOpciones.push('Running');
+    if (actividades.includes('spinning')) actividadOpciones.push('Cycling');
+    if (actividades.includes('funcional')) actividadOpciones.push('Funcional');
   }
 
   const params = new URLSearchParams();

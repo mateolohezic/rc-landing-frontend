@@ -38,7 +38,7 @@ export const HeroPrimavera = () => {
         </p>
 
         <h2
-          className={`${headlineFont.className} text-[#fbf1dd] text-6xl sm:text-8xl lg:text-[9rem] leading-[0.9] uppercase`}
+          className={`${headlineFont.className} text-[#fbf1dd] text-5xl sm:text-8xl lg:text-[9rem] leading-[0.9] uppercase`}
         >
           Primavera
           <br />
@@ -63,6 +63,8 @@ export const HeroPrimavera = () => {
           style={{ fontFamily: 'var(--pr-label)' }}
           className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-[#fbf1dd] text-sm sm:text-base tracking-wide"
         >
+          <span className="font-bold">Totalmente gratis</span>
+          <span className="text-[#fbf1dd]/70">·</span>
           <span>Domingo 20 de septiembre</span>
           <span className="text-[#fbf1dd]/70">·</span>
           <span>RC Gym Terrazas</span>

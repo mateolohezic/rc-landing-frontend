@@ -5,8 +5,11 @@ import {
   CountdownPrimavera,
   StoryIntroPrimavera,
   MomentosPrimavera,
+  CronogramaPrimavera,
+  MapaCircuitoPrimavera,
   FormInscripcionPrimavera,
   FAQPrimavera,
+  SponsorsPrimavera,
   CTAFinalPrimavera,
   StickyCTAPrimavera,
 } from '@/components/primavera-running';
@@ -16,12 +19,13 @@ import { headlineFont, labelFont } from '@/components/primavera-running/fonts';
 export const metadata: Metadata = {
   title: 'Primavera Running RC x Alterpoint · 20 de septiembre | Tucumán',
   description:
-    'Indoor cycling al aire libre, circuito de running por Yerba Buena y after en la terraza de Alterpoint. Domingo 20 de septiembre, desde las 9:00. Gratis, cupos limitados. Inscribite.',
+    'Running, spinning y funcional en RC Terrazas, con cierre en la terraza de Alterpoint. Domingo 20 de septiembre, desde las 9:30. Gratis, cupos limitados. Inscribite.',
   keywords: [
     'primavera running tucuman',
     'rc gym alterpoint',
     'evento running tucuman',
-    'indoor cycling al aire libre',
+    'spinning tucuman',
+    'funcional tucuman',
     'evento yerba buena',
     'evento familiar tucuman',
     'alterpoint terraza',
@@ -32,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Primavera Running RC x Alterpoint · 20 de septiembre',
     description:
-      'Indoor cycling al aire libre, circuito de running por Yerba Buena y after en la terraza de Alterpoint. Gratis, cupos limitados. Inscribite.',
+      'Running, spinning y funcional en RC Terrazas, con cierre en la terraza de Alterpoint. Gratis, cupos limitados. Inscribite.',
     url: 'https://rcgym.com.ar/primavera-running',
     type: 'website',
     images: [
@@ -50,8 +54,9 @@ const jsonLd = [
     '@type': 'SportsEvent',
     name: 'Primavera Running RC x Alterpoint',
     description:
-      'Jornada de indoor cycling al aire libre y circuito de running por Yerba Buena, con after en la terraza de Alterpoint (música y gastronomía).',
-    startDate: '2026-09-20T09:00:00-03:00',
+      'Jornada de running, spinning y funcional en RC Terrazas, con cierre en la terraza de Alterpoint (charla y 3er tiempo).',
+    startDate: '2026-09-20T09:30:00-03:00',
+    endDate: '2026-09-20T12:30:00-03:00',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     url: 'https://rcgym.com.ar/primavera-running',
@@ -108,9 +113,12 @@ export default function PrimaveraRunningPage() {
       <HeroPrimavera />
       <StoryIntroPrimavera />
       <MomentosPrimavera />
+      <CronogramaPrimavera />
+      <MapaCircuitoPrimavera />
       <CountdownPrimavera />
       <FormInscripcionPrimavera />
       <FAQPrimavera />
+      <SponsorsPrimavera />
       <CTAFinalPrimavera />
       <StickyCTAPrimavera />
     </main>

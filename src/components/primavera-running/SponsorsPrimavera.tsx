@@ -1,23 +1,43 @@
-import { SPONSORS } from './constants';
+import Image from 'next/image';
+import { headlineFont } from './fonts';
+import osde from '@/assets/primavera-running/sponsors/osde.png';
+import gatorade from '@/assets/primavera-running/sponsors/gatorade.png';
+import bianchi from '@/assets/primavera-running/sponsors/bianchi.png';
+import pinarello from '@/assets/primavera-running/sponsors/pinarello.png';
+import monster from '@/assets/primavera-running/sponsors/monster.png';
+import kuranda from '@/assets/primavera-running/sponsors/kuranda.png';
+import bonusTicket from '@/assets/primavera-running/sponsors/bonus-ticket.png';
 
-// No renderiza nada hasta que SPONSORS tenga marcas confirmadas.
+// Faltan Paco García y Que lo Paleó: los logos que se consiguieron no sirven
+// (baja resolución / cuenta equivocada). Sumar cuando lleguen en condiciones.
+const SPONSORS = [
+  { nombre: 'OSDE', logo: osde, bg: 'bg-[#fbf1dd]' },
+  { nombre: 'Gatorade', logo: gatorade, bg: 'bg-[#fbf1dd]' },
+  { nombre: 'Bianchi', logo: bianchi, bg: 'bg-[#fbf1dd]' },
+  { nombre: 'Pinarello', logo: pinarello, bg: 'bg-[#fbf1dd]' },
+  { nombre: 'Monster Energy', logo: monster, bg: 'bg-[#fbf1dd]' },
+  { nombre: 'Kuranda Market', logo: kuranda, bg: 'bg-[#1a1f0d]' },
+  { nombre: 'Bonus Ticket', logo: bonusTicket, bg: 'bg-[#fbf1dd]' },
+];
+
 export const SponsorsPrimavera = () => {
-  if (SPONSORS.length === 0) return null;
-
   return (
-    <section className="w-full bg-black px-6 py-16 border-t border-white/10 text-center">
-      <p style={{ fontFamily: 'var(--pr-label)' }} className="text-sm uppercase tracking-[0.4em] text-white/60 mb-6">
-        Nos acompañan
+    <section className="w-full bg-black px-6 py-24 border-t border-white/10 text-center">
+      <p style={{ fontFamily: 'var(--pr-label)' }} className="text-sm uppercase tracking-[0.4em] text-[#e2941f] mb-4">
+        Gracias a
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 max-w-2xl mx-auto">
+      <h2 className={`${headlineFont.className} text-[#fbf1dd] text-3xl sm:text-5xl uppercase mb-12`}>
+        Nos acompañan
+      </h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
         {SPONSORS.map((s) => (
-          <span
-            key={s}
-            style={{ fontFamily: 'var(--pr-label)' }}
-            className="text-white/80 text-base sm:text-lg tracking-wide"
+          <div
+            key={s.nombre}
+            className={`flex items-center justify-center p-6 h-24 ${s.bg}`}
           >
-            {s}
-          </span>
+            <Image src={s.logo} alt={s.nombre} className="max-h-12 w-auto max-w-full object-contain" />
+          </div>
         ))}
       </div>
     </section>

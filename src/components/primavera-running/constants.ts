@@ -1,6 +1,6 @@
 // ───────────────────────────────────────────────
 // Datos del evento Primavera Running RC x Alterpoint (20/09/2026)
-// Circuito de indoor cycling + running entre RC Terrazas y la terraza de Alterpoint.
+// Running + spinning + funcional en RC Terrazas, cierre en Alterpoint.
 // ───────────────────────────────────────────────
 
 // WhatsApp del evento. Por defecto, el de la sede Terrazas (punto de largada). Override con env var si hay número dedicado.
@@ -8,40 +8,50 @@ export const EVENTO_WHATSAPP = process.env.NEXT_PUBLIC_EVENTO_WHATSAPP_PRIMAVERA
 
 export const EVENTO = {
   fechaLarga: 'Domingo 20 de septiembre de 2026',
-  horario: 'Desde las 9:00',
+  horario: 'Desde las 9:30',
   salida: 'RC Terrazas',
   llegada: 'Alterpoint, terraza Malvina',
   ciudad: 'Yerba Buena, Tucumán',
 };
 
-// Inicio del evento (para el countdown y el link de agendar)
-export const EVENTO_ISO = '2026-09-20T09:00:00-03:00';
+// Inicio del evento (para el countdown y el link de agendar): 9:30, bienvenida y acreditación.
+export const EVENTO_ISO = '2026-09-20T09:30:00-03:00';
 
-// Fotos de fondo. Hoy son placeholders de picsum.photos; cuando lleguen las fotos reales
-// de Alterpoint, se reemplaza cada valor acá (no hace falta tocar los componentes).
+// Cronograma real del día.
+export const CRONOGRAMA = [
+  { hora: '9:30', actividad: 'Bienvenida y acreditación + café', detalle: 'Para socios y no socios' },
+  { hora: '10:00', actividad: 'Running con Romi Mamá Fit', detalle: 'Para todas las edades' },
+  { hora: '10:30', actividad: 'Masterclass de spinning con Luz Moyano', detalle: '' },
+  { hora: '10:30', actividad: 'Funcional con Jere y Lu', detalle: '' },
+  { hora: '12:00', actividad: 'Charla del Dr. Calabro + 3er tiempo', detalle: 'En Alterpoint' },
+];
+
+// Fotos de fondo. Hoy son placeholders; cuando lleguen las fotos reales de Alterpoint,
+// se reemplaza cada valor acá (no hace falta tocar los componentes).
 export const PRIMAVERA_FOTOS = {
   hero: 'https://picsum.photos/seed/primavera-hero/1600/2000',
   storyIntro: 'https://picsum.photos/seed/primavera-familia/1600/2000',
-  cycling: 'https://picsum.photos/seed/cyclehall/1200/1600',
   running: 'https://picsum.photos/seed/primavera-alterpoint/1200/1600',
-  after: 'https://picsum.photos/seed/terracenight/1200/1600',
+  funcional: 'https://picsum.photos/seed/primavera-funcional/1200/1600',
   ctaFinal: 'https://picsum.photos/seed/primavera-cta/1600/2000',
 };
 
 // ── Actividades ──────────────────────────────────
-export type ActividadId = 'cycling' | 'running';
+export type ActividadId = 'running' | 'spinning' | 'funcional';
 
 export const ACTIVIDAD_LABELS: Record<ActividadId, string> = {
-  cycling: 'Indoor Cycling al aire libre',
-  running: 'Circuito de running',
+  running: 'Running',
+  spinning: 'Spinning',
+  funcional: 'Funcional',
 };
 
 // Construye el resumen legible de lo que eligió la persona (para WhatsApp / gracias)
 export const buildActividadResumen = (actividades: ActividadId[], soloAfter: boolean): string => {
   if (soloAfter) return 'Solo el after';
   const partes: string[] = [];
-  if (actividades.includes('cycling')) partes.push('Indoor Cycling');
   if (actividades.includes('running')) partes.push('Running');
+  if (actividades.includes('spinning')) partes.push('Spinning');
+  if (actividades.includes('funcional')) partes.push('Funcional');
   return partes.join(' + ');
 };
 
@@ -53,29 +63,24 @@ export const buildWhatsappLink = (params: { nombre?: string; actividad?: string 
   return `https://wa.me/${EVENTO_WHATSAPP}?text=${encodeURIComponent(text)}`;
 };
 
-// Link para agendar el evento en Google Calendar (fecha/hora reales, sin duración estimada
-// porque no está confirmada — se carga como evento de 3h desde el inicio a modo de referencia).
+// Link para agendar el evento en Google Calendar (fecha/hora reales; dura hasta el cierre
+// confirmado a las 12:00 en Alterpoint).
 export const buildCalendarLink = () => {
   const start = new Date(EVENTO_ISO);
-  const end = new Date(start.getTime() + 3 * 60 * 60 * 1000);
+  const end = new Date('2026-09-20T12:30:00-03:00');
   const fmt = (d: Date) => d.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
   const params = new URLSearchParams({
     action: 'TEMPLATE',
     text: 'Primavera Running · RC x Alterpoint',
     dates: `${fmt(start)}/${fmt(end)}`,
     location: 'RC Gym Terrazas, Yerba Buena, Tucumán',
-    details: 'Indoor cycling, circuito de running y after en la terraza de Alterpoint.',
+    details: 'Running, spinning y funcional en RC Terrazas, cierre en Alterpoint con charla y 3er tiempo.',
   });
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 };
 
-// ── Sponsors ─────────────────────────────────────
-// Vacío hasta que se confirme el line-up. SponsorsPrimavera no renderiza nada si esto está vacío.
-export const SPONSORS: string[] = [];
-
 // ── FAQ ──────────────────────────────────────────
-// Solo preguntas con respuesta 100% verificada. Nada de horarios de cada bloque, km del
-// circuito, cupo total, estacionamiento ni política de lista de espera: no están confirmados.
+// Solo preguntas con respuesta 100% verificada.
 export const FAQ = [
   {
     q: '¿Hay que ser socio de RC para participar?',
@@ -90,12 +95,12 @@ export const FAQ = [
     a: 'Sí, los cupos son limitados.',
   },
   {
-    q: '¿Puedo inscribirme a las dos actividades?',
-    a: 'Sí. Al inscribirte podés elegir el indoor cycling, el circuito de running, ambas, o anotarte solo para el after en Alterpoint.',
+    q: '¿Puedo inscribirme a más de una actividad?',
+    a: 'Sí. Podés elegir running, spinning, funcional, combinarlas, o anotarte solo para el cierre en Alterpoint. Running es a las 10, spinning y funcional son a las 10:30 (en simultáneo, así que de esas dos se elige una).',
   },
   {
     q: '¿Es para todos los niveles?',
-    a: 'Sí. Es un evento familiar, abierto a todos los niveles.',
+    a: 'Sí. Es un evento familiar, abierto a todos los niveles. El running es para todas las edades.',
   },
   {
     q: '¿Qué hay que llevar?',

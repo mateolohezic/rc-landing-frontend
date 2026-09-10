@@ -167,10 +167,11 @@ export const FormInscripcionPrimavera = () => {
 
         <fieldset>
           <legend className={labelClass}>Actividad</legend>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-3 gap-2">
             {([
-              ['cycling', 'Cycling'],
               ['running', 'Running'],
+              ['spinning', 'Spinning'],
+              ['funcional', 'Funcional'],
             ] as const).map(([id, label]) => (
               <button
                 type="button"
@@ -189,9 +190,11 @@ export const FormInscripcionPrimavera = () => {
             onClick={toggleSoloAfter}
             className={`w-full mt-3 ${toggleClass(form.soloAfter)}`}
           >
-            Solo el after
+            Solo el cierre en Alterpoint
           </button>
-          <span className="block mt-2 text-xs text-white/60">Podés elegir cycling, running, ambas, o solo el after.</span>
+          <span className="block mt-2 text-xs text-white/60">
+            Running es a las 10. Spinning y funcional son a las 10:30, en simultáneo (elegís una). O anotate solo para el cierre.
+          </span>
         </fieldset>
 
         <fieldset>
