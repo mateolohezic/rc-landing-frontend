@@ -17,7 +17,6 @@ const links: NavLink[] = [
     { title: 'Sedes', href: '/links' },
     { title: 'Planes', href: '/planes' },
     { title: 'Pileta', href: '/pileta' },
-    { title: 'Primavera Running', href: '/primavera-running', highlight: true },
 ];
 
 const socialMedias = [
