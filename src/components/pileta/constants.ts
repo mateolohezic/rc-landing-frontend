@@ -187,11 +187,11 @@ export const FAQ = [
   },
   {
     q: '¿Desde qué edad pueden ir los chicos?',
-    a: 'Tenemos clases de natación para niños desde los 5 años. Coordinamos con vos la edad y el nivel cuando te respondamos por WhatsApp.',
+    a: 'Tenemos clases de natación para niños desde los 4 años. Coordinamos con vos la edad y el nivel cuando te respondamos por WhatsApp.',
   },
   {
     q: '¿Mi hijo necesita algo especial para empezar?',
-    a: 'Sí. Los chicos de 5 a 10 años necesitan completar un consentimiento médico antes de la primera clase. Te lo enviamos por WhatsApp y se firma con presentación del DNI. La revisión médica es obligatoria — la coordinamos con vos al confirmar tu plan.',
+    a: 'Sí. Los chicos de 4 a 10 años necesitan completar un consentimiento médico antes de la primera clase. Te lo enviamos por WhatsApp y se firma con presentación del DNI. La revisión médica es obligatoria — la coordinamos con vos al confirmar tu plan.',
   },
   {
     q: '¿Necesito hacer una revisión médica para empezar?',
@@ -264,7 +264,7 @@ export const BENEFICIOS_NADO = [
   },
   {
     titulo: 'Sirve a cualquier edad',
-    desc: 'Tenemos gente de 5 años y gente de 70 en la misma pileta, en distintos turnos. No hay una edad para empezar.',
+    desc: 'Tenemos gente de 4 años y gente de 70 en la misma pileta, en distintos turnos. No hay una edad para empezar.',
   },
 ];
 
@@ -274,7 +274,7 @@ export const BENEFICIOS_NADO = [
 export const CLASES = [
   {
     nombre: 'Natación niños',
-    desc: 'Desde 5 años. Grupos por edad y nivel. Requiere consentimiento médico firmado antes de la primera clase.',
+    desc: 'Desde 4 años. Grupos por edad y nivel. Requiere consentimiento médico firmado antes de la primera clase.',
     horario: 'Lun a vie · 17 a 20 hs',
   },
   {
