@@ -41,6 +41,9 @@ export interface Sede {
     precios?: SedePrecios;
 }
 
+// Fuente única de sedes, horarios, clases, grilla y precios: la home, /planes y /links leen de acá.
+// Precios confirmados por Mateo el 15/10/2026. Son valores fijos por sede (no se derivan de una fórmula).
+// Barrio Norte no tiene débito automático; trimestral y semestral solo en efectivo.
 export const sedes: Sede[] = [
     {
         slug: 'epico',
@@ -59,7 +62,7 @@ export const sedes: Sede[] = [
             { time: "18:00", lun: ["Spinning", "Funcional"], mar: ["Funcional"], mie: ["Spinning", "Funcional"], jue: ["Funcional"], vie: ["Spinning", "Funcional"] },
             { time: "19:00", lun: ["Funcional"], mar: ["Spinning"], mie: ["Funcional"], jue: ["Spinning"], vie: ["Funcional"] },
         ],
-        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 216000, semestral: 408000 },
+        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 204000, semestral: 384000 },
     },
     {
         slug: 'terrazas',
@@ -104,7 +107,7 @@ export const sedes: Sede[] = [
             { time: "20:00", mar: ["Funcional", "Crossfit"], jue: ["Funcional", "Crossfit"] },
             { time: "21:00", lun: ["Calistenia"], mie: ["Calistenia"], vie: ["Calistenia"] },
         ],
-        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 200000, semestral: 380000 },
+        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 204000, semestral: 384000 },
     },
     {
         slug: 'barrio-sur',
@@ -151,7 +154,7 @@ export const sedes: Sede[] = [
             { time: "20:00", lun: ["Funcional"], mar: ["Spinning"], mie: ["Funcional"], jue: ["Spinning"], vie: ["Funcional"] },
             { time: "21:00", lun: ["Funcional"], mar: ["Spinning", "Funcional"], mie: ["Funcional"], jue: ["Spinning", "Funcional"], vie: ["Funcional"] },
         ],
-        precios: { mensual: 72000, debitoAutomatico: 58000, trimestral: 183000, semestral: 342000 },
+        precios: { mensual: 72000, debitoAutomatico: 58000, trimestral: 183000, semestral: 348000 },
     },
     {
         slug: 'barrio-norte',
