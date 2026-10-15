@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { CrossIcon, InstagramIcon, MenuIcon, TiktokIcon, YoutubeIcon } from "@/icons";
 import { RCIcon } from "@/components";
+import { halloweenVigente } from "@/components/halloween-2026/ModalHalloween";
 
 interface NavLink {
     title: string;
@@ -12,12 +13,14 @@ interface NavLink {
     highlight?: boolean;
 }
 
-const links: NavLink[] = [
+const baseLinks: NavLink[] = [
     { title: 'Inicio', href: '/' },
     { title: 'Sedes', href: '/links' },
     { title: 'Planes', href: '/planes' },
     { title: 'Pileta', href: '/pileta' },
 ];
+
+const halloweenLink: NavLink = { title: 'Halloween', href: '/halloween', highlight: true };
 
 const socialMedias = [
     { label: 'Instagram', href: 'https://www.instagram.com/rcgym/', Icon: InstagramIcon },
@@ -28,6 +31,10 @@ const socialMedias = [
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
+    const [mostrarHalloween, setMostrarHalloween] = useState(false);
+    const links = mostrarHalloween ? [...baseLinks, halloweenLink] : baseLinks;
+
+    useEffect(() => setMostrarHalloween(halloweenVigente()), []);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 50);

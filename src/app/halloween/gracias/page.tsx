@@ -20,7 +20,6 @@ export default function GraciasHalloweenPage() {
 function GraciasContent() {
   const params = useSearchParams();
   const nombre = (params.get('nombre') || '').trim();
-  const acompanantes = Number(params.get('acompanantes') || '0');
   const concurso = params.get('concurso') === '1';
   const socio = params.get('socio') || '';
   const primerNombre = nombre.split(/\s+/)[0];
@@ -66,8 +65,7 @@ function GraciasContent() {
         </h1>
 
         <p className="text-[#f3ece2]/80 leading-relaxed">
-          Tu inscripción quedó registrada
-          {acompanantes > 0 ? `, con ${acompanantes} ${acompanantes > 1 ? 'personas' : 'persona'} más` : ''}.
+          Tu inscripción quedó registrada.
           {concurso ? ' Marcaste que querés participar del concurso de disfraces.' : ''}
         </p>
 

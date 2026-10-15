@@ -14,7 +14,6 @@ interface FormState {
   email: string;
   socio: Socio;
   sede: string;
-  acompanantes: number;
   concurso: boolean;
   consent: boolean;
   // Honeypot: campo invisible que completan los bots
@@ -30,13 +29,11 @@ const initial: FormState = {
   email: '',
   socio: '',
   sede: '',
-  acompanantes: 0,
   concurso: false,
   consent: false,
   website: '',
 };
 
-const MAX_ACOMPANANTES = 10;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 const onlyDigits = (s: string) => s.replace(/[^\d]/g, '');
@@ -156,7 +153,6 @@ export const FormInscripcionHalloween = () => {
 
     const params = new URLSearchParams({
       nombre: form.nombre.trim(),
-      acompanantes: String(form.acompanantes),
       concurso: form.concurso ? '1' : '0',
       socio: form.socio,
     });
@@ -298,37 +294,6 @@ export const FormInscripcionHalloween = () => {
               </select>
             </div>
           )}
-
-          <div>
-            <span id="hw-acomp-label" className={labelClass}>¿Cuántas personas van con vos? (opcional)</span>
-            <div role="group" aria-labelledby="hw-acomp-label" className="flex items-center gap-6">
-              <button
-                type="button"
-                onClick={() => update('acompanantes', Math.max(0, form.acompanantes - 1))}
-                disabled={form.acompanantes === 0}
-                aria-label="Una persona menos"
-                className="size-12 border border-white/30 text-xl text-[#f3ece2] hover:border-[#f26b1d] hover:text-[#f26b1d] transition-colors disabled:opacity-30 disabled:hover:border-white/30 disabled:hover:text-[#f3ece2]"
-              >
-                −
-              </button>
-              <span
-                aria-live="polite"
-                className={`${headlineFont.className} italic font-black text-4xl w-10 text-center tabular-nums text-[#f3ece2]`}
-              >
-                {form.acompanantes}
-              </span>
-              <button
-                type="button"
-                onClick={() => update('acompanantes', Math.min(MAX_ACOMPANANTES, form.acompanantes + 1))}
-                disabled={form.acompanantes === MAX_ACOMPANANTES}
-                aria-label="Una persona más"
-                className="size-12 border border-white/30 text-xl text-[#f3ece2] hover:border-[#f26b1d] hover:text-[#f26b1d] transition-colors disabled:opacity-30 disabled:hover:border-white/30 disabled:hover:text-[#f3ece2]"
-              >
-                +
-              </button>
-            </div>
-          </div>
-
 
           <div className="space-y-4 pt-2">
             {([

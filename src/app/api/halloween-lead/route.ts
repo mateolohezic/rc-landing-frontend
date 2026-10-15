@@ -9,7 +9,6 @@ interface HalloweenLeadBody {
   email?: string;
   socio?: 'si' | 'no' | '';
   sede?: string;
-  acompanantes?: number | string;
   concurso?: boolean;
   consent?: boolean;
   // Honeypot
@@ -22,7 +21,6 @@ interface Lead {
   email: string;
   socio: 'si' | 'no';
   sede: string;
-  acompanantes: number;
   concurso: boolean;
   consent: boolean;
   timestamp: string;
@@ -31,19 +29,19 @@ interface Lead {
 const SEDES = ['Tafí Viejo', 'Barrio Sur', 'Barrio Norte', 'Terrazas', 'Aconquija', 'Épico'];
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-// ── Destino 2 (opcional): Google Form con su Sheet vinculado, como en Primavera Running ──
-// Para activarlo: crear el Form, copiar la URL de "formResponse" y los ids "entry.XXXX" de cada
-// pregunta (Obtener enlace prellenado) y pegarlos acá. Mientras estén vacíos, solo se manda el mail.
-const GOOGLE_FORM_ACTION = '';
+// ── Destino principal: Google Form con su Sheet vinculado, como en Primavera Running ──
+// Form "Inscripción Halloween 2026". Si se cambian las preguntas del Form, hay que actualizar estos ids.
+// Si la URL queda vacía, las inscripciones llegan por mail a contacto@rcgym.com.ar.
+const GOOGLE_FORM_ACTION =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdSdkuwoxQte2M1V8Yd0qKguwdhJ3tLclGguVGY3ZnlN_vT9g/formResponse';
 const GOOGLE_FORM_ENTRIES = {
-  nombre: '',
-  whatsapp: '',
-  email: '',
-  socio: '', // Sí / No
-  sede: '',
-  acompanantes: '',
-  concurso: '', // Sí / No
-  consent: '', // Sí / No
+  nombre: 'entry.541243978',
+  whatsapp: 'entry.1852480621',
+  email: 'entry.1308561590',
+  socio: 'entry.1899092983', // Sí / No
+  sede: 'entry.1338546576',
+  concurso: 'entry.1369972471', // Sí / No
+  consent: 'entry.506842768', // Sí / No
 };
 
 // Rate limit en memoria (per-IP, 10 req/min)
@@ -112,7 +110,6 @@ Nombre:          ${lead.nombre}
 WhatsApp:        +${lead.whatsapp}
 Email:           ${lead.email || '—'}
 ¿Es socio?:      ${socioLabel(lead)}
-Acompañantes:    ${lead.acompanantes}
 Concurso:        ${lead.concurso ? 'Quiere participar' : 'No'}
 Novedades RC:    ${lead.consent ? 'Sí, acepta' : 'No'}
 Recibido:        ${lead.timestamp}
@@ -144,7 +141,6 @@ const buildEmailHtml = (lead: Lead) => {
           ${row('WhatsApp', '+' + lead.whatsapp)}
           ${row('Email', lead.email || '—')}
           ${row('¿Es socio?', socioLabel(lead))}
-          ${row('Acompañantes', String(lead.acompanantes))}
           ${row('Concurso', lead.concurso ? 'Quiere participar' : 'No')}
           ${row('Novedades RC', lead.consent ? 'Sí, acepta' : 'No')}
           ${row('Recibido', lead.timestamp)}
@@ -188,7 +184,6 @@ const sendToGoogleForm = async (lead: Lead): Promise<boolean> => {
   if (lead.email) add(e.email, lead.email);
   add(e.socio, lead.socio === 'si' ? 'Sí' : 'No');
   if (lead.sede) add(e.sede, lead.sede);
-  add(e.acompanantes, String(lead.acompanantes));
   add(e.concurso, lead.concurso ? 'Sí' : 'No');
   add(e.consent, lead.consent ? 'Sí' : 'No');
   try {
@@ -227,7 +222,6 @@ export async function POST(req: NextRequest) {
   const email = sanitize(body.email || '');
   const socio = body.socio;
   const sede = sanitize(body.sede || '');
-  const acompanantes = Math.min(10, Math.max(0, Math.floor(Number(body.acompanantes) || 0)));
 
   if (nombre.length < 3 || nombre.length > 100) {
     return NextResponse.json({ error: 'Nombre inválido' }, { status: 422 });
@@ -251,7 +245,6 @@ export async function POST(req: NextRequest) {
     email,
     socio,
     sede: socio === 'si' ? sede : '',
-    acompanantes,
     concurso: body.concurso === true,
     consent: body.consent === true,
     timestamp: new Date().toLocaleString('es-AR', {
@@ -268,10 +261,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, dev: true });
   }
 
-  const [emailOk, formOk] = await Promise.all([sendEmail(lead), sendToGoogleForm(lead)]);
+  // Destino principal: Google Form (cae en una planilla). El mail queda como respaldo: solo se manda
+  // si el Form no está configurado o falla, para no perder ninguna inscripción.
+  const formOk = await sendToGoogleForm(lead);
+  const emailOk = formOk ? true : await sendEmail(lead);
 
-  // Si ningún destino guardó la inscripción, se avisa: la persona no debe creer que quedó anotada.
-  if (!emailOk && !formOk) {
+  if (!emailOk) {
     return NextResponse.json({ error: 'No se pudo guardar la inscripción' }, { status: 502 });
   }
 

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { ClarityTracker, MetaPixel, Navbar } from "@/components";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { ModalHalloween } from "@/components/halloween-2026/ModalHalloween";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -109,6 +110,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
         <ClarityTracker/>
         <MetaPixel/>
         <Navbar />
+        <ModalHalloween />
         {children}
       </body>
     </html>
