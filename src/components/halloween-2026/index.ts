@@ -1,0 +1,11 @@
+export { HalloweenTracker, trackHalloween } from './HalloweenTracker';
+export { HeroHalloween } from './HeroHalloween';
+export { DatosHalloween } from './DatosHalloween';
+export { QueHayHalloween } from './QueHayHalloween';
+export { ConcursoHalloween } from './ConcursoHalloween';
+export { GaleriaHalloween } from './GaleriaHalloween';
+export { FormInscripcionHalloween } from './FormInscripcionHalloween';
+export { FAQHalloween } from './FAQHalloween';
+export { CTAFinalHalloween } from './CTAFinalHalloween';
+export { StickyCTAHalloween } from './StickyCTAHalloween';
+export { CronometroHalloween } from './CronometroHalloween';
