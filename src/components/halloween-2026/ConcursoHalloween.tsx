@@ -54,13 +54,13 @@ export const ConcursoHalloween = () => (
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
         <figure>
           <div className="relative aspect-[4/5] overflow-hidden">
-            <Image src={ganadores} alt="Ganadores del desfile 2025 disfrazados de mariachi y catrina, con un chico en brazos" fill sizes="(min-width: 1024px) 25vw, 45vw" className="object-cover object-[center_45%]" />
+            <Image quality={60} src={ganadores} alt="Ganadores del desfile 2025 disfrazados de mariachi y catrina, con un chico en brazos" fill sizes="(min-width: 1024px) 25vw, 45vw" className="object-cover object-[center_45%]" />
           </div>
           <figcaption className="mt-2 text-xs uppercase tracking-[0.25em] text-black/60">1° puesto 2025</figcaption>
         </figure>
         <figure className="mt-10">
           <div className="relative aspect-[4/5] overflow-hidden">
-            <Image src={ganadoras} alt="Ganadoras del desfile 2025 mostrando sus premios" fill sizes="(min-width: 1024px) 25vw, 45vw" className="object-cover object-[center_50%]" />
+            <Image quality={60} src={ganadoras} alt="Ganadoras del desfile 2025 mostrando sus premios" fill sizes="(min-width: 1024px) 25vw, 45vw" className="object-cover object-[center_50%]" />
           </div>
           <figcaption className="mt-2 text-xs uppercase tracking-[0.25em] text-black/60">2° y 3° puesto 2025</figcaption>
         </figure>

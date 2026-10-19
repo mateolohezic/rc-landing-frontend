@@ -4,8 +4,8 @@ import { Barlow, Barlow_Condensed } from 'next/font/google';
 // Barlow Condensed en itálica pesada: es la misma de la pieza "Save the date".
 export const headlineFont = Barlow_Condensed({
   subsets: ['latin'],
-  weight: ['600', '700', '800', '900'],
-  style: ['normal', 'italic'],
+  weight: ['700', '800', '900'],
+  style: ['italic'],
   variable: '--hw-headline',
   display: 'swap',
 });

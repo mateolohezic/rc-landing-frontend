@@ -32,7 +32,7 @@ const VideoCard = ({ item }: { item: Extract<GaleriaItem, { tipo: 'video' }> }) 
       muted
       loop
       playsInline
-      preload="metadata"
+      preload="none"
       className="absolute inset-0 size-full object-cover"
     />
   );
@@ -83,7 +83,7 @@ export const GaleriaHalloween = () => {
           <figure key={item.pie} className="snap-start shrink-0 w-[72vw] sm:w-[320px] lg:w-[340px]">
             <div className="relative aspect-[4/5] overflow-hidden bg-neutral-900">
               {item.tipo === 'foto' ? (
-                <Image
+                <Image quality={60}
                   src={item.src}
                   alt={item.alt}
                   fill

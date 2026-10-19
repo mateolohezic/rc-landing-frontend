@@ -239,3 +239,9 @@
 .pulse-glow {
   animation: pulse-glow 3s ease-in-out infinite;
 }
+
+
+/* Entrada del hero de Halloween: puro CSS, no depende de que cargue el JavaScript. */
+@keyframes hw-fade { from { opacity: 0.001; } to { opacity: 1; } }
+.hw-fade { animation: hw-fade 0.45s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .hw-fade { animation: none; } }
