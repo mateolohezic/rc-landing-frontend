@@ -40,13 +40,21 @@ export const SEDES = ['Tafí Viejo', 'Barrio Sur', 'Barrio Norte', 'Terrazas', '
 export const QUE_HAY = [
   { titulo: 'DJ en vivo', detalle: 'Música para bailar toda la noche.' },
   { titulo: 'Stand de juegos', detalle: 'Vení a jugar durante la fiesta.' },
-  { titulo: 'Comida y bebida', detalle: 'Hay para comer y tomar en el lugar.' },
+  { titulo: 'Comida y bebida', detalle: 'Para disfrutar mientras lo das todo.' },
   { titulo: 'Concurso de disfraces', detalle: 'Un jurado elige los mejores y se entregan premios.' },
 ];
 
 // Premios del concurso de este año. Mientras esté vacío, la landing no muestra el bloque de premios.
 // Formato: { puesto: '1° puesto', premio: 'Texto del premio' }
-export const PREMIOS: { puesto: string; premio: string }[] = [];
+export const PREMIOS: { puesto: string; meses: string }[] = [
+  { puesto: '1° puesto', meses: '12' },
+  { puesto: '2° puesto', meses: '6' },
+  { puesto: '3° puesto', meses: '3' },
+];
+export const PREMIO_DETALLE = 'de gimnasio en tu sede';
+
+// Línea debajo de los premios (premios varios y sorteos sin detallar).
+export const PREMIOS_EXTRA = 'Además, premios y sorteos durante la fiesta.';
 
 // Jurado de este año. Mientras esté vacío, no se muestra.
 export const JURADO: { nombre: string; detalle?: string }[] = [];

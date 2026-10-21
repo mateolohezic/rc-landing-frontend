@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { headlineFont } from './fonts';
-import { JURADO, PREMIOS } from './constants';
+import { JURADO, PREMIOS, PREMIOS_EXTRA, PREMIO_DETALLE } from './constants';
 import ganadores from '@/assets/halloween-2026/ganadores-desfile.jpeg';
 import ganadoras from '@/assets/halloween-2026/ganadoras-desfile.jpeg';
 
@@ -20,16 +20,32 @@ export const ConcursoHalloween = () => (
         </p>
 
         {PREMIOS.length > 0 && (
-          <ul className="mt-10 border-t border-black/20 max-w-md">
-            {PREMIOS.map((p) => (
-              <li key={p.puesto} className="flex items-baseline justify-between gap-6 border-b border-black/20 py-4">
-                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#c4470a]">{p.puesto}</span>
-                <span className={`${headlineFont.className} italic font-extrabold uppercase text-2xl sm:text-3xl text-right`}>
-                  {p.premio}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10 grid grid-cols-3 items-end gap-2 sm:gap-3 max-w-md" role="list" aria-label="Premios del concurso">
+            {[PREMIOS[1], PREMIOS[0], PREMIOS[2]].filter(Boolean).map((p) => {
+              const primero = p === PREMIOS[0];
+              const segundo = p === PREMIOS[1];
+              return (
+                <div
+                  key={p.puesto}
+                  role="listitem"
+                  className={`flex flex-col items-center text-center px-1 pb-5 pt-5 ${
+                    primero
+                      ? 'bg-[#f26b1d] text-black min-h-[15.5rem] sm:min-h-[17rem]'
+                      : segundo
+                        ? 'bg-[#0a0a0a] text-[#f3ece2] min-h-[13.5rem] sm:min-h-[15rem]'
+                        : 'border-2 border-[#0a0a0a] text-[#0a0a0a] min-h-[12rem] sm:min-h-[13.25rem]'
+                  }`}
+                >
+                  <span className="text-[0.65rem] sm:text-xs font-semibold uppercase tracking-[0.2em] sm:tracking-[0.3em]">{p.puesto}</span>
+                  <span className={`${headlineFont.className} italic font-black leading-[0.85] mt-3 ${primero ? 'text-7xl sm:text-8xl' : 'text-6xl sm:text-7xl'}`}>
+                    {p.meses}
+                  </span>
+                  <span className={`${headlineFont.className} italic font-extrabold uppercase text-xl sm:text-2xl mt-1`}>meses</span>
+                  <span className="mt-3 text-[0.6rem] sm:text-xs font-semibold uppercase tracking-[0.12em] sm:tracking-[0.2em] leading-tight">{PREMIO_DETALLE}</span>
+                </div>
+              );
+            })}
+          </div>
         )}
 
         {JURADO.length > 0 && (
@@ -46,9 +62,7 @@ export const ConcursoHalloween = () => (
           </div>
         )}
 
-        <p className="mt-10 pt-6 border-t border-black/20 max-w-md text-sm text-black/70 leading-relaxed">
-          Edición 2025: los tres primeros puestos se llevaron 1 año, 6 meses y 3 meses gratis de entrenamiento en RC.
-        </p>
+        <p className="mt-6 max-w-md text-base font-medium leading-relaxed">{PREMIOS_EXTRA}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3 sm:gap-4">
