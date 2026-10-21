@@ -16,7 +16,7 @@ const sedes = [
     {
         title: "Épico",
         description: "Contamos con salones climatizados, dispenser de agua fría y caliente, vestuarios, duchas, lockers y zona de cardio equipada.",
-        location: "San Luis 2120, Yerba Buena",
+        location: "San Luis 1300, Yerba Buena",
         img: sede_epico,
         clases: ["Spinning", "Funcional", "GAP"],
         horarios: { semana: "6:00 a 23:00", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },

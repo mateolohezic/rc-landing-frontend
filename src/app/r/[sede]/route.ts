@@ -38,7 +38,7 @@ const SEDES: Record<string, Sede> = {
     query: 'RC Gym Aconquija, Av. Aconquija 2122, Yerba Buena, Tucumán',
   },
   epico: {
-    query: 'RC Gym Épico, San Luis y Güemes, Yerba Buena, Tucumán',
+    query: 'RC Gym Épico, San Luis 1300, Yerba Buena, Tucumán',
   },
 };
 

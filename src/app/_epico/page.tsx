@@ -51,7 +51,7 @@ export default function EpicoPage() {
         </div>
         <div className="w-full max-w-lg">
           <h2 className="sr-only">Ubicación y horarios</h2>
-          <h3 className="text-5xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">San Luis 2120, Yerba Buena</h3>
+          <h3 className="text-5xl lg:text-8xl font-highrise-bold uppercase text-center lg:text-start">San Luis 1300, Yerba Buena</h3>
           <p className="mt-4 text-lg lg:text-xl text-white/80 text-center lg:text-start">Una ubicación estratégica para entrenar sin excusas</p>
           <div className='mt-6 lg:mt-8 w-fit mx-auto lg:mx-0 bg-neutral-700 text-sm rounded-2xl overflow-hidden flex relative'>
             <div className='w-12 shrink-0 bg-red-500 flex justify-center items-center'>
