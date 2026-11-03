@@ -7,7 +7,7 @@ import { sedes } from '@/data/sedes';
 
 // Los precios viven en src/data/sedes.ts (fuente única, también la usan /links/[sede]).
 // Trimestral y semestral se pagan en 3 y 6 cuotas sin interes con tarjeta Macro.
-// Barrio Norte no tiene debito automatico y sus planes trimestral/semestral son solo en efectivo.
+// Barrio Norte: trimestral y semestral son solo en efectivo (soloEfectivoPromos).
 const ORDEN = ['barrio-sur', 'barrio-norte', 'aconquija', 'tafi-viejo', 'terrazas', 'epico'];
 const preciosPorSede = ORDEN.flatMap((slug) => {
     const s = sedes.find((x) => x.slug === slug);
