@@ -131,7 +131,7 @@ export const sedes: Sede[] = [
             { time: "21:00", lun: ["Indoor", "Funcional"], mar: ["Indoor", "Funcional"], mie: ["Indoor", "Funcional"], jue: ["Indoor", "Funcional"], vie: ["Indoor", "Funcional"] },
             { time: "22:00", lun: ["GAPWOD"], mie: ["GAPWOD"], vie: ["GAPWOD"] },
         ],
-        precios: { mensual: 61000, debitoAutomatico: 48800, trimestral: 155400, semestral: 292800 },
+        precios: { mensual: 70000, debitoAutomatico: 56000, trimestral: 178500, semestral: 336000 },
     },
     {
         slug: 'tafi-viejo',
