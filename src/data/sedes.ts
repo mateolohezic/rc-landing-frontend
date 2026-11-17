@@ -91,7 +91,7 @@ export const sedes: Sede[] = [
         description: "Amplia terraza al aire libre, WiFi, duchas, vestuarios, secador de pelo, dispenser de agua, salones climatizados y estacionamiento.",
         location: "Av. Aconquija 2122",
         img: sede_yerba_buena,
-        clases: ["Funcional", "Indoor", "Yoga", "Body", "Bodypump", "Ritmos Latinos", "Boxeo", "Crossfit", "Calistenia"],
+        clases: ["Funcional", "Indoor", "Yoga", "Body", "Bodypump", "Ritmos Latinos", "Boxeo", "Calistenia"],
         horarios: { semana: "6:00 a 22:30", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
         phonenumber: "https://api.whatsapp.com/send/?phone=5493816454929&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20Aconquija&type=phone_number&app_absent=0",
         schedule: [
@@ -104,7 +104,6 @@ export const sedes: Sede[] = [
             { time: "17:00", lun: ["Indoor"], mie: ["Indoor"], vie: ["Indoor"] },
             { time: "18:00", lun: ["Bodypump", "Funcional"], mie: ["Bodypump", "Funcional"], vie: ["Bodypump", "Funcional"] },
             { time: "19:00", lun: ["Ritmos Latinos"], mar: ["Boxeo", "Indoor"], mie: ["Ritmos Latinos"], jue: ["Boxeo", "Indoor"] },
-            { time: "20:00", mar: ["Funcional", "Crossfit"], jue: ["Funcional", "Crossfit"] },
             { time: "21:00", lun: ["Calistenia"], mie: ["Calistenia"], vie: ["Calistenia"] },
         ],
         precios: { mensual: 80000, suscripcion: 64000, trimestral: 204000, semestral: 384000 },
