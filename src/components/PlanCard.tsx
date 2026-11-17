@@ -4,7 +4,7 @@ import { CheckIcon } from "@/icons";
 interface PlanCardProps {
     title: string;
     precio: number;
-    precioDebito?: number;
+    precioSuscripcion?: number;
     subtitulo?: string;
     descripcion?: string;
     cta?: string;
@@ -13,7 +13,7 @@ interface PlanCardProps {
 
 const benefits = ["Acceso a musculación", "Clases grupales", "Matrícula incluida"];
 
-export const PlanCard = ({ title, precio, precioDebito, subtitulo, descripcion, cta = "Quiero este plan", destacado = false }: PlanCardProps) => (
+export const PlanCard = ({ title, precio, precioSuscripcion, subtitulo, descripcion, cta = "Quiero este plan", destacado = false }: PlanCardProps) => (
     <div className={`relative p-6 sm:p-8 rounded-2xl flex flex-col items-center text-center transition-all duration-300 ${
         destacado
             ? 'border-2 border-red-500/50 bg-red-600/10 shadow-2xl shadow-red-600/10'
@@ -30,25 +30,25 @@ export const PlanCard = ({ title, precio, precioDebito, subtitulo, descripcion, 
         {subtitulo && <p className="mt-1 text-sm text-white/40 uppercase tracking-widest">{subtitulo}</p>}
 
         <div className="mt-8 mb-8 grid grid-rows-[1.5rem_auto_1.75rem_1rem] place-items-center gap-1">
-            <span className={`text-lg font-medium leading-none ${precioDebito ? 'text-white/30 line-through' : 'invisible'}`}>
+            <span className={`text-lg font-medium leading-none ${precioSuscripcion ? 'text-white/30 line-through' : 'invisible'}`}>
                 ${precio.toLocaleString()}
             </span>
             <div className="leading-none">
                 <span className="text-sm text-white/40 align-top">$</span>
                 <span className="text-4xl sm:text-5xl font-highrise-bold">
-                    {(precioDebito ?? precio).toLocaleString()}
+                    {(precioSuscripcion ?? precio).toLocaleString()}
                 </span>
             </div>
-            {precioDebito ? (
+            {precioSuscripcion ? (
                 <span className="inline-flex items-center px-2.5 py-1 rounded-full border border-red-500/30 bg-red-500/[0.06] text-[10px] sm:text-xs font-bold uppercase tracking-[0.18em] text-red-400 leading-none">
-                    −20% con débito automático
+                    −20% con Suscripción RC
                 </span>
             ) : (
                 <span className="invisible">.</span>
             )}
-            {precioDebito ? (
+            {precioSuscripcion ? (
                 <span className="text-xs text-white/50 leading-none">
-                    Ahorrás ${(precio - precioDebito).toLocaleString()} cada mes
+                    Ahorrás ${(precio - precioSuscripcion).toLocaleString()} cada mes
                 </span>
             ) : (
                 <span className="invisible">.</span>

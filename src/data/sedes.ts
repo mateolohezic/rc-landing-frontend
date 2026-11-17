@@ -18,7 +18,7 @@ export interface ScheduleRow {
 
 export interface SedePrecios {
     mensual: number;
-    debitoAutomatico?: number;
+    suscripcion?: number;
     trimestral: number;
     semestral: number;
     soloEfectivoPromos?: boolean;
@@ -43,7 +43,7 @@ export interface Sede {
 
 // Fuente única de sedes, horarios, clases, grilla y precios: la home, /planes y /links leen de acá.
 // Precios confirmados por Mateo el 15/10/2026. Son valores fijos por sede (no se derivan de una fórmula).
-// Barrio Norte no tiene débito automático; trimestral y semestral solo en efectivo.
+// Barrio Norte no tiene Suscripción RC; trimestral y semestral solo en efectivo.
 export const sedes: Sede[] = [
     {
         slug: 'epico',
@@ -62,7 +62,7 @@ export const sedes: Sede[] = [
             { time: "18:00", lun: ["Spinning", "Funcional"], mar: ["Funcional"], mie: ["Spinning", "Funcional"], jue: ["Funcional"], vie: ["Spinning", "Funcional"] },
             { time: "19:00", lun: ["Funcional"], mar: ["Spinning"], mie: ["Funcional"], jue: ["Spinning"], vie: ["Funcional"] },
         ],
-        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 204000, semestral: 384000 },
+        precios: { mensual: 80000, suscripcion: 64000, trimestral: 204000, semestral: 384000 },
     },
     {
         slug: 'terrazas',
@@ -83,7 +83,7 @@ export const sedes: Sede[] = [
             { time: "19:00", lun: ["Spinning"], mar: ["Bodyperfect"], mie: ["Spinning"], jue: ["Bodyperfect"], vie: ["Spinning"] },
             { time: "20:00", lun: ["Calistenia", "Zumba"], mie: ["Calistenia", "Zumba"], vie: ["Calistenia", "Zumba"] },
         ],
-        precios: { mensual: 90000, debitoAutomatico: 72000, trimestral: 243000, semestral: 459000 },
+        precios: { mensual: 90000, suscripcion: 72000, trimestral: 243000, semestral: 459000 },
     },
     {
         slug: 'aconquija',
@@ -107,7 +107,7 @@ export const sedes: Sede[] = [
             { time: "20:00", mar: ["Funcional", "Crossfit"], jue: ["Funcional", "Crossfit"] },
             { time: "21:00", lun: ["Calistenia"], mie: ["Calistenia"], vie: ["Calistenia"] },
         ],
-        precios: { mensual: 80000, debitoAutomatico: 64000, trimestral: 204000, semestral: 384000 },
+        precios: { mensual: 80000, suscripcion: 64000, trimestral: 204000, semestral: 384000 },
     },
     {
         slug: 'barrio-sur',
@@ -131,7 +131,7 @@ export const sedes: Sede[] = [
             { time: "21:00", lun: ["Indoor", "Funcional"], mar: ["Indoor", "Funcional"], mie: ["Indoor", "Funcional"], jue: ["Indoor", "Funcional"], vie: ["Indoor", "Funcional"] },
             { time: "22:00", lun: ["GAPWOD"], mie: ["GAPWOD"], vie: ["GAPWOD"] },
         ],
-        precios: { mensual: 70000, debitoAutomatico: 56000, trimestral: 178500, semestral: 336000 },
+        precios: { mensual: 70000, suscripcion: 56000, trimestral: 178500, semestral: 336000 },
     },
     {
         slug: 'tafi-viejo',
@@ -154,7 +154,7 @@ export const sedes: Sede[] = [
             { time: "20:00", lun: ["Funcional"], mar: ["Spinning"], mie: ["Funcional"], jue: ["Spinning"], vie: ["Funcional"] },
             { time: "21:00", lun: ["Funcional"], mar: ["Spinning", "Funcional"], mie: ["Funcional"], jue: ["Spinning", "Funcional"], vie: ["Funcional"] },
         ],
-        precios: { mensual: 72000, debitoAutomatico: 58000, trimestral: 183000, semestral: 348000 },
+        precios: { mensual: 72000, suscripcion: 58000, trimestral: 183000, semestral: 348000 },
     },
     {
         slug: 'barrio-norte',
@@ -172,7 +172,7 @@ export const sedes: Sede[] = [
             { time: "19:00", lun: ["Full Body"], mie: ["Full Body"], vie: ["Full Body"] },
             { time: "20:00", lun: ["Spinning"], mar: ["Spinning"], mie: ["Spinning"], jue: ["Spinning"], vie: ["Spinning"] },
         ],
-        precios: { mensual: 70000, debitoAutomatico: 56000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
+        precios: { mensual: 70000, suscripcion: 56000, trimestral: 178500, semestral: 336000, soloEfectivoPromos: true },
     },
 ];
 

@@ -143,29 +143,29 @@ export default async function SedePage({ params }: Props) {
                         <h2 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-3">Planes</h2>
                         <div className="flex flex-col gap-2.5">
                             {/* Mensual */}
-                            <div className={`glass-card p-4 ${sede.precios.debitoAutomatico ? 'border-red-500/40' : ''}`}>
+                            <div className={`glass-card p-4 ${sede.precios.suscripcion ? 'border-red-500/40' : ''}`}>
                                 <div className="flex justify-between items-start gap-4">
                                     <div className="min-w-0">
                                         <p className="text-sm font-bold uppercase tracking-wider">Mensual</p>
                                         <p className="text-xs text-white/40 mt-0.5">
-                                            {sede.precios.debitoAutomatico ? "Con débito automático" : "Mes a mes"}
+                                            {sede.precios.suscripcion ? "Con Suscripción RC" : "Mes a mes"}
                                         </p>
                                     </div>
                                     <div className="text-right shrink-0">
-                                        {sede.precios.debitoAutomatico && (
+                                        {sede.precios.suscripcion && (
                                             <p className="text-xs text-white/30 line-through leading-none">
                                                 ${sede.precios.mensual.toLocaleString('es-AR')}
                                             </p>
                                         )}
                                         <p className="font-highrise-bold text-2xl leading-none mt-1">
-                                            ${(sede.precios.debitoAutomatico ?? sede.precios.mensual).toLocaleString('es-AR')}
+                                            ${(sede.precios.suscripcion ?? sede.precios.mensual).toLocaleString('es-AR')}
                                         </p>
                                         <p className="text-[10px] text-white/40 uppercase tracking-widest mt-1">por mes</p>
                                     </div>
                                 </div>
-                                {sede.precios.debitoAutomatico && (
+                                {sede.precios.suscripcion && (
                                     <p className="mt-3 pt-3 border-t border-white/[0.06] text-xs text-red-400">
-                                        Ahorrás ${(sede.precios.mensual - sede.precios.debitoAutomatico).toLocaleString('es-AR')} cada mes.
+                                        Ahorrás ${(sede.precios.mensual - sede.precios.suscripcion).toLocaleString('es-AR')} cada mes.
                                     </p>
                                 )}
                             </div>

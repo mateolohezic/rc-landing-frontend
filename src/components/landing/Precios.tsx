@@ -36,8 +36,8 @@ export const Precios = () => {
                     transition={{ delay: 0.2 }}
                     className="mt-4 max-w-xl mx-auto text-white/50 text-lg"
                 >
-                    {sede.debitoAutomatico
-                        ? "El precio más bajo siempre es con débito automático."
+                    {sede.suscripcion
+                        ? "El precio más bajo siempre es con la Suscripción RC, que se cobra cada mes en tu tarjeta de crédito."
                         : "Seleccioná tu sede y conocé nuestros planes."}
                 </motion.p>
             </div>
@@ -72,13 +72,13 @@ export const Precios = () => {
                     <PlanCard
                         title="Mensual"
                         precio={sede.mensual}
-                        precioDebito={sede.debitoAutomatico}
-                        subtitulo={sede.debitoAutomatico ? "Tu cuota más baja" : "Mes a mes"}
-                        descripcion={sede.debitoAutomatico
-                            ? "La cuota más baja de RC, debitada cada mes."
+                        precioSuscripcion={sede.suscripcion}
+                        subtitulo={sede.suscripcion ? "Tu cuota más baja" : "Mes a mes"}
+                        descripcion={sede.suscripcion
+                            ? "La cuota más baja de RC, cobrada cada mes en tu tarjeta de crédito."
                             : "Probá RC, mes a mes."}
-                        cta={sede.debitoAutomatico ? "Sumate con débito" : "Sumate a RC"}
-                        destacado={Boolean(sede.debitoAutomatico)}
+                        cta={sede.suscripcion ? "Sumate con la Suscripción" : "Sumate a RC"}
+                        destacado={Boolean(sede.suscripcion)}
                     />
                     <PlanCard
                         title="Trimestral"
@@ -93,7 +93,7 @@ export const Precios = () => {
                         subtitulo="Pago único · 6 meses"
                         descripcion="Pagás una vez y entrenás 6 meses."
                         cta="Entrenar 6 meses"
-                        destacado={!sede.debitoAutomatico}
+                        destacado={!sede.suscripcion}
                     />
                 </motion.div>
             </AnimatePresence>
