@@ -1,0 +1,11 @@
+export { HeroEmpresas } from './HeroEmpresas';
+export { ProofBarEmpresas } from './ProofBarEmpresas';
+export { BeneficiosEmpresas } from './BeneficiosEmpresas';
+export { BannerEmpresas } from './BannerEmpresas';
+export { PlanesEmpresas } from './PlanesEmpresas';
+export { SedesEmpresas } from './SedesEmpresas';
+export { ComoFuncionaEmpresas } from './ComoFuncionaEmpresas';
+export { FAQEmpresas } from './FAQEmpresas';
+export { CTAFinalEmpresas } from './CTAFinalEmpresas';
+export { FormEmpresas } from './FormEmpresas';
+export { EmpresasTracker } from './EmpresasTracker';
