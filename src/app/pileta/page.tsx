@@ -7,7 +7,6 @@ import {
   TestimoniosPileta,
   HorariosPileta,
   ProfesPileta,
-  PreciosPileta,
   ComoLlegar,
   CasaRC,
   FAQPileta,
@@ -15,7 +14,7 @@ import {
   StickyHeaderPileta,
   PiletaTracker,
 } from '@/components/pileta';
-import { FAQ, PLANES } from '@/components/pileta/constants';
+import { FAQ } from '@/components/pileta/constants';
 
 export const metadata: Metadata = {
   title: 'Pileta Climatizada RC Terrazas · Tucumán | Abierta',
@@ -102,22 +101,7 @@ const jsonLd = [
       worstRating: '1',
     },
   },
-  // 2. Offer catalog — planes con precios para Google rich results
-  {
-    '@context': 'https://schema.org',
-    '@type': 'OfferCatalog',
-    name: 'Planes de Pileta RC',
-    itemListElement: PLANES.map((p) => ({
-      '@type': 'Offer',
-      name: p.titulo,
-      description: p.bajada,
-      price: p.precio,
-      priceCurrency: 'ARS',
-      availability: 'https://schema.org/InStock',
-      url: 'https://rcgym.com.ar/pileta#planes',
-    })),
-  },
-  // 3. FAQPage — para que Google muestre el accordion en SERPs
+  // 2. FAQPage — para que Google muestre el accordion en SERPs
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -148,7 +132,6 @@ export default function PiletaPage() {
       <SolucionPileta />
       <ComparativaPileta />
       <TestimoniosPileta />
-      <PreciosPileta />
       <HorariosPileta />
       <ProfesPileta />
       <ComoLlegar />

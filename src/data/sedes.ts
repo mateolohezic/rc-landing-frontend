@@ -42,8 +42,8 @@ export interface Sede {
 }
 
 // Fuente única de sedes, horarios, clases, grilla y precios: la home, /planes y /links leen de acá.
-// Precios confirmados por Mateo el 15/10/2026. Son valores fijos por sede (no se derivan de una fórmula).
-// Barrio Norte no tiene Suscripción RC; trimestral y semestral solo en efectivo.
+// Precios confirmados por Mateo el 15/10/2026 (Tafí Viejo actualizado el 17/11/2026; Terrazas el 25/11/2026). Son valores fijos por sede (no se derivan de una fórmula).
+// Barrio Norte tiene Suscripción RC desde el 03/11/2026; ahí trimestral y semestral son solo en efectivo.
 export const sedes: Sede[] = [
     {
         slug: 'epico',
@@ -83,7 +83,7 @@ export const sedes: Sede[] = [
             { time: "19:00", lun: ["Spinning"], mar: ["Bodyperfect"], mie: ["Spinning"], jue: ["Bodyperfect"], vie: ["Spinning"] },
             { time: "20:00", lun: ["Calistenia", "Zumba"], mie: ["Calistenia", "Zumba"], vie: ["Calistenia", "Zumba"] },
         ],
-        precios: { mensual: 90000, suscripcion: 72000, trimestral: 243000, semestral: 459000 },
+        precios: { mensual: 100000, suscripcion: 80000, trimestral: 270000, semestral: 510000 },
     },
     {
         slug: 'aconquija',
@@ -138,22 +138,22 @@ export const sedes: Sede[] = [
         description: "Espacio al aire libre, duchas, vestuarios, secador de pelo, salones climatizados y estacionamiento.",
         location: "Av. Constitución 2400",
         img: sede_tafi_viejo,
-        clases: ["Funcional", "Spinning", "Yoga", "GAP", "Ritmos", "Full Body"],
+        clases: ["Funcional", "Spinning", "Yoga", "Calistenia", "GAP", "Full Body"],
         horarios: { semana: "6:00 a 22:30", sabado: "9:00 a 13:00 y 16:00 a 20:00", domingo: "17:00 a 20:00" },
         phonenumber: "https://api.whatsapp.com/send/?phone=5493815145543&text=Hola%2C%20quiero%20info%20sobre%20RC%20Gym%20Taf%C3%AD%20Viejo&type=phone_number&app_absent=0",
         schedule: [
             { time: "07:00", lun: ["Funcional"], mie: ["Funcional"], vie: ["Funcional"] },
-            { time: "09:00", lun: ["Spinning"], mar: ["Localizada"], mie: ["Spinning"], jue: ["Localizada"], vie: ["Spinning"] },
+            { time: "09:00", mar: ["Localizada"], jue: ["Localizada"], sab: ["Yoga"] },
             { time: "10:30", sab: ["GAP"] },
-            { time: "15:00", lun: ["Yoga"], mie: ["Yoga"], vie: ["Yoga"] },
+            { time: "15:00", lun: ["Yoga"], mar: ["Calistenia"], mie: ["Yoga"], jue: ["Calistenia"], vie: ["Yoga"] },
             { time: "16:00", lun: ["Stretching"], mar: ["Step"], mie: ["Stretching"], jue: ["Step"], vie: ["Stretching"] },
             { time: "17:00", lun: ["Spinning"], mar: ["GAP"], mie: ["Spinning"], jue: ["GAP"], vie: ["Spinning"] },
             { time: "18:00", lun: ["Funcional"], mar: ["Fight Do"], mie: ["Funcional"], jue: ["Fight Do"], vie: ["Funcional"] },
             { time: "19:00", lun: ["Spinning"], mar: ["Full Body"], mie: ["Spinning"], jue: ["Full Body"], vie: ["Spinning"] },
             { time: "20:00", lun: ["Funcional"], mar: ["Spinning"], mie: ["Funcional"], jue: ["Spinning"], vie: ["Funcional"] },
-            { time: "21:00", lun: ["Funcional"], mar: ["Spinning", "Funcional"], mie: ["Funcional"], jue: ["Spinning", "Funcional"], vie: ["Funcional"] },
+            { time: "21:00", lun: ["Funcional"], mie: ["Funcional"], vie: ["Funcional"] },
         ],
-        precios: { mensual: 72000, suscripcion: 58000, trimestral: 183000, semestral: 348000 },
+        precios: { mensual: 80000, suscripcion: 64000, trimestral: 204000, semestral: 384000 },
     },
     {
         slug: 'barrio-norte',
