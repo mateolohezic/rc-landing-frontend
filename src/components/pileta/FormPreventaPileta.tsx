@@ -131,8 +131,7 @@ export const FormPreventaPileta = () => {
           <option value="">Elegí un plan</option>
           {PLANES.map((p) => (
             <option key={p.id} value={p.id}>
-              {p.titulo} — ${p.precio.toLocaleString('es-AR')}
-              {p.unidad}
+              {p.titulo}
             </option>
           ))}
         </select>
